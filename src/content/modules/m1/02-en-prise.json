@@ -1,0 +1,15 @@
+{
+  "id": "m1-en-prise",
+  "title": "Les pièces en prise",
+  "intro": "Une pièce est **en prise** quand on peut la prendre **gratuitement** : personne ne la défend.\nÀ chaque coup, demande-toi : *une pièce adverse est-elle en prise ? Et une des miennes ?*",
+  "steps": [
+    {"type": "demo", "fen": "6k1/5ppp/3n4/8/8/8/5PPP/3R2K1 w - - 0 1", "text": "Le cavalier noir en d6 est attaqué par la tour et **aucune pièce noire ne le défend**. Il est en prise : la tour peut le prendre sans rien risquer.", "arrows": [["d1", "d6"]]},
+    {"type": "move", "id": "m1-prise-1", "fen": "6k1/5ppp/3n4/8/8/8/5PPP/3R2K1 w - - 0 1", "prompt": "Prends la pièce en prise.", "solution": ["Rxd6"], "engine": true, "hint": "La tour avance sur la colonne d.", "explanation": "**Txd6** : un cavalier gratuit, **+3**."},
+    {"type": "move", "id": "m1-prise-2", "fen": "3q2k1/5ppp/8/3B4/8/8/5PPP/6K1 b - - 0 1", "prompt": "Tu as les Noirs. Une pièce blanche est en prise : prends-la.", "solution": ["Qxd5"], "engine": true, "hint": "Regarde la colonne d.", "explanation": "**Dxd5** : le fou blanc n'était défendu par rien, **+3**."},
+    {"type": "move", "id": "m1-prise-3", "fen": "6k1/6pp/4p3/5r2/6P1/8/5P1P/6K1 w - - 0 1", "prompt": "La tour noire est défendue… mais par quoi est-elle attaquée ?", "solution": ["gxf5"], "engine": true, "hint": "Un pion qui prend une tour gagne même si on le reprend.", "explanation": "**gxf5** exf5 : tu as donné un pion (1) pour une tour (5), **+4**. Une pièce attaquée par une pièce de **moindre valeur** est aussi en danger."},
+    {"type": "move", "id": "m1-en-prise-p1", "fen": "1k5r/1r1qb1pp/1p1p1p2/8/P1R5/1P2B3/2PQ2PP/5R1K w - - 1 30", "preMove": "Rg4", "source": "lichess:JtVnq", "prompt": "Trouve le meilleur coup.", "solution": ["Qxg4"], "engine": true, "hint": "Une pièce adverse n’est pas (assez) protégée.", "explanation": "Pièce en prise ! Solution : **Dxg4**."},
+    {"type": "move", "id": "m1-en-prise-p2", "fen": "r1b1k2r/pp1nqppp/2n1p3/1B1pP3/3p4/2N2N2/PPP1QPPP/R3K2R w KQkq - 0 10", "preMove": "Nxd4", "source": "lichess:TsuuD", "prompt": "Trouve le meilleur coup.", "solution": ["Nxd4"], "engine": true, "hint": "Une pièce adverse n’est pas (assez) protégée.", "explanation": "Pièce en prise ! Solution : **Cxd4**."},
+    {"type": "move", "id": "m1-en-prise-p3", "fen": "5k2/5p2/p2r1q2/8/P6P/6Q1/5PP1/R5K1 w - - 3 49", "preMove": "h5", "source": "lichess:oBLk6", "prompt": "Trouve le meilleur coup.", "solution": ["Qxa1+"], "engine": true, "hint": "Une pièce adverse n’est pas (assez) protégée.", "explanation": "Pièce en prise ! Solution : **Dxa1+**."},
+    {"type": "move", "id": "m1-en-prise-p4", "fen": "rnb1k2r/ppppqppp/5n2/2b1pQ2/2B1P3/5N2/PPPP1PPP/RNB1K2R b KQkq - 7 5", "preMove": "d6", "source": "lichess:ntA9D", "prompt": "Trouve le meilleur coup.", "solution": ["Qxc8+"], "engine": true, "hint": "Une pièce adverse n’est pas (assez) protégée.", "explanation": "Pièce en prise ! Solution : **Dxc8+**."}
+  ]
+}

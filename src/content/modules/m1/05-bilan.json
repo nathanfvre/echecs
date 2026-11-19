@@ -1,0 +1,12 @@
+{
+  "id": "m1-bilan",
+  "title": "Bilan du module 1",
+  "intro": "Mélange de tout le module : pièces en prise, échanges, défense. Prends ton temps et compte avant de prendre.",
+  "steps": [
+    {"type": "move", "id": "m1-bilan-1", "fen": "6k1/5ppp/3p4/4q3/8/8/5PPP/4R1K1 w - - 0 1", "prompt": "La dame noire attaque ta tour. Que fais-tu ?", "solution": ["Rxe5"], "engine": true, "hint": "La dame est défendue par le pion d6… mais compte quand même.", "explanation": "**Txe5** dxe5 : tu donnes ta tour (5) contre la dame (9), **+4**."},
+    {"type": "move", "id": "m1-bilan-p1", "fen": "r1bq1rk1/1p2bppp/p1p5/3pP3/3PQ3/5N2/PP3PPP/R1B2RK1 w - - 0 14", "preMove": "Be3", "source": "lichess:R54Qa", "prompt": "Trouve le meilleur coup.", "solution": ["dxe4"], "engine": true, "hint": "Une pièce adverse n’est pas (assez) protégée.", "explanation": "Pièce en prise ! Solution : **dxe4**."},
+    {"type": "move", "id": "m1-bilan-p2", "fen": "r2qk2r/pp1bn2p/5p2/2bp2p1/Q7/2NB2BP/PP1N1PP1/R3R1K1 w kq - 2 17", "preMove": "Nxd5", "source": "lichess:p4yfF", "prompt": "Trouve le meilleur coup.", "solution": ["Bxa4"], "engine": true, "hint": "Une pièce adverse n’est pas (assez) protégée.", "explanation": "Pièce en prise ! Solution : **Fxa4**."},
+    {"type": "move", "id": "m1-bilan-p3", "fen": "r2qk2r/1p2bppp/p3p3/2np4/3Q1BP1/2N1P3/PPP2P1P/2KR3R b kq - 1 13", "preMove": "Bf6", "source": "lichess:RpdlE", "prompt": "Trouve le meilleur coup.", "solution": ["Qxc5"], "engine": true, "hint": "Une pièce adverse n’est pas (assez) protégée.", "explanation": "Pièce en prise ! Solution : **Dxc5**."},
+    {"type": "move", "id": "m1-bilan-p4", "fen": "rnr3k1/5pp1/p3q2p/B2p4/R2P4/3QP2P/5PP1/R5K1 w - - 5 21", "preMove": "Bb6", "source": "lichess:2FXsF", "prompt": "Trouve le meilleur coup.", "solution": ["Qxb6"], "engine": true, "hint": "Une pièce adverse n’est pas (assez) protégée.", "explanation": "Pièce en prise ! Solution : **Dxb6**."}
+  ]
+}

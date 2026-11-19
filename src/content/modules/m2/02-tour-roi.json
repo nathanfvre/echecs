@@ -1,0 +1,14 @@
+{
+  "id": "m2-tour-roi",
+  "title": "Mater avec la tour",
+  "intro": "Tour + roi contre roi : gagné aussi, mais plus long. La méthode :\n1. la tour **coupe** le roi adverse (elle lui interdit une rangée ou une colonne) ;\n2. ton roi vient **face** au roi adverse (opposition) ;\n3. la tour donne échec : le roi recule d'une rangée. On recommence jusqu'au bord.",
+  "steps": [
+    {"type": "demo", "fen": "4k3/8/4K3/8/8/8/8/R7 w - - 0 1", "text": "Les rois sont **face à face** (opposition). La tour n'a plus qu'à donner échec sur la 8e rangée : le roi noir ne peut pas avancer, le roi blanc lui prend d7, e7 et f7.", "arrows": [["a1", "a8"]], "moves": ["Ra8#"]},
+    {"type": "move", "id": "m2-tour-1", "fen": "4k3/8/4K3/8/8/8/8/R7 w - - 0 1", "prompt": "Mat en 1.", "solution": ["Ra8#"], "goal": "mate", "hint": "Les rois sont face à face.", "explanation": "**Ta8#** : c'est le mat type avec la tour."},
+    {"type": "move", "id": "m2-tour-2", "fen": "k7/8/1K6/8/8/8/8/7R w - - 0 1", "prompt": "Mat en 1.", "solution": ["Rh8#"], "goal": "mate", "hint": "Ton roi garde a7 et b7.", "explanation": "**Th8#** : la tour prend la 8e rangée."},
+    {"type": "move", "id": "m2-tour-3", "fen": "8/7r/8/8/8/5k2/8/5K2 b - - 0 1", "prompt": "Tu as les Noirs. Mat en 1.", "solution": ["Rh1#"], "goal": "mate", "hint": "Ton roi est face au roi blanc.", "explanation": "**Th1#** : même schéma, de l'autre côté."},
+    {"type": "choice", "id": "m2-tour-4", "fen": "8/8/8/8/8/8/R7/5K1k b - - 0 1", "prompt": "Les Blancs viennent de jouer Ta2. Qu'est-ce que c'est ?", "options": ["Échec et mat", "Pat (nulle)", "Échec"], "answer": 1, "facts": ["checkmate", "stalemate", "check"], "explanation": "**Pat.** Le roi noir n'a plus aucune case et n'est pas en échec. Avec la tour aussi, attention à toujours laisser une case."},
+    {"type": "practice", "id": "m2-tour-5", "fen": "4k3/8/8/4K3/8/8/8/7R w - - 0 1", "prompt": "Mate le roi noir contre Stockfish (il est déjà au bord).", "goal": "mate", "maxMoves": 10, "hint": "Mets ton roi face au roi noir, puis donne échec avec la tour sur la 8e rangée. S'il s'échappe sur le côté, attends avec la tour.", "explanation": "Bien joué : opposition puis échec, c'est toute la méthode."},
+    {"type": "practice", "id": "m2-tour-6", "fen": "8/8/8/4k3/8/8/8/R3K3 w - - 0 1", "prompt": "La vraie finale : roi noir au centre. Mate-le en 30 coups maximum.", "goal": "mate", "maxMoves": 30, "hint": "Coupe d'abord le roi avec la tour (Ta4 par exemple), approche ton roi, et donne échec seulement quand les rois sont face à face.", "explanation": "Tu sais mater avec la tour seule : c'est l'une des finales les plus importantes."}
+  ]
+}

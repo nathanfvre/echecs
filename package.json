@@ -11,7 +11,8 @@
     "verify": "tsx scripts/verify-content.ts && tsx scripts/verify-puzzles.ts",
     "build:puzzles": "tsx scripts/build-puzzles.ts",
     "predev": "node scripts/copy-stockfish.mjs",
-    "prebuild": "node scripts/copy-stockfish.mjs"
+    "prebuild": "node scripts/copy-stockfish.mjs",
+    "lesson:puzzles": "tsx scripts/lesson-puzzles.ts"
   },
   "dependencies": {
     "chess.js": "^1.4.0",

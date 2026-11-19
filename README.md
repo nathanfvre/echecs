@@ -72,10 +72,27 @@ src/
       "solution": ["Nc7+"], "engine": true, "hint": "Indice", "explanation": "Pourquoi c'est le bon coup" },
     { "type": "squares", "id": "m0-ma-lecon-2", "fen": "…", "from": "e4",
       "prompt": "Où peut aller cette pièce ?", "hint": "…", "explanation": "…" },
-    { "type": "choice", "id": "m0-ma-lecon-3", "prompt": "Question ?", "options": ["A", "B"], "answer": 0, "explanation": "…" }
+    { "type": "choice", "id": "m0-ma-lecon-3", "prompt": "Question ?", "options": ["A", "B"], "answer": 0, "explanation": "…" },
+    { "type": "choice", "id": "m0-ma-lecon-4", "fen": "…", "prompt": "Quel coup ?", "options": ["Nf3", "Nxf7"],
+      "answer": 0, "engineChoice": true, "explanation": "…" },
+    { "type": "practice", "id": "m0-ma-lecon-5", "fen": "…", "prompt": "Mate contre Stockfish.",
+      "goal": "mate", "maxMoves": 10, "hint": "…", "explanation": "…" },
+    { "type": "puzzles", "themes": ["fork"], "min": 500, "max": 800, "count": 4, "explain": "Fourchette !" }
   ]
 }
 ```
+
+Les types d'étapes :
+- `demo` : une position commentée (avec des coups à rejouer) — à utiliser peu : 20 % de lecture maximum ;
+- `move` : trouver le bon coup (ou la bonne suite) ;
+- `squares` : cliquer sur des cases ;
+- `choice` : question à choix ; avec `"engineChoice": true`, les options sont des coups et Stockfish vérifie
+  que la bonne réponse est nettement la meilleure ;
+- `practice` : jouer la position jusqu'au bout **contre Stockfish** : `"goal"` vaut `"mate"` (mater en
+  `maxMoves` coups), `"promote"` (promouvoir un pion sans le perdre) ou `"hold"` (tenir `maxMoves` coups) ;
+- `puzzles` : un emplacement provisoire. `npm run lesson:puzzles` le remplace par `count` puzzles Lichess
+  du thème demandé et de classement `min`–`max` (non utilisés ailleurs), sous forme d'exercices `move`
+  marqués `"source": "lichess:<id>"`. Il faut avoir lancé `npm run build:puzzles` une fois avant.
 
 Règles importantes :
 - les **coups** sont écrits en notation **anglaise** (`Nf3`, `Qxd7+`, `O-O`, `e8=Q`) ;
@@ -85,7 +102,9 @@ Règles importantes :
 - `"engine": true` demande à Stockfish de confirmer la solution (à mettre sur tout exercice tactique) ;
 - une leçon est validée avec **80 %** d'exercices réussis du premier coup, sans indice.
 
-3. Lance `npm run verify` : corrige jusqu'à ce que tout soit vert.
+3. S'il y a des emplacements `puzzles`, lance `npm run lesson:puzzles`.
+4. Lance `npm run verify` : corrige jusqu'à ce que tout soit vert. Le script contrôle aussi, avec Stockfish,
+   les QCM `engineChoice` et que les positions `practice` sont bien gagnantes (ou tenables).
 
 ## Puzzles
 
@@ -134,7 +153,7 @@ et toujours affichés en notation française (`Cf3`) : R = roi, D = dame, T = to
 - [x] Phase b — moteur de leçons et d'exercices, module 0
 - [x] Phase c — puzzles et répétition espacée
 - [x] Phase d — bot Stockfish et analyse
-- [ ] Phase e — modules 1 à 9, entraîneur d'ouvertures
+- [ ] Phase e — modules 1 à 9, entraîneur d'ouvertures (fait : modules 1 et 2)
 - [ ] Phase f — tableau de bord
 - [ ] Phase g — déploiement
 

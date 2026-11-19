@@ -1,0 +1,14 @@
+{
+  "id": "m1-echanges",
+  "title": "Compter avant d'échanger",
+  "intro": "Avant de prendre une pièce défendue, compte : **ce que tu prends** moins **ce que tu perds** quand l'adversaire reprend.\nPrends avec ta pièce **la moins précieuse** d'abord.",
+  "steps": [
+    {"type": "demo", "fen": "6k1/5ppp/8/3p4/4P3/1BN2N2/5PPP/3R2K1 w - - 0 1", "text": "Le pion d5 est attaqué **4 fois** : par le pion e4, le cavalier c3, le fou b3 et la tour d1. Le cavalier f3, lui, ne l'attaque pas.", "arrows": [["e4", "d5"], ["c3", "d5"], ["b3", "d5"], ["d1", "d5"]]},
+    {"type": "squares", "id": "m1-echanges-1", "fen": "6k1/5ppp/8/3p4/4P3/1BN2N2/5PPP/3R2K1 w - - 0 1", "prompt": "Même position : clique sur **toutes les pièces blanches** qui attaquent d5, puis valide.", "answer": ["b3", "c3", "d1", "e4"], "hint": "Il y en a 4 : un pion, un cavalier, un fou, une tour.", "explanation": "e4 (le pion prend en diagonale), c3 (saut en L), b3 (diagonale) et d1 (colonne)."},
+    {"type": "choice", "id": "m1-echanges-2", "prompt": "Ta **dame** prend un pion défendu par un pion adverse. Bilan après la reprise ?", "options": ["+1", "−8", "0"], "answer": 1, "explanation": "Tu prends 1 point, tu perds ta dame (9) : **−8**. Ne prends jamais une pièce défendue avec plus précieux qu'elle sans calculer."},
+    {"type": "choice", "id": "m1-echanges-3", "prompt": "Ton **cavalier** (3) prend une **tour** (5) défendue, puis on reprend ton cavalier. Bilan ?", "options": ["+2", "−2", "0"], "answer": 0, "explanation": "5 − 3 = **+2** : tu as gagné la qualité."},
+    {"type": "move", "id": "m1-echanges-4", "fen": "3k4/p1r2ppp/8/1N6/8/8/P4PPP/6K1 w - - 0 1", "prompt": "Gagne du matériel… et regarde ce que menace la tour noire.", "solution": ["Nxc7"], "engine": true, "hint": "La tour c7 est défendue par le roi, mais elle vaut plus que ton cavalier.", "explanation": "**Cxc7** Rxc7 : +2 (la qualité). Et surtout, la tour menaçait **Tc1#** ! Cxa7 aurait perdu sur ce mat du couloir."},
+    {"type": "move", "id": "m1-echanges-5", "fen": "6k1/5ppp/8/q6B/8/2N5/1P3PPP/6K1 b - - 0 1", "prompt": "Tu as les Noirs. Ta dame peut prendre deux pièces. Une seule est un bon choix.", "solution": ["Qxh5"], "accept": ["Qa1+"], "engine": true, "hint": "Le cavalier c3 est défendu par le pion b2. Le fou h5, lui ?", "explanation": "**Dxh5** gagne un fou gratuitement (Da1+, plus compliqué, gagne aussi une pièce). Dxc3 ?? bxc3 aurait échangé ta dame (9) contre un cavalier (3)."},
+    {"type": "move", "id": "m1-echanges-6", "fen": "6k1/5ppp/8/3p4/4P3/1BN2N2/5PPP/3R2K1 w - - 0 1", "prompt": "Le pion d5 n'est défendu par rien. Prends-le avec ta pièce **la moins précieuse**.", "solution": ["exd5"], "hint": "Quelle pièce blanche qui attaque d5 vaut le moins ?", "explanation": "**exd5** : on prend avec le pion, la pièce la moins précieuse. C'est la bonne habitude : si la case était défendue, tu perdrais le moins possible."}
+  ]
+}

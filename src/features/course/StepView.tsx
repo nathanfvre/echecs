@@ -2,6 +2,7 @@ import { isExercise, type ExerciseStep, type Step } from '../../content/types'
 import { ChoiceExercise } from './ChoiceExercise'
 import { DemoView } from './DemoView'
 import { MoveExercise } from './MoveExercise'
+import { PracticeExercise } from './PracticeExercise'
 import { SquaresExercise } from './SquaresExercise'
 
 /** Affiche une étape de leçon (démo ou exercice). */
@@ -13,10 +14,12 @@ export function StepView({ step, onNext }: { step: Step; onNext: (r?: { id: stri
 export function ExerciseView({ step, onDone }: { step: ExerciseStep; onDone: (ok: boolean) => void }) {
   switch (step.type) {
     case 'move':
-      return <MoveExercise step={step} onDone={onDone} />
+      return <MoveExercise step={step} onDone={onDone} preMove={step.preMove} />
     case 'squares':
       return <SquaresExercise step={step} onDone={onDone} />
     case 'choice':
       return <ChoiceExercise step={step} onDone={onDone} />
+    case 'practice':
+      return <PracticeExercise step={step} onDone={onDone} />
   }
 }

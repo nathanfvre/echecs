@@ -1,0 +1,14 @@
+{
+  "id": "m2-dame-roi",
+  "title": "Mater avec la dame",
+  "intro": "Dame + roi contre roi seul : c'est **toujours gagné**. La méthode :\n1. la dame **enferme** le roi adverse dans une boîte qui rétrécit (place-la à un saut de cavalier du roi) ;\n2. quand il est au bord, **ton roi s'approche** ;\n3. mat. **Attention au pat** : laisse toujours une case au roi adverse tant que ce n'est pas mat.",
+  "steps": [
+    {"type": "demo", "fen": "8/8/8/3k4/8/2Q5/8/4K3 w - - 0 1", "text": "La dame en c3 contrôle la colonne c et la 3e rangée : le roi noir est enfermé dans le rectangle d4–h8. À chaque coup, la dame réduit la boîte, sans jamais donner d'échec inutile.", "highlight": ["c3"]},
+    {"type": "move", "id": "m2-dame-1", "fen": "k7/8/1K6/8/8/8/8/2Q5 w - - 0 1", "prompt": "Mat en 1.", "solution": ["Qc8#"], "goal": "mate", "hint": "Ton roi contrôle déjà a7 et b7. Il reste la 8e rangée.", "explanation": "**Dc8#** : la dame tient toute la 8e rangée, le roi blanc garde a7 et b7."},
+    {"type": "move", "id": "m2-dame-2", "fen": "8/8/8/8/8/Q7/5K2/7k w - - 0 1", "prompt": "Mat en 1.", "solution": ["Qh3#"], "goal": "mate", "hint": "Le roi noir est dans le coin. Ton roi contrôle g1 et g2.", "explanation": "**Dh3#** : la dame attaque h1 par la colonne h et contrôle h2 et g2."},
+    {"type": "choice", "id": "m2-dame-3", "fen": "8/8/8/8/8/6Q1/5K2/7k b - - 0 1", "prompt": "Les Blancs viennent de jouer Dg3. Qu'est-ce que c'est ?", "options": ["Échec et mat", "Pat (nulle)", "Échec"], "answer": 1, "facts": ["checkmate", "stalemate", "check"], "explanation": "**Pat !** Le roi noir n'est pas en échec mais n'a aucune case : c'est nulle. Toujours vérifier qu'il reste une case au roi adverse avant le mat."},
+    {"type": "move", "id": "m2-dame-4", "fen": "7K/8/6k1/8/8/8/q7/8 b - - 0 1", "prompt": "Tu as les Noirs. Mat en 1.", "solution": ["Qa8#"], "goal": "mate", "hint": "Le roi blanc est dans le coin, ton roi garde g7 et h7.", "explanation": "**Da8#** : la dame prend toute la 8e rangée."},
+    {"type": "practice", "id": "m2-dame-5", "fen": "7k/8/8/8/8/8/8/K2Q4 w - - 0 1", "prompt": "Mate le roi noir contre Stockfish. Il est déjà au bord : approche ton roi.", "goal": "mate", "maxMoves": 10, "hint": "Coince le roi sur la 8e rangée avec la dame (Dd7 par exemple), puis amène ton roi jusqu'en 6e rangée.", "explanation": "Bravo : boîte, approche du roi, mat !"},
+    {"type": "practice", "id": "m2-dame-6", "fen": "8/8/8/3k4/8/8/8/2Q1K3 w - - 0 1", "prompt": "La vraie finale : le roi noir est au centre. Mate-le en 20 coups maximum.", "goal": "mate", "maxMoves": 20, "hint": "Place ta dame à un saut de cavalier du roi noir et suis-le pour réduire la boîte. Quand il est au bord, fais venir ton roi.", "explanation": "Tu sais mater avec la dame : cette technique doit devenir automatique."}
+  ]
+}

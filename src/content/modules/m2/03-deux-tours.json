@@ -1,0 +1,13 @@
+{
+  "id": "m2-deux-tours",
+  "title": "Le mat de l'escalier",
+  "intro": "Avec **deux tours** (ou dame + tour), pas besoin du roi : les tours avancent l'une après l'autre, comme un **escalier**. L'une tient une rangée pendant que l'autre donne échec sur la suivante.",
+  "steps": [
+    {"type": "demo", "fen": "8/8/8/7k/8/8/R7/1R4K1 w - - 0 1", "text": "Rejoue les coups : la tour a donne échec, puis la tour b, puis la tour a… Le roi noir recule jusqu'au bord.", "moves": ["Ra5+", "Kg6", "Rb6+", "Kf7", "Ra7+", "Ke8", "Rb8#"]},
+    {"type": "move", "id": "m2-tours-1", "fen": "6k1/R7/8/8/8/8/8/1R4K1 w - - 0 1", "prompt": "Mat en 1.", "solution": ["Rb8#"], "goal": "mate", "hint": "Une tour tient déjà la 7e rangée.", "explanation": "**Tb8#** : la tour a tient la 7e rangée, la tour b donne échec sur la 8e."},
+    {"type": "move", "id": "m2-tours-2", "fen": "k7/7R/8/8/8/8/8/K5R1 w - - 0 1", "prompt": "Mat en 1.", "solution": ["Rg8#"], "goal": "mate", "hint": "Même schéma.", "explanation": "**Tg8#**."},
+    {"type": "move", "id": "m2-tours-3", "fen": "1r4k1/8/8/8/8/8/r7/6K1 b - - 0 1", "prompt": "Tu as les Noirs. Mat en 1.", "solution": ["Rb1#"], "goal": "mate", "hint": "Ta tour a2 tient déjà la 2e rangée.", "explanation": "**Tb1#** : l'escalier marche aussi pour les Noirs."},
+    {"type": "choice", "id": "m2-tours-4", "prompt": "Le roi noir s'approche d'une de tes tours pour la prendre. Que faire ?", "options": ["L'éloigner à l'autre bout de sa rangée", "La défendre avec l'autre tour", "Donner échec avec l'autre tour"], "answer": 0, "explanation": "On **éloigne la tour** le plus loin possible sur la même rangée : elle continue de couper le roi, et il ne peut plus l'attraper."},
+    {"type": "practice", "id": "m2-tours-5", "fen": "8/8/8/3k4/8/8/8/R3K2R w - - 0 1", "prompt": "Mate le roi noir avec tes deux tours en 8 coups maximum.", "goal": "mate", "maxMoves": 8, "hint": "Une tour coupe une rangée, l'autre donne échec sur la rangée suivante. Si le roi s'approche d'une tour, éloigne-la.", "explanation": "L'escalier : rapide et sans risque de pat."}
+  ]
+}

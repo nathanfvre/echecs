@@ -1,0 +1,14 @@
+{
+  "id": "m2-bilan",
+  "title": "Bilan du module 2",
+  "intro": "Des mats en 1 et en 2 tirés de vraies parties, et une finale tour + roi pour vérifier que la technique est acquise.",
+  "steps": [
+    {"type": "move", "id": "m2-bilan-p1", "fen": "r4rk1/1p2bppp/p1b1p3/2Nnq3/3B2Q1/PB6/1P3PPP/2R2RK1 b - - 5 19", "preMove": "Qf4", "source": "lichess:jkA2O", "prompt": "Mat en 1.", "solution": ["Qxg7#"], "goal": "mate", "engine": true, "hint": "Un seul coup suffit pour mater. Regarde tous les échecs.", "explanation": "Mat ! Solution : **Dxg7#**."},
+    {"type": "move", "id": "m2-bilan-p2", "fen": "r3kbnr/ppp2ppp/2n2q2/4N3/5Bb1/5N2/PPP1PPPP/R2QKB1R b KQkq - 2 7", "preMove": "Bxf3", "source": "lichess:hN4Ba", "prompt": "Mat en 1.", "solution": ["Qd7#"], "goal": "mate", "engine": true, "hint": "Un seul coup suffit pour mater. Regarde tous les échecs.", "explanation": "Mat ! Solution : **Dd7#**."},
+    {"type": "move", "id": "m2-bilan-p3", "fen": "4Q3/2R3R1/p2P1p1p/1p3p2/5P1k/4P3/5qBK/5r2 w - - 6 39", "preMove": "Qg6", "source": "lichess:TcUyq", "prompt": "Mat en 1.", "solution": ["Qg1#"], "goal": "mate", "engine": true, "hint": "Un seul coup suffit pour mater. Regarde tous les échecs.", "explanation": "Mat ! Solution : **Dg1#**."},
+    {"type": "move", "id": "m2-bilan-p4", "fen": "r1b4k/pp3B1q/4p3/8/5p1Q/8/P5PP/1R5K w - - 9 32", "preMove": "Qxf4", "source": "lichess:lhbfL", "prompt": "Mat en 2.", "solution": ["Qxb1+", "Qc1", "Qxc1#"], "goal": "mate", "engine": true, "hint": "Commence par un échec (ou une menace) qui ne laisse presque aucun choix.", "explanation": "Mat en 2 ! Solution : **Dxb1+ Dc1 Dxc1#**."},
+    {"type": "move", "id": "m2-bilan-p5", "fen": "2k3r1/1bp5/1pPp4/3Pprq1/1P5p/Q5B1/5PP1/R3RK2 b - - 0 30", "preMove": "hxg3", "source": "lichess:I3KQ2", "prompt": "Mat en 2.", "solution": ["Qa8+", "Bxa8", "Rxa8#"], "goal": "mate", "engine": true, "hint": "Commence par un échec (ou une menace) qui ne laisse presque aucun choix.", "explanation": "Mat en 2 ! Solution : **Da8+ Fxa8 Txa8#**."},
+    {"type": "move", "id": "m2-bilan-p6", "fen": "8/2R3p1/1rp2p1k/7p/2P2P1K/6PP/8/8 w - - 2 42", "preMove": "c5", "source": "lichess:DKt62", "prompt": "Mat en 2.", "solution": ["g5+", "fxg5+", "fxg5#"], "goal": "mate", "engine": true, "hint": "Commence par un échec (ou une menace) qui ne laisse presque aucun choix.", "explanation": "Mat en 2 ! Solution : **g5+ fxg5+ fxg5#**."},
+    {"type": "practice", "id": "m2-bilan-1", "fen": "8/8/3k4/8/8/8/8/4K2R w - - 0 1", "prompt": "Mate le roi noir avec la tour en 30 coups maximum.", "goal": "mate", "maxMoves": 30, "hint": "Coupe le roi, approche ton roi, échec quand les rois sont face à face.", "explanation": "Module 2 terminé : tu sais conclure une partie gagnée !"}
+  ]
+}

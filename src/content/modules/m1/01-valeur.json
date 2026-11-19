@@ -1,0 +1,14 @@
+{
+  "id": "m1-valeur",
+  "title": "La valeur des pièces",
+  "intro": "Pour savoir si un échange est bon, on compte en points :\n**pion 1 · cavalier 3 · fou 3 · tour 5 · dame 9**.\nLe roi n'a pas de prix : le perdre, c'est perdre la partie.",
+  "steps": [
+    {"type": "demo", "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "text": "Chaque camp commence avec **39 points** : 8 pions (8), 2 cavaliers (6), 2 fous (6), 2 tours (10) et une dame (9). Celui qui a plus de points a souvent l'avantage.", "highlight": ["d1", "a1", "h1", "b1", "c1"]},
+    {"type": "choice", "id": "m1-valeur-1", "prompt": "Tu donnes ton **fou** (3) et tu prends une **tour** (5). Bilan ?", "options": ["Je gagne 2 points", "Je perds 2 points", "C'est égal"], "answer": 0, "explanation": "5 − 3 = **+2**. Gagner une tour contre une pièce mineure (fou ou cavalier) s'appelle **gagner la qualité**."},
+    {"type": "choice", "id": "m1-valeur-2", "prompt": "Tu donnes ta **dame** (9) contre une **tour et un cavalier** (5 + 3). Bilan ?", "options": ["Je gagne 1 point", "Je perds 1 point", "C'est égal"], "answer": 1, "explanation": "Tu reçois 8 points et tu en donnes 9 : **−1**. La dame vaut plus qu'une tour et une pièce mineure."},
+    {"type": "choice", "id": "m1-valeur-3", "fen": "r1b3k1/5ppp/8/8/8/8/5PPP/3Q2K1 w - - 0 1", "prompt": "Qui a le plus de matériel ?", "options": ["Les Blancs, de 1 point", "Les Noirs, de 1 point", "Égalité"], "answer": 0, "explanation": "Blancs : dame (9) + 3 pions = **12**. Noirs : tour (5) + fou (3) + 3 pions = **11**."},
+    {"type": "move", "id": "m1-valeur-4", "fen": "6k1/3r1ppp/8/4N3/8/8/5PPP/6K1 w - - 0 1", "prompt": "Ton cavalier peut prendre une tour ou un pion. Choisis le plus gros butin.", "solution": ["Nxd7"], "engine": true, "hint": "Compare : une tour vaut 5, un pion 1 (et le pion f7 est défendu par le roi).", "explanation": "**Cxd7** gagne une tour entière. En plus, la tour menaçait **Td1#** (mat du couloir) !"},
+    {"type": "move", "id": "m1-valeur-5", "fen": "6k1/5ppp/5n2/2b5/4P3/4Q3/5PPP/6K1 b - - 0 1", "prompt": "Tu as les Noirs. Gagne le plus de points possible.", "solution": ["Bxe3"], "engine": true, "hint": "Ton fou peut prendre la dame, même si elle est défendue.", "explanation": "**Fxe3** : tu donnes ton fou (3) contre la dame (9). Même après fxe3, tu as gagné **6 points**."},
+    {"type": "move", "id": "m1-valeur-6", "fen": "6k1/6pp/2p5/3n1p2/4P3/8/5PPP/6K1 w - - 0 1", "prompt": "Ton pion e4 peut prendre deux choses. Laquelle rapporte le plus ?", "solution": ["exd5"], "engine": true, "hint": "Un cavalier vaut 3 points, un pion 1. Si les Noirs reprennent, compte quand même.", "explanation": "**exd5** : après cxd5, tu as échangé un pion (1) contre un cavalier (3) : **+2**."}
+  ]
+}

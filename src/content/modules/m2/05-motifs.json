@@ -1,0 +1,14 @@
+{
+  "id": "m2-motifs",
+  "title": "Motifs de mat à connaître",
+  "intro": "Quelques mats reviennent sans cesse. Si tu les reconnais, tu les trouveras en partie :\n- le **mat du baiser** : la dame se colle au roi, protégée par une autre pièce ;\n- le **mat à l'étouffée** : le roi est entouré de ses propres pièces et un cavalier donne échec ;\n- le **coup du berger** : la dame prend en f7 (ou f2), protégée par le fou.",
+  "steps": [
+    {"type": "move", "id": "m2-motifs-1", "fen": "6k1/5p1p/5BpQ/8/8/8/5PPP/6K1 w - - 0 1", "prompt": "Mat en 1 (mat du baiser).", "solution": ["Qg7#"], "goal": "mate", "hint": "La dame peut se coller au roi : quelle pièce la protège ?", "explanation": "**Dg7#** : la dame est protégée par le fou f6, le roi ne peut pas la prendre."},
+    {"type": "move", "id": "m2-motifs-2", "fen": "6rk/6pp/8/6N1/8/8/8/6K1 w - - 0 1", "prompt": "Mat en 1 (mat à l'étouffée).", "solution": ["Nf7#"], "goal": "mate", "hint": "Le roi noir est entouré de ses propres pièces.", "explanation": "**Cf7#** : le cavalier saute par-dessus tout, et le roi n'a aucune case."},
+    {"type": "move", "id": "m2-motifs-3", "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR w KQkq - 4 4", "prompt": "Mat en 1 (coup du berger).", "solution": ["Qxf7#"], "goal": "mate", "hint": "Le point faible des Noirs est f7, défendu seulement par le roi.", "explanation": "**Dxf7#** : la dame est protégée par le fou c4. Au module 4, tu apprendras à te défendre contre ce piège."},
+    {"type": "move", "id": "m2-motifs-p1", "fen": "6k1/pR4p1/5pKp/4p3/1P5P/P7/5r2/8 b - - 3 32", "preMove": "e4", "source": "lichess:uv5Dm", "prompt": "Mat en 1.", "solution": ["Rb8#"], "goal": "mate", "engine": true, "hint": "Un seul coup suffit pour mater. Regarde tous les échecs.", "explanation": "Mat ! Solution : **Tb8#**."},
+    {"type": "move", "id": "m2-motifs-p2", "fen": "8/5r2/5P2/2p1p3/p1k5/K7/2P5/5R2 w - - 0 52", "preMove": "Kxa4", "source": "lichess:pIwor", "prompt": "Mat en 1.", "solution": ["Ra7#"], "goal": "mate", "engine": true, "hint": "Un seul coup suffit pour mater. Regarde tous les échecs.", "explanation": "Mat ! Solution : **Ta7#**."},
+    {"type": "move", "id": "m2-motifs-p3", "fen": "2kr3r/pp3p2/2nqppp1/8/8/1P1P4/P3BPPP/R2Q1RK1 w - - 0 17", "preMove": "Rc1", "source": "lichess:XulCR", "prompt": "Mat en 1.", "solution": ["Qxh2#"], "goal": "mate", "engine": true, "hint": "Un seul coup suffit pour mater. Regarde tous les échecs.", "explanation": "Mat ! Solution : **Dxh2#**."},
+    {"type": "move", "id": "m2-motifs-p4", "fen": "1K6/1P1n2pk/7p/4n2P/3r4/8/P7/1RR5 w - - 1 48", "preMove": "Ka7", "source": "lichess:0s80I", "prompt": "Mat en 1.", "solution": ["Ra4#"], "goal": "mate", "engine": true, "hint": "Un seul coup suffit pour mater. Regarde tous les échecs.", "explanation": "Mat ! Solution : **Ta4#**."}
+  ]
+}

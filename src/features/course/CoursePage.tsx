@@ -5,17 +5,19 @@ import { useProgress } from '../../lib/progress'
 import { isUnlocked } from './unlock'
 
 // Modules prévus mais pas encore écrits (phase e).
-const UPCOMING = [
-  'Module 1 — Valeur des pièces et échanges',
-  'Module 2 — Mats élémentaires',
-  'Module 3 — Tactique 1',
-  "Module 4 — Principes d'ouverture",
-  'Module 5 — Ton répertoire',
-  'Module 6 — Milieu de partie',
-  'Module 7 — Finales essentielles',
-  'Module 8 — Tactique 2',
-  'Module 9 — Pratique de la partie',
+// Modules prévus, affichés « bientôt » tant que leur contenu n'existe pas.
+const PLANNED: [order: number, title: string][] = [
+  [1, 'Module 1 — Valeur des pièces et échanges'],
+  [2, 'Module 2 — Mats élémentaires'],
+  [3, 'Module 3 — Tactique 1'],
+  [4, "Module 4 — Principes d'ouverture"],
+  [5, 'Module 5 — Ton répertoire'],
+  [6, 'Module 6 — Milieu de partie'],
+  [7, 'Module 7 — Finales essentielles'],
+  [8, 'Module 8 — Tactique 2'],
+  [9, 'Module 9 — Pratique de la partie'],
 ]
+const UPCOMING = PLANNED.filter(([o]) => !MODULES.some((m) => m.order === o)).map(([, t]) => t)
 
 export function CoursePage() {
   const progress = useProgress()
@@ -69,14 +71,14 @@ export function CoursePage() {
           </section>
         )
       })}
-      <section>
+      {UPCOMING.length > 0 && <section>
         <h2 className="mb-2 text-lg font-semibold text-stone-400">Bientôt</h2>
         <ul className="space-y-1 text-sm text-stone-400">
           {UPCOMING.map((t) => (
             <li key={t}>🔒 {t}</li>
           ))}
         </ul>
-      </section>
+      </section>}
     </div>
   )
 }

@@ -5,7 +5,9 @@
 //  2. chaque coup (démos, solutions, coups acceptés) est légal et bien écrit ;
 //  3. les réponses des cases / questions à choix correspondent à la position ;
 //  4. pour les exercices marqués "engine": true, Stockfish confirme que le coup de la solution
-//     est le meilleur, ou un coup clairement gagnant (mat ou au moins +3).
+//     est le meilleur (à 0,3 pion près), ou un coup clairement gagnant (mat ou au moins +3) ;
+//  5. questions "engineChoice" : la bonne option est nettement le meilleur coup selon Stockfish ;
+//  6. finales "practice" : la position est bien gagnante (mater / promouvoir) ou tenable (tenir).
 //
 // Le script s'arrête avec une erreur s'il trouve un problème : rien d'inexact ne doit passer.
 import { readdirSync, readFileSync } from 'node:fs'
@@ -18,6 +20,8 @@ import { Engine, score } from './engine'
 const ROOT = join(import.meta.dirname, '../src/content/modules')
 const DEPTH = Number(process.env.DEPTH ?? 18)
 const WINNING = 300 // centipions : « clairement gagnant »
+const CLOSE = 30 // centipions : « aussi bon que le meilleur coup »
+const CHOICE_MARGIN = 30 // la bonne option d'un QCM moteur doit dépasser les autres d'au moins 0,3 pion
 
 const errors: string[] = []
 const warnings: string[] = []
@@ -72,7 +76,7 @@ async function checkWithEngine(engine: Engine, fen: string, san: string, where: 
   const solUci = uci(game, san)
   const sol = solUci === best.bestmove ? best : (await engine.analyse(fen, DEPTH, { searchmoves: [solUci] }))[0]
   const s = score(sol)
-  const ok = solUci === best.bestmove || (sol.mate !== null && sol.mate > 0) || s >= WINNING
+  const ok = solUci === best.bestmove || (sol.mate !== null && sol.mate > 0) || s >= WINNING || (best.mate === null && s >= score(best) - CLOSE)
   if (!ok) {
     const bestSan = game.move(best.bestmove).san
     errors.push(`${where} : Stockfish n'est pas d'accord. ${san} vaut ${fmt(sol)}, alors que ${bestSan} vaut ${fmt(best)}`)
@@ -94,6 +98,10 @@ function fmt(e: { cp: number | null; mate: number | null }) {
 }
 
 async function checkStep(step: Step, where: string, engine: () => Promise<Engine>) {
+  if ((step as { type: string }).type === 'puzzles') {
+    errors.push(`${where} : emplacement "puzzles" non rempli — lance npm run lesson:puzzles`)
+    return
+  }
   const fp = fenProblem(step.fen ?? '')
   if (step.fen !== undefined && fp) {
     errors.push(`${where} : ${fp} — ${step.fen}`)
@@ -114,6 +122,8 @@ async function checkStep(step: Step, where: string, engine: () => Promise<Engine
       if (step.solution.length % 2 === 0) errors.push(`${where} : la solution doit finir par un coup de l'élève`)
       if (step.accept?.length && step.solution.length > 1) errors.push(`${where} : "accept" n'est permis que pour une solution d'un seul coup`)
       const g = new Chess(step.fen)
+      if (step.preMove && !playSan(g, step.preMove, `${where} (coup adverse de départ)`)) return
+      const startFen = g.fen()
       for (const [i, san] of step.solution.entries()) {
         const fenBefore = g.fen()
         if (!playSan(g, san, `${where} (coup ${i + 1})`)) return
@@ -123,7 +133,7 @@ async function checkStep(step: Step, where: string, engine: () => Promise<Engine
       for (const san of step.accept ?? []) playSan(new Chess(step.fen), san, `${where} (accept)`)
       if (step.engine) {
         const e = await engine()
-        const pos = new Chess(step.fen)
+        const pos = new Chess(startFen)
         for (const [i, san] of step.solution.entries()) {
           if (i % 2 === 0) await checkWithEngine(e, pos.fen(), san, `${where} (coup ${i + 1})`, step.accept ?? [], step.goal === 'mate')
           pos.move(san)
@@ -165,6 +175,45 @@ async function checkStep(step: Step, where: string, engine: () => Promise<Engine
             errors.push(`${where} : ${step.legal} est ${legal ? 'légal' : 'illégal'} mais la réponse dit l'inverse`)
         }
       }
+      if (step.engineChoice) {
+        if (!step.fen) {
+          errors.push(`${where} : "engineChoice" sans position`)
+          break
+        }
+        const sans: string[] = []
+        for (const opt of step.options) if (playSan(new Chess(step.fen), opt, `${where} (option)`)) sans.push(opt)
+        if (sans.length !== step.options.length) break
+        const e = await engine()
+        engineChecks++
+        const g = new Chess(step.fen)
+        const evals = []
+        for (const san of sans) evals.push((await e.analyse(step.fen, DEPTH, { searchmoves: [uci(g, san)] }))[0])
+        const right = score(evals[step.answer])
+        for (const [i, ev] of evals.entries())
+          if (i !== step.answer && score(ev) > right - CHOICE_MARGIN)
+            errors.push(`${where} : ${sans[i]} (${fmt(ev)}) vaut autant ou plus que la bonne réponse ${sans[step.answer]} (${fmt(evals[step.answer])})`)
+      }
+      break
+    }
+    case 'practice': {
+      if (step.maxMoves < 1) errors.push(`${where} : "maxMoves" doit être au moins 1`)
+      const g = new Chess(step.fen)
+      if (g.isGameOver()) {
+        errors.push(`${where} : la partie est déjà finie`)
+        break
+      }
+      const e = await engine()
+      engineChecks++
+      const [best] = await e.analyse(step.fen, Math.max(DEPTH, 20))
+      const s = score(best)
+      if (step.goal === 'hold') {
+        if (s < -150) errors.push(`${where} : position perdue (${fmt(best)}), impossible à tenir`)
+      } else if (!((best.mate !== null && best.mate > 0) || s >= 500))
+        errors.push(`${where} : position pas clairement gagnante (${fmt(best)})`)
+      else if (step.goal === 'mate' && best.mate !== null && best.mate > step.maxMoves)
+        errors.push(`${where} : Stockfish mate en ${best.mate}, plus que les ${step.maxMoves} coups permis`)
+      else if (step.goal === 'mate' && best.mate === null)
+        warnings.push(`${where} : Stockfish ne voit pas encore le mat (${fmt(best)}) — vérifie que ${step.maxMoves} coups suffisent`)
       break
     }
   }

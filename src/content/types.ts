@@ -31,6 +31,10 @@ export type MoveStep = {
   accept?: string[]
   goal?: 'mate'
   engine?: boolean
+  /** Coup adverse (SAN) joué automatiquement depuis `fen` avant que l'élève cherche (ex. puzzles Lichess). */
+  preMove?: string
+  /** Origine de la position, ex. "lichess:AbC12" (puzzle de la base Lichess, CC0). */
+  source?: string
   hint: string
   explanation: string
   orientation?: 'white' | 'black'
@@ -71,12 +75,51 @@ export type ChoiceStep = {
   answer: number
   facts?: Fact[]
   legal?: string
+  /**
+   * Les options sont des coups (SAN) jouables dans `fen` : le script vérifie avec Stockfish que
+   * la bonne réponse est nettement le meilleur de ces coups.
+   */
+  engineChoice?: boolean
   hint?: string
   explanation: string
   orientation?: 'white' | 'black'
 }
 
-export type ExerciseStep = MoveStep | SquaresStep | ChoiceStep
+/**
+ * Jouer une position jusqu'au bout contre Stockfish.
+ * goal "mate" : mater en `maxMoves` coups maximum ; "promote" : promouvoir un pion sans le perdre aussitôt ;
+ * "hold" : tenir `maxMoves` coups sans perdre (nulle).
+ */
+export type PracticeStep = {
+  type: 'practice'
+  id: string
+  fen: string
+  prompt: string
+  goal: 'mate' | 'promote' | 'hold'
+  maxMoves: number
+  hint: string
+  explanation: string
+  orientation?: 'white' | 'black'
+}
+
+/**
+ * Emplacement à remplir automatiquement par des puzzles Lichess (npm run lesson:puzzles).
+ * N'existe que pendant l'écriture d'une leçon : le script le remplace par des exercices « move ».
+ */
+export type PuzzlesPlaceholder = {
+  type: 'puzzles'
+  themes: string[]
+  min: number
+  max: number
+  count: number
+  /** Nombre maximum de coups à trouver par l'élève. */
+  maxMoves?: number
+  /** Début d'explication, ex. « Fourchette : ». */
+  explain?: string
+  hint?: string
+}
+
+export type ExerciseStep = MoveStep | SquaresStep | ChoiceStep | PracticeStep
 export type Step = DemoStep | ExerciseStep
 
 export type Lesson = {

@@ -1,0 +1,13 @@
+{
+  "id": "m1-defendre",
+  "title": "Défendre ses pièces",
+  "intro": "Quand une de tes pièces est attaquée, tu as 3 solutions :\n1. la **déplacer** sur une case sûre ;\n2. la **défendre** ;\n3. **contre-attaquer** plus fort (un échec, une menace plus grosse).\nAvant chaque coup, regarde ce que menace le dernier coup adverse.",
+  "steps": [
+    {"type": "demo", "fen": "6k1/1p3ppp/4p3/3p4/2B5/8/P1P2PPP/6K1 w - - 0 1", "text": "Le pion noir vient d'avancer en d5 : il **attaque ton fou** c4. Il faut le mettre à l'abri, sur une case où rien ne peut le prendre.", "arrows": [["d5", "c4"]]},
+    {"type": "choice", "id": "m1-defendre-1", "fen": "6k1/1p3ppp/4p3/3p4/2B5/8/P1P2PPP/6K1 w - - 0 1", "prompt": "Où mettre ton fou ?", "options": ["Bxd5", "Bb3", "Ba6"], "answer": 1, "engineChoice": true, "hint": "Pour chaque case, demande-toi : un pion ou une pièce noire peut-il la prendre ?", "explanation": "**Fb3** : le fou est en sécurité. Fxd5 ? exd5 perd le fou contre un pion, et Fa6 ? bxa6 le perd pour rien."},
+    {"type": "choice", "id": "m1-defendre-2", "fen": "2b3k1/1p3ppp/3p4/4N3/8/8/PP3PPP/6K1 w - - 0 1", "prompt": "Le pion noir d6 attaque ton cavalier. Où le mettre ?", "options": ["Nxf7", "Ng4", "Nf3"], "answer": 2, "engineChoice": true, "hint": "Regarde les diagonales du fou c8 et ce qui défend f7.", "explanation": "**Cf3** : case sûre. Cxf7 ? Rxf7 donne le cavalier pour un pion, et Cg4 ? Fxg4 le perd tout de suite (le fou c8 surveille g4)."},
+    {"type": "choice", "id": "m1-defendre-3", "fen": "6k1/5ppp/1pn5/2p5/3Q4/8/PP3PPP/6K1 w - - 0 1", "prompt": "Ta dame est attaquée par le pion c5 **et** le cavalier c6. Où va-t-elle ?", "options": ["Qxc5", "Qe5", "Qd3"], "answer": 2, "engineChoice": true, "hint": "Pour chaque case : un pion ou le cavalier noir peut-il y aller ?", "explanation": "**Dd3** : la dame est à l'abri. Dxc5 ? bxc5 et De5 ? Cxe5 perdent la dame."},
+    {"type": "choice", "id": "m1-defendre-4", "prompt": "Après chaque coup de l'adversaire, quelle est la **première** question à te poser ?", "options": ["Qu'est-ce qu'il menace ?", "Comment puis-je l'attaquer ?", "Quelle pièce développer ?"], "answer": 0, "explanation": "**Que menace-t-il ?** Une pièce attaquée, un mat, une fourchette… Si tu ne vois pas la menace, tu ne peux pas la parer."},
+    {"type": "choice", "id": "m1-defendre-5", "fen": "6k1/pp3ppp/3b4/8/7q/8/PP1N1PPP/5RK1 w - - 0 1", "prompt": "Les Noirs menacent **Dxh2#** (la dame, soutenue par le fou d6). Que joues-tu ?", "options": ["Nf3", "Rd1", "b3"], "answer": 0, "engineChoice": true, "hint": "Quelle pièce blanche peut venir protéger h2 ?", "explanation": "**Cf3** défend h2 **et** attaque la dame. Td1 ? ou b3 ? perdent sur Dxh2#."}
+  ]
+}
