@@ -30,6 +30,8 @@ export type GameRecord = {
 
 export type Progress = {
   version: 1
+  /** Date et heure de la dernière modification (ISO), pour la synchronisation : la plus récente gagne. */
+  updatedAt: string
   lessons: Record<string, LessonProgress>
   /** Cartes de répétition espacée (exercices et puzzles ratés). */
   cards: Record<string, Card>
@@ -51,6 +53,7 @@ export type Progress = {
 
 const empty = (): Progress => ({
   version: 1,
+  updatedAt: '',
   lessons: {},
   cards: {},
   puzzleRating: 600,
@@ -90,8 +93,14 @@ function load(): Progress {
 let state: Progress = load()
 const listeners = new Set<() => void>()
 
+/** Enregistre une modification faite par l'élève : marque le jour comme actif et met l'heure à jour. */
 function save(next: Progress) {
-  state = { ...next, days: next.days.includes(today()) ? next.days : [...next.days, today()] }
+  write({ ...next, updatedAt: new Date().toISOString(), days: next.days.includes(today()) ? next.days : [...next.days, today()] })
+}
+
+/** Écrit la progression telle quelle (dans le navigateur) et prévient l'interface. */
+function write(next: Progress) {
+  state = next
   try {
     localStorage.setItem(KEY, JSON.stringify(state))
   } catch {
@@ -102,6 +111,20 @@ function save(next: Progress) {
 
 export function getProgress() {
   return state
+}
+
+/** Être prévenu de chaque changement (utilisé par la synchronisation en ligne). Renvoie la fonction pour arrêter. */
+export function subscribeProgress(cb: () => void): () => void {
+  listeners.add(cb)
+  return () => listeners.delete(cb)
+}
+
+/** Remplace la progression par une version venue d'ailleurs (sauvegarde en ligne), sans changer son heure. */
+export function applyRemoteProgress(data: unknown): boolean {
+  const d = data as Partial<Progress> | null
+  if (d?.version !== 1 || typeof d.lessons !== 'object') return false
+  write(normalize(d))
+  return true
 }
 
 export function useProgress(): Progress {
@@ -249,11 +272,6 @@ export function importProgress(json: string): string | null {
 }
 
 export function resetProgress() {
-  state = empty()
-  try {
-    localStorage.removeItem(KEY)
-  } catch {
-    /* rien */
-  }
-  listeners.forEach((l) => l())
+  // On garde l'heure : la remise à zéro est une modification comme une autre (elle sera synchronisée).
+  write({ ...empty(), updatedAt: new Date().toISOString() })
 }

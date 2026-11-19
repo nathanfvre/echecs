@@ -8,6 +8,7 @@ import { bestBotWin, gameStats, lastDays, streaks, weakThemes } from '../../lib/
 import { BOT_LEVELS } from '../../engine/bot'
 import { THEME_LABEL } from '../puzzles/themes'
 import { Backup } from '../../pages/Backup'
+import { OnlineBackup } from '../../pages/OnlineBackup'
 
 /** Tableau de bord : où j'en suis, ce que je fais aujourd'hui, ce qu'il faut travailler. */
 export function DashboardPage() {
@@ -142,6 +143,7 @@ export function DashboardPage() {
         </div>
       </Section>
 
+      <OnlineBackup />
       <Backup />
     </div>
   )

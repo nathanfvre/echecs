@@ -171,6 +171,19 @@ objectifs vérifiés automatiquement, dans `src/content/plan.ts` : modifie ce fi
 La progression est stockée dans le navigateur. Page **Progrès → Sauvegarde** : « Exporter » télécharge
 un fichier JSON, « Importer » le recharge (par exemple sur un autre ordinateur).
 
+### Sauvegarde en ligne automatique (recommandée)
+
+Page **Progrès → Sauvegarde en ligne automatique** : l'appli enregistre ta progression dans un **Gist
+secret** de ton compte GitHub (un petit fichier privé, gratuit), quelques secondes après chaque exercice.
+1. Clique sur « Crée un jeton d'accès GitHub » : seule la case **gist** est cochée. Choisis une durée,
+   puis **Generate token**, et copie le jeton (`ghp_…`).
+2. Colle-le dans la page Progrès, puis **Activer**.
+3. Sur un autre appareil (ou après un effacement des données de Safari) : colle le même jeton, la
+   progression est récupérée automatiquement.
+
+Règle : la version la plus récente gagne. L'appli vérifie au démarrage et quand tu reviens sur l'onglet.
+Le jeton reste dans ton navigateur et n'est envoyé qu'à `api.github.com` ; il ne donne accès qu'à tes Gists.
+
 ## Notation
 
 Les coups sont stockés en notation anglaise (`Nf3`), comme dans les PGN et chess.js,
@@ -224,7 +237,7 @@ Après 5 à 10 minutes (la vérification Stockfish est longue), le site est en l
 ### Ensuite
 - Chaque `git push` sur `main` met le site à jour (suivi dans l'onglet **Actions** : vert = en ligne).
 - La progression est enregistrée **par navigateur et par adresse** : celle du site en ligne est séparée de
-  celle de `npm run dev`. Pour la transférer : Progrès → Exporter, puis Importer sur l'autre.
+  celle de `npm run dev`. Active la sauvegarde en ligne (même jeton) sur les deux pour qu'elles se rejoignent.
 - Pour tester le site construit avant de l'envoyer : `npm run build` puis `npx vite preview --base /echecs/`.
 
 ## Licences

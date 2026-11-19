@@ -12,6 +12,10 @@ import { PlayPage } from './features/play/PlayPage'
 import { AnalysisPage } from './features/analysis/AnalysisPage'
 import { today, useProgress } from './lib/progress'
 import { isDue } from './lib/srs'
+import { startSync } from './lib/sync'
+
+// Sauvegarde en ligne : démarre une fois (ne fait rien tant qu'elle n'est pas activée dans Progrès).
+startSync()
 
 const NAV = [
   { to: '/', label: 'Accueil', icon: '♔' },
