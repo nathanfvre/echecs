@@ -1,0 +1,21 @@
+{
+  "id": "m0-echiquier",
+  "title": "L'échiquier et ses cases",
+  "intro": "L'échiquier a **64 cases** : 8 colonnes (lettres **a à h**) et 8 rangées (chiffres **1 à 8**).\nChaque case a un nom : la colonne puis la rangée, par exemple **e4**.\nLes Blancs commencent en bas. À retenir : la case en **bas à droite (h1) est claire**.",
+  "steps": [
+    {
+      "type": "demo",
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "text": "La position de départ. Repère les cases en bleu : **e4** (colonne e, rangée 4) et **d5** (colonne d, rangée 5). Les lettres et chiffres sont écrits sur les bords de l'échiquier.",
+      "highlight": ["e4", "d5"]
+    },
+    { "type": "squares", "id": "m0-echiquier-1", "fen": "4k3/8/8/8/8/8/8/4K3 w - - 0 1", "prompt": "Clique sur la case **e4**.", "answer": ["e4"], "hint": "Trouve la colonne **e** (5e lettre en partant de la gauche), puis monte jusqu'à la rangée **4**.", "explanation": "e4 : colonne e, rangée 4. C'est l'une des 4 cases du centre." },
+    { "type": "squares", "id": "m0-echiquier-2", "fen": "4k3/8/8/8/8/8/8/4K3 w - - 0 1", "prompt": "Clique sur la case **a8**.", "answer": ["a8"], "hint": "Colonne a = tout à gauche. Rangée 8 = tout en haut.", "explanation": "a8 est le coin en haut à gauche (vu des Blancs)." },
+    { "type": "squares", "id": "m0-echiquier-3", "fen": "4k3/8/8/8/8/8/8/4K3 w - - 0 1", "prompt": "Clique sur la case **h1**.", "answer": ["h1"], "hint": "Colonne h = tout à droite. Rangée 1 = tout en bas.", "explanation": "h1 : le coin en bas à droite. Elle est **claire** : c'est comme ça qu'on vérifie que l'échiquier est bien posé." },
+    { "type": "squares", "id": "m0-echiquier-4", "fen": "4k3/8/8/8/8/8/8/4K3 w - - 0 1", "prompt": "Clique sur la case **c6**.", "answer": ["c6"], "hint": "Colonne c (3e lettre), rangée 6.", "explanation": "c6 : colonne c, rangée 6." },
+    { "type": "squares", "id": "m0-echiquier-5", "fen": "4k3/8/8/8/8/8/8/4K3 w - - 0 1", "prompt": "Clique sur la case **f3**.", "answer": ["f3"], "hint": "Colonne f (6e lettre), rangée 3.", "explanation": "f3 : la case où le cavalier blanc aime aller dès le début de la partie." },
+    { "type": "squares", "id": "m0-echiquier-6", "fen": "4k3/8/8/8/8/8/8/4K3 w - - 0 1", "prompt": "Clique sur les **4 cases du centre**, puis valide.", "answer": ["d4", "e4", "d5", "e5"], "hint": "Elles sont au milieu : colonnes **d** et **e**, rangées **4** et **5**.", "explanation": "d4, e4, d5, e5 : le centre. Les pièces y sont les plus actives, on se bat pour le contrôler dès l'ouverture." },
+    { "type": "choice", "id": "m0-echiquier-7", "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "prompt": "Sur quelle case commence la **dame blanche** ?", "options": ["d1", "e1", "d8"], "answer": 0, "hint": "La dame blanche commence sur une case de **sa couleur** (claire).", "explanation": "La dame blanche est en d1, case claire : « la dame sur sa couleur ». Le roi est à côté, en e1." },
+    { "type": "choice", "id": "m0-echiquier-8", "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "prompt": "Sur quelle case commence le **roi noir** ?", "options": ["d8", "e8", "e1"], "answer": 1, "explanation": "Le roi noir est en e8, en face du roi blanc (e1). La dame noire est en d8, sur une case foncée : sa couleur." }
+  ]
+}

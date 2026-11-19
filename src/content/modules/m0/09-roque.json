@@ -1,0 +1,13 @@
+{
+  "id": "m0-roque",
+  "title": "Le roque",
+  "intro": "Le **roque** met le roi à l'abri et active une tour, en **un seul coup** : le roi se déplace de **deux cases** vers une tour, et la tour saute de l'autre côté du roi.\n**O-O** = petit roque (côté roi), **O-O-O** = grand roque (côté dame).\nRoque **interdit** si : le roi ou cette tour a déjà bougé, une pièce est entre eux, le roi est en échec, ou il doit passer ou arriver sur une case attaquée.",
+  "steps": [
+    { "type": "demo", "fen": "r3k2r/pppq1ppp/2npbn2/2b1p3/2B1P3/2NPBN2/PPPQ1PPP/R3K2R w KQkq - 0 1", "text": "Rejoue : petit roque des Blancs (**O-O** : roi en g1, tour en f1), puis grand roque des Noirs (**O-O-O** : roi en c8, tour en d8).", "moves": ["O-O", "O-O-O"] },
+    { "type": "move", "id": "m0-roque-1", "fen": "rnbqk2r/pppp1ppp/5n2/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4", "prompt": "Fais le **petit roque**.", "solution": ["O-O"], "hint": "Fais glisser le roi de **deux cases** vers la droite (de e1 vers g1) : la tour suit toute seule.", "explanation": "O-O : roi en g1, tour en f1. Ton roi est à l'abri et ta tour approche du centre." },
+    { "type": "move", "id": "m0-roque-2", "fen": "r3kbnr/pppqpppp/2n5/3p1b2/3P1B2/2N5/PPPQPPPP/R3KBNR b KQkq - 5 5", "prompt": "Avec les Noirs, fais le **grand roque**.", "solution": ["O-O-O"], "orientation": "black", "hint": "Le roi va de e8 vers c8 (deux cases vers la tour a8).", "explanation": "O-O-O : roi en c8, tour en d8. La tour arrive directement sur la colonne centrale d." },
+    { "type": "choice", "id": "m0-roque-3", "fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 1 5", "prompt": "Les Blancs peuvent-ils faire le petit roque ?", "options": ["Oui", "Non"], "legal": "O-O", "answer": 0, "explanation": "Oui : ni le roi ni la tour h1 n'ont bougé, f1 et g1 sont libres et non attaquées, et le roi n'est pas en échec." },
+    { "type": "choice", "id": "m0-roque-4", "fen": "rn1qkbnr/ppp1pppp/8/8/2b5/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 1", "prompt": "Les Blancs peuvent-ils faire le petit roque ?", "options": ["Oui", "Non"], "legal": "O-O", "answer": 1, "hint": "Regarde la diagonale du fou noir.", "explanation": "Non : le fou c4 contrôle f1. Le roi **passerait** sur une case attaquée : interdit." },
+    { "type": "choice", "id": "m0-roque-5", "fen": "rnbqk1nr/pppp1ppp/8/4p3/1b6/5NP1/PPP1PPBP/RNBQK2R w KQkq - 0 1", "prompt": "Les Blancs sont en échec. Peuvent-ils roquer pour s'échapper ?", "options": ["Oui", "Non"], "legal": "O-O", "answer": 1, "explanation": "Non : on ne peut **jamais** roquer pour sortir d'un échec." }
+  ]
+}

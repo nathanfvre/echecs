@@ -1,0 +1,14 @@
+{
+  "id": "m0-pion",
+  "title": "Le pion",
+  "intro": "Le **pion** avance tout droit d'une case. À son **premier coup**, il peut avancer de **deux cases**.\nIl ne recule jamais et ne peut pas avancer si une pièce est devant lui.\nMais il **prend en diagonale**, d'une case vers l'avant.",
+  "steps": [
+    { "type": "demo", "fen": "4k3/8/8/3p4/4P3/8/8/4K3 w - - 0 1", "text": "Le pion e4 peut avancer en **e5**, ou **prendre** le pion d5 en diagonale. Il ne peut pas prendre tout droit.", "arrows": [["e4", "d5"], ["e4", "e5"]] },
+    { "type": "squares", "id": "m0-pion-1", "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "from": "e2", "prompt": "Où peut aller le pion **e2** ?", "hint": "C'est son premier coup.", "explanation": "e3 ou e4 : au premier coup, un pion peut avancer d'une ou de deux cases." },
+    { "type": "squares", "id": "m0-pion-2", "fen": "4k3/8/8/3pn3/3P4/8/8/4K3 w - - 0 1", "from": "d4", "prompt": "Où peut aller le pion **d4** ?", "hint": "Il est bloqué devant… mais il y a quelque chose en diagonale.", "explanation": "Bloqué par le pion d5, il ne peut pas avancer. Il peut seulement prendre le cavalier en e5." },
+    { "type": "squares", "id": "m0-pion-3", "fen": "4k3/2p5/8/8/8/8/8/4K3 b - - 0 1", "from": "c7", "prompt": "Les pions noirs **descendent** ! Où peut aller le pion c7 ?", "hint": "Il n'a pas encore bougé.", "explanation": "c6 ou c5 : pour les Noirs, « avancer » veut dire descendre vers la rangée 1." },
+    { "type": "move", "id": "m0-pion-4", "fen": "4k3/8/8/8/3n4/2P1P3/8/4K3 w - - 0 1", "prompt": "Prends le cavalier avec un pion.", "solution": ["exd4"], "accept": ["cxd4"], "hint": "Les pions c3 et e3 attaquent tous les deux d4.", "explanation": "exd4 ou cxd4 : les deux pions peuvent prendre. On note la colonne de départ du pion : **exd4** = le pion e prend en d4." },
+    { "type": "move", "id": "m0-pion-5", "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "prompt": "Avance le pion **d2** de deux cases.", "solution": ["d4"], "hint": "Glisse le pion de d2 jusqu'en d4.", "explanation": "On écrit simplement **d4** : pas de lettre pour un pion." },
+    { "type": "choice", "id": "m0-pion-6", "prompt": "Un pion peut-il reculer ?", "options": ["Oui, d'une case", "Non, jamais"], "answer": 1, "explanation": "Jamais. C'est pour ça qu'il faut bien réfléchir avant d'avancer un pion : on ne peut pas revenir en arrière." }
+  ]
+}

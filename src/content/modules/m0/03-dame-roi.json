@@ -1,0 +1,15 @@
+{
+  "id": "m0-dame-roi",
+  "title": "La dame et le roi",
+  "intro": "La **dame** combine la tour et le fou : lignes droites **et** diagonales. C'est la pièce la plus forte.\nLe **roi** avance d'**une seule case**, dans toutes les directions. Il n'a **jamais** le droit d'aller sur une case attaquée par l'adversaire.",
+  "steps": [
+    { "type": "demo", "fen": "4k3/8/8/8/3Q4/8/8/4K3 w - - 0 1", "text": "La dame en d4 rayonne dans **8 directions** : elle contrôle 27 cases !", "arrows": [["d4", "d8"], ["d4", "d1"], ["d4", "a4"], ["d4", "h4"], ["d4", "h8"], ["d4", "a1"], ["d4", "a7"], ["d4", "g1"]] },
+    { "type": "squares", "id": "m0-dame-roi-1", "fen": "4k3/8/8/8/8/8/P7/Q3K3 w - - 0 1", "from": "a1", "prompt": "Où peut aller la dame a1 ?", "hint": "Vers le haut, son pion la bloque. Il reste la rangée 1 (jusqu'au roi) et la grande diagonale.", "explanation": "b1, c1, d1 sur la rangée, puis toute la grande diagonale de b2 à h8 : 10 cases." },
+    { "type": "move", "id": "m0-dame-roi-2", "fen": "4k3/8/8/8/6n1/8/8/3QK3 w - - 0 1", "prompt": "La dame peut prendre le cavalier noir. Joue ce coup.", "solution": ["Qxg4"], "hint": "Suis la diagonale de la dame vers le haut à droite.", "explanation": "Dxg4 : la dame utilise une diagonale, comme un fou." },
+    { "type": "demo", "fen": "4k3/8/8/8/8/8/3K4/8 w - - 0 1", "text": "Le roi en d2 peut aller sur les **8 cases** autour de lui (en bleu), une seule case à la fois.", "highlight": ["c1", "d1", "e1", "c2", "e2", "c3", "d3", "e3"] },
+    { "type": "squares", "id": "m0-dame-roi-3", "fen": "4k3/8/8/r7/4K3/8/8/8 w - - 0 1", "from": "e4", "prompt": "Où peut aller le roi blanc ? Attention : la tour noire contrôle toute la **5e rangée**.", "hint": "Les cases d5, e5 et f5 sont attaquées par la tour.", "explanation": "Le roi ne peut pas aller sur la 5e rangée (d5, e5, f5) : il serait attaqué. Il lui reste d3, e3, f3, d4, f4." },
+    { "type": "squares", "id": "m0-dame-roi-4", "fen": "8/8/8/3k4/8/3K4/8/8 w - - 0 1", "from": "d3", "prompt": "Les deux rois ne peuvent **jamais** être côte à côte. Où peut aller le roi blanc ?", "hint": "Les cases c4, d4 et e4 touchent le roi noir.", "explanation": "c4, d4 et e4 sont interdites : elles touchent le roi noir. Il reste c2, d2, e2, c3, e3." },
+    { "type": "move", "id": "m0-dame-roi-5", "fen": "4k3/8/8/8/8/8/3q4/4K3 w - - 0 1", "prompt": "Le roi blanc est attaqué par la dame noire, qui n'est **pas protégée**. Prends-la !", "solution": ["Kxd2"], "hint": "Le roi peut prendre, lui aussi, s'il ne se met pas en danger.", "explanation": "Rxd2 : le roi peut prendre une pièce adverse **non protégée** à côté de lui." },
+    { "type": "choice", "id": "m0-dame-roi-6", "prompt": "Le roi peut-il aller sur une case attaquée par une pièce adverse ?", "options": ["Oui", "Non, jamais"], "answer": 1, "explanation": "Jamais : un coup qui met (ou laisse) son propre roi en échec est **illégal**." }
+  ]
+}

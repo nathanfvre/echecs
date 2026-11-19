@@ -1,0 +1,13 @@
+{
+  "id": "m0-passant-promotion",
+  "title": "Prise en passant et promotion",
+  "intro": "**Promotion** : un pion qui atteint la dernière rangée se transforme en dame, tour, fou ou cavalier (presque toujours en **dame**).\n**Prise en passant** : si un pion adverse avance de **deux cases** et arrive juste **à côté** de ton pion, tu peux le prendre **comme s'il n'avait avancé que d'une case**. Seulement au coup **immédiatement** suivant !",
+  "steps": [
+    { "type": "demo", "fen": "4k3/3p4/8/4P3/8/8/8/4K3 b - - 0 1", "text": "Rejoue : le pion noir avance de deux cases (d7-d5) et arrive à côté du pion e5. Le pion blanc le prend **en passant** : il va en d6, et le pion d5 disparaît.", "moves": ["d5", "exd6"] },
+    { "type": "move", "id": "m0-passant-1", "fen": "4k3/8/8/4Pp2/8/8/8/4K3 w - f6 0 2", "prompt": "Le pion noir vient de jouer f7-f5. Prends-le **en passant** !", "solution": ["exf6"], "hint": "Ton pion e5 va en diagonale sur la case que le pion noir a « sautée » (f6).", "explanation": "exf6 en passant : ton pion arrive en f6 et le pion f5 est retiré." },
+    { "type": "move", "id": "m0-passant-2", "fen": "4k3/8/8/8/2Pp4/8/8/4K3 b - c3 0 1", "prompt": "Avec les Noirs : le pion blanc vient de jouer c2-c4. Prends-le en passant.", "solution": ["dxc3"], "orientation": "black", "hint": "Ton pion d4 va en c3.", "explanation": "dxc3 en passant. Ça marche dans les deux sens !" },
+    { "type": "choice", "id": "m0-passant-3", "fen": "4k3/8/8/4Pp2/8/8/8/4K3 w - - 0 3", "prompt": "Le pion f a avancé de deux cases **il y a plusieurs coups**. Peut-on encore le prendre en passant ?", "options": ["Oui", "Non"], "legal": "exf6", "answer": 1, "explanation": "Non : la prise en passant n'est possible **qu'au coup juste après**. Après, c'est trop tard." },
+    { "type": "move", "id": "m0-promotion-1", "fen": "8/P5k1/8/8/8/8/8/4K3 w - - 0 1", "prompt": "Avance ton pion en a8 et choisis la **dame**.", "solution": ["a8=Q"], "hint": "Une fenêtre s'ouvre quand le pion arrive : choisis la dame.", "explanation": "a8=D : ton pion devient une dame. Tu as maintenant de quoi mater facilement." },
+    { "type": "move", "id": "m0-promotion-2", "fen": "1r4k1/P4ppp/8/8/8/8/8/6K1 w - - 0 1", "prompt": "Une promotion qui **mate** : trouve-la !", "solution": ["axb8=Q#"], "goal": "mate", "hint": "Le pion peut aussi prendre en diagonale en arrivant sur la dernière rangée.", "explanation": "axb8=D# : le pion prend la tour, devient une dame, et c'est le mat du couloir." }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "m0-echec",
+  "title": "L'échec et comment s'en sortir",
+  "intro": "Quand le roi est attaqué, il est **en échec**. Il faut **immédiatement** parer l'échec. Trois façons :\n1. **Fuir** : déplacer le roi sur une case sûre.\n2. **Prendre** la pièce qui donne échec.\n3. **S'interposer** : placer une pièce entre le roi et l'attaquant.",
+  "steps": [
+    { "type": "demo", "fen": "4k3/8/8/8/7b/8/8/4K3 w - - 0 1", "text": "Le fou noir attaque le roi blanc en diagonale : c'est **échec**. Les Blancs doivent s'en occuper avant tout le reste.", "arrows": [["h4", "e1"]] },
+    { "type": "choice", "id": "m0-echec-1", "fen": "4k3/8/8/b7/8/8/8/4K3 w - - 0 1", "prompt": "Le roi blanc est-il en échec ?", "options": ["Oui", "Non"], "facts": ["check", "normal"], "answer": 0, "explanation": "Oui : le fou a5 attaque e1 par la diagonale a5-b4-c3-d2-e1." },
+    { "type": "choice", "id": "m0-echec-2", "fen": "4k3/8/8/b7/8/8/3P4/4K3 w - - 0 1", "prompt": "Et maintenant, le roi blanc est-il en échec ?", "options": ["Oui", "Non"], "facts": ["check", "normal"], "answer": 1, "explanation": "Non : le pion d2 est sur la diagonale et bloque le fou. Le pion est **cloué** (s'il bouge, son roi serait en échec)." },
+    { "type": "move", "id": "m0-echec-3", "fen": "4k3/8/8/8/8/8/3P1P2/r3K3 w - - 0 1", "prompt": "Échec de la tour ! Trouve la **seule** case sûre pour le roi.", "solution": ["Ke2"], "hint": "Les cases de la 1re rangée restent attaquées par la tour.", "explanation": "Re2 : la seule fuite. d1 et f1 sont sur la rangée de la tour, d2 et f2 sont occupées par tes pions." },
+    { "type": "move", "id": "m0-echec-4", "fen": "4k3/8/8/8/8/8/5q2/4K3 w - - 0 1", "prompt": "Échec ! La meilleure réponse est de **prendre** la pièce qui attaque.", "solution": ["Kxf2"], "engine": true, "hint": "La dame noire n'est protégée par rien.", "explanation": "Rxf2 : le roi prend la dame non protégée. Toujours regarder d'abord si on peut **prendre** l'attaquant." },
+    { "type": "move", "id": "m0-echec-5", "fen": "1k2r3/8/8/8/8/8/3P1PPP/4KBNR w K - 0 1", "prompt": "Pare l'échec en **interposant** le cavalier.", "solution": ["Ne2"], "hint": "Le cavalier g1 peut sauter sur la colonne e, entre le roi et la tour.", "explanation": "Ce2 : le cavalier se place entre la tour et le roi. Il est protégé par le roi et le fou, donc la tour ne peut pas le prendre gratuitement." },
+    { "type": "move", "id": "m0-echec-6", "fen": "4k3/8/8/8/8/5n2/4P3/4K3 w - - 0 1", "prompt": "Échec du cavalier ! Quelle est la meilleure façon de parer ?", "solution": ["exf3"], "engine": true, "hint": "Un échec de cavalier ne peut pas être bloqué. Mais peut-on le prendre ?", "explanation": "exf3 : le pion prend le cavalier. On pare l'échec **et** on gagne une pièce." }
+  ]
+}

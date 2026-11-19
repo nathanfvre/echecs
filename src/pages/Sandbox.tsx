@@ -42,11 +42,11 @@ export function Sandbox() {
 
   return (
     <div className="flex flex-col gap-6 lg:flex-row">
-      <div className="w-full max-w-[560px]">
+      <div className="w-full max-w-[560px] shrink-0 lg:w-[55%]">
         <Board fen={game.fen()} orientation={orientation} onMove={handleMove} lastMove={last} />
       </div>
 
-      <div className="flex min-w-64 flex-1 flex-col gap-4">
+      <div className="flex min-w-0 flex-1 flex-col gap-4">
         <div className={`rounded-md px-3 py-2 font-medium ${status.over ? 'bg-amber-100 text-amber-900' : 'bg-white'}`}>
           {status.text}
         </div>

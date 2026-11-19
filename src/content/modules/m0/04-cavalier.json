@@ -1,0 +1,14 @@
+{
+  "id": "m0-cavalier",
+  "title": "Le cavalier",
+  "intro": "Le **cavalier** se déplace en **L** : deux cases dans une direction, puis une case sur le côté.\nC'est la seule pièce qui peut **sauter** par-dessus les autres.\nAstuce : à chaque saut, le cavalier **change de couleur de case**.",
+  "steps": [
+    { "type": "demo", "fen": "4k3/8/8/8/3N4/8/8/4K3 w - - 0 1", "text": "Le cavalier en d4 peut sauter sur **8 cases**. Remarque : il est sur une case foncée, et toutes ses cases d'arrivée sont claires.", "arrows": [["d4", "c6"], ["d4", "e6"], ["d4", "f5"], ["d4", "f3"], ["d4", "e2"], ["d4", "c2"], ["d4", "b3"], ["d4", "b5"]] },
+    { "type": "squares", "id": "m0-cavalier-1", "fen": "4k3/8/8/8/4N3/8/8/4K3 w - - 0 1", "from": "e4", "prompt": "Où peut sauter le cavalier e4 ?", "hint": "Deux cases tout droit, puis une sur le côté. Il y en a 8.", "explanation": "d6, f6, g5, g3, f2, d2, c3, c5 : 8 cases, toutes foncées (le cavalier est sur une case claire)." },
+    { "type": "squares", "id": "m0-cavalier-2", "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "from": "b1", "prompt": "Le cavalier saute par-dessus les pions. Où peut-il aller depuis **b1** ?", "hint": "d2 est occupée par un pion blanc. Regarde vers la 3e rangée.", "explanation": "a3 et c3. En pratique, **Cc3** est bien meilleur : un cavalier au bord (a3) est moins actif." },
+    { "type": "squares", "id": "m0-cavalier-3", "fen": "7n/8/8/8/8/8/8/K6k b - - 0 1", "from": "h8", "prompt": "Où peut aller le cavalier noir en **h8** ?", "hint": "Dans un coin, il ne reste que 2 cases.", "explanation": "Seulement f7 et g6. Retiens : **un cavalier au bord, c'est un cavalier faible**." },
+    { "type": "move", "id": "m0-cavalier-4", "fen": "4k3/8/8/8/8/2r5/8/1N2K3 w - - 0 1", "prompt": "Prends la tour avec le cavalier.", "solution": ["Nxc3"], "hint": "Un saut en L depuis b1 vers le haut.", "explanation": "Cxc3 : le cavalier saute de b1 en c3 et prend la tour." },
+    { "type": "move", "id": "m0-cavalier-5", "fen": "q3k3/8/8/3N4/8/8/8/4K3 w - - 0 1", "prompt": "Trouve le saut qui donne **échec** au roi noir **et** attaque la dame en même temps !", "solution": ["Nc7+"], "engine": true, "hint": "Cherche une case d'où le cavalier touche à la fois e8 et a8.", "explanation": "Cc7+ attaque le roi et la dame : c'est une **fourchette**. Le roi doit bouger, puis le cavalier prend la dame. Tu reverras ce motif au module 3." },
+    { "type": "choice", "id": "m0-cavalier-6", "prompt": "Un cavalier sur une case **claire** saute toujours sur une case…", "options": ["claire", "foncée"], "answer": 1, "explanation": "Toujours la couleur opposée : c'est une bonne façon de vérifier un saut." }
+  ]
+}

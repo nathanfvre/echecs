@@ -1,0 +1,15 @@
+{
+  "id": "m0-notation",
+  "title": "Lire et écrire les coups",
+  "intro": "Un coup s'écrit : **lettre de la pièce** + **case d'arrivée**.\n**R** = roi, **D** = dame, **T** = tour, **F** = fou, **C** = cavalier. Le pion n'a pas de lettre.\n**Cf3** = un cavalier va en f3. **e4** = un pion va en e4. **x** = prise (Fxc6), **+** = échec, **#** = mat.\nSur Lichess en anglais : K, Q, R, B, N (N pour *kNight*).",
+  "steps": [
+    { "type": "demo", "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "text": "Rejoue ce début de partie avec le bouton et regarde comment s'écrit chaque coup : e4, e5, Cf3, Cc6, Fb5.", "moves": ["e4", "e5", "Nf3", "Nc6", "Bb5"] },
+    { "type": "move", "id": "m0-notation-1", "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "prompt": "Joue **Cf3**.", "solution": ["Nf3"], "hint": "C = cavalier. Lequel peut aller en f3 ?", "explanation": "Le cavalier g1 va en f3." },
+    { "type": "move", "id": "m0-notation-2", "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2", "prompt": "Joue **Fc4**.", "solution": ["Bc4"], "hint": "F = fou. Le fou f1 a une diagonale libre depuis que le pion e2 a avancé.", "explanation": "Le fou f1 va en c4 : il vise le point faible f7." },
+    { "type": "move", "id": "m0-notation-3", "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1", "prompt": "Avec les Noirs, joue **c5**.", "solution": ["c5"], "orientation": "black", "hint": "Pas de lettre : c'est un coup de pion. Lequel peut aller en c5 ?", "explanation": "Le pion c7 avance de deux cases. (1.e4 c5 s'appelle la défense **sicilienne**.)" },
+    { "type": "move", "id": "m0-notation-4", "fen": "rnbqkbnr/ppp1pppp/8/3p4/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2", "prompt": "Joue **exd5**.", "solution": ["exd5"], "hint": "Le pion de la colonne **e** prend (**x**) en **d5**.", "explanation": "exd5 : pour une prise de pion, on écrit la colonne de départ du pion." },
+    { "type": "move", "id": "m0-notation-5", "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2", "prompt": "Joue **Dh5**.", "solution": ["Qh5"], "hint": "D = dame. Elle sort par la diagonale d1-h5.", "explanation": "Dh5 : la dame va en h5 (sortir la dame si tôt n'est pas une bonne idée, tu verras pourquoi au module 4)." },
+    { "type": "choice", "id": "m0-notation-6", "prompt": "Que veut dire **Txe8+** ?", "options": ["Une tour prend en e8 et donne échec", "Le roi va en e8", "Une tour va en e8 et fait mat"], "answer": 0, "explanation": "T = tour, x = prise, e8 = case d'arrivée, + = échec. (Un mat s'écrirait #.)" },
+    { "type": "choice", "id": "m0-notation-7", "prompt": "Sur Lichess en anglais, comment s'écrit **Cf3** ?", "options": ["Cf3", "Nf3", "Kf3"], "answer": 1, "explanation": "Le cavalier se dit *knight* : N. Attention, **K** est le roi (*king*)." }
+  ]
+}

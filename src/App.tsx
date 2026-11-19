@@ -2,6 +2,9 @@ import { HashRouter, NavLink, Route, Routes } from 'react-router-dom'
 import { Home } from './pages/Home'
 import { Sandbox } from './pages/Sandbox'
 import { Placeholder } from './pages/Placeholder'
+import { Backup } from './pages/Backup'
+import { CoursePage } from './features/course/CoursePage'
+import { LessonPage } from './features/course/LessonPlayer'
 
 const NAV = [
   { to: '/', label: 'Accueil', icon: '♔' },
@@ -38,16 +41,25 @@ export default function App() {
             </NavLink>
           ))}
         </nav>
-        <main className="flex-1 p-4 md:p-8">
+        <main className="min-w-0 flex-1 p-4 md:p-8">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/libre" element={<Sandbox />} />
-            <Route path="/cours" element={<Placeholder title="Le cours" phase="b" />} />
+            <Route path="/cours" element={<CoursePage />} />
+            <Route path="/cours/:lessonId" element={<LessonPage />} />
             <Route path="/puzzles" element={<Placeholder title="Puzzles" phase="c" />} />
             <Route path="/ouvertures" element={<Placeholder title="Entraîneur d'ouvertures" phase="e" />} />
             <Route path="/jouer" element={<Placeholder title="Jouer contre le bot" phase="d" />} />
             <Route path="/analyse" element={<Placeholder title="Analyse de parties" phase="d" />} />
-            <Route path="/progres" element={<Placeholder title="Tableau de bord" phase="f" />} />
+            <Route
+              path="/progres"
+              element={
+                <div className="space-y-6">
+                  <Placeholder title="Tableau de bord" phase="f" />
+                  <Backup />
+                </div>
+              }
+            />
             <Route path="*" element={<Placeholder title="Page introuvable" phase="—" />} />
           </Routes>
         </main>
