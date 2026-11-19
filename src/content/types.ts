@@ -114,6 +114,8 @@ export type PuzzlesPlaceholder = {
   count: number
   /** Nombre maximum de coups à trouver par l'élève. */
   maxMoves?: number
+  /** Accepter aussi des puzzles qui finissent par un mat (sinon exclus hors des leçons sur le mat). */
+  allowMate?: boolean
   /** Début d'explication, ex. « Fourchette : ». */
   explain?: string
   hint?: string

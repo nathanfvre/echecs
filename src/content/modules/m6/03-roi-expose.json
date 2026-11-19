@@ -1,0 +1,13 @@
+{
+  "id": "m6-roi-expose",
+  "title": "Le roi exposé",
+  "intro": "Un roi sans pions devant lui, ou resté au centre quand le jeu s'ouvre, est en danger : chaque **échec** peut gagner du temps ou du matériel. Cherche les échecs en premier !",
+  "steps": [
+    {"type": "move", "id": "m6-roi-expose-p1", "fen": "2R5/7p/3k1p2/p7/3r2PP/P2bKP2/8/8 b - - 2 38", "preMove": "Rd5", "source": "lichess:YKAPX", "prompt": "Trouve la bonne suite (3 coups).", "solution": ["Rd8+", "Kc5", "Rxd5+", "Kxd5", "Kxd3"], "engine": true, "hint": "Échecs, captures, menaces.", "explanation": "Roi exposé ! Solution : **Td8+ Rc5 Txd5+ Rxd5 Rxd3**."},
+    {"type": "move", "id": "m6-roi-expose-p2", "fen": "R7/6r1/7k/p7/5p1P/8/2B1PP1K/r7 b - - 0 48", "preMove": "Rc7", "source": "lichess:EmQfG", "prompt": "Trouve la bonne suite (3 coups).", "solution": ["Rh8+", "Kg7", "Rh7+", "Kg8", "Rxc7"], "engine": true, "hint": "Attaque une pièce importante : quand elle bouge, celle de derrière tombe.", "explanation": "Roi exposé ! Solution : **Th8+ Rg7 Th7+ Rg8 Txc7**."},
+    {"type": "move", "id": "m6-roi-expose-p3", "fen": "7k/pp3K2/2p3P1/8/8/7P/P2p4/8 b - - 0 46", "preMove": "d1=Q", "source": "lichess:0eX3H", "prompt": "Mat en 3.", "solution": ["g7+", "Kh7", "g8=Q+", "Kh6", "Qg6#"], "goal": "mate", "engine": true, "hint": "Un pion est tout près de devenir dame.", "explanation": "Roi exposé ! Solution : **g7+ Rh7 g8=D+ Rh6 Dg6#**."},
+    {"type": "move", "id": "m6-roi-expose-p4", "fen": "8/8/2N1bp2/6k1/1R6/6pp/8/6K1 w - - 0 71", "preMove": "Nd4", "source": "lichess:PJEnR", "prompt": "Trouve la bonne suite (3 coups).", "solution": ["h2+", "Kg2", "Bd5+", "Kxg3", "h1=Q"], "engine": true, "hint": "Force une pièce adverse à quitter son poste de défense.", "explanation": "Roi exposé ! Solution : **h2+ Rg2 Fd5+ Rxg3 h1=D**."},
+    {"type": "move", "id": "m6-roi-expose-p5", "fen": "5rk1/1R5p/2p5/p5p1/8/4rp2/PPR4P/3K3N w - - 0 34", "preMove": "Nf2", "source": "lichess:kLEr7", "prompt": "Trouve la bonne suite (3 coups).", "solution": ["Rd8+", "Rd2", "Rxd2+", "Kxd2", "Re2+"], "engine": true, "hint": "Attire une pièce adverse (souvent le roi) sur une mauvaise case.", "explanation": "Roi exposé ! Solution : **Td8+ Td2 Txd2+ Rxd2 Te2+**."},
+    {"type": "move", "id": "m6-roi-expose-p6", "fen": "8/p1q2pk1/2r1p1p1/3pP1Pp/2rn1P2/RRP2N1P/1Q3K2/8 w - - 0 33", "preMove": "Nxd4", "source": "lichess:TcmUQ", "prompt": "Trouve la bonne suite (3 coups).", "solution": ["Rxd4", "cxd4", "Rc2+", "Qxc2", "Qxc2+"], "engine": true, "hint": "Une de tes pièces peut attaquer deux cibles à la fois.", "explanation": "Roi exposé ! Solution : **Txd4 cxd4 Tc2+ Dxc2 Dxc2+**."}
+  ]
+}

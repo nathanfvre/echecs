@@ -93,6 +93,8 @@ Les types d'étapes :
 - `puzzles` : un emplacement provisoire. `npm run lesson:puzzles` le remplace par `count` puzzles Lichess
   du thème demandé et de classement `min`–`max` (non utilisés ailleurs), sous forme d'exercices `move`
   marqués `"source": "lichess:<id>"`. Il faut avoir lancé `npm run build:puzzles` une fois avant.
+  Options : `maxMoves` (coups à trouver, 2 par défaut), `hint`, `explain`, et `allowMate` pour accepter des
+  puzzles qui finissent par un mat dans une leçon qui ne parle pas de mat.
 
 Règles importantes :
 - les **coups** sont écrits en notation **anglaise** (`Nf3`, `Qxd7+`, `O-O`, `e8=Q`) ;
@@ -170,7 +172,7 @@ et toujours affichés en notation française (`Cf3`) : R = roi, D = dame, T = to
 - [x] Phase b — moteur de leçons et d'exercices, module 0
 - [x] Phase c — puzzles et répétition espacée
 - [x] Phase d — bot Stockfish et analyse
-- [ ] Phase e — modules 1 à 9, entraîneur d'ouvertures (fait : modules 1 à 5 et entraîneur d'ouvertures)
+- [ ] Phase e — modules 1 à 9, entraîneur d'ouvertures (fait : modules 1 à 7 et entraîneur d'ouvertures)
 - [ ] Phase f — tableau de bord
 - [ ] Phase g — déploiement
 

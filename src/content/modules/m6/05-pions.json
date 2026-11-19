@@ -1,0 +1,13 @@
+{
+  "id": "m6-pions",
+  "title": "Les pions qui avancent",
+  "intro": "Un **pion passé** (aucun pion adverse ne peut l'arrêter sur sa colonne ou les colonnes voisines) est une arme : plus il avance, plus il est dangereux. Près de la promotion, il oblige souvent l'adversaire à sacrifier une pièce.",
+  "steps": [
+    {"type": "move", "id": "m6-pions-p1", "fen": "2r3k1/5p2/3RqBp1/4Pp1p/5P1P/7K/6P1/8 b - - 5 37", "preMove": "Qxd6", "source": "lichess:v3jER", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["exd6", "Rb8", "d7"], "engine": true, "hint": "Une pièce adverse n’est pas (assez) protégée.", "explanation": "Le pion avancé décide ! Solution : **exd6 Tb8 d7**."},
+    {"type": "move", "id": "m6-pions-p2", "fen": "8/3n4/6k1/PK6/8/8/8/8 b - - 0 69", "preMove": "Kf6", "source": "lichess:UMCtv", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["a6", "Ke5", "a7"], "engine": true, "hint": "Échecs, captures, menaces.", "explanation": "Le pion avancé décide ! Solution : **a6 Re5 a7**."},
+    {"type": "move", "id": "m6-pions-p3", "fen": "8/kpR5/2p5/5P2/8/8/pr4P1/3R2K1 w - - 0 39", "preMove": "Ra1", "source": "lichess:3pw2D", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Rb1+", "Rxb1", "axb1=Q+"], "engine": true, "hint": "Un pion est tout près de devenir dame.", "explanation": "Le pion avancé décide ! Solution : **Tb1+ Txb1 axb1=D+**."},
+    {"type": "move", "id": "m6-pions-p4", "fen": "5R2/1p6/6P1/2k2K2/5P2/8/3p4/1r6 w - - 0 43", "preMove": "Rd8", "source": "lichess:hHFBE", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["d1=Q", "Rxd1", "Rxd1"], "engine": true, "hint": "Un pion est tout près de devenir dame.", "explanation": "Le pion avancé décide ! Solution : **d1=D Txd1 Txd1**."},
+    {"type": "move", "id": "m6-pions-p5", "fen": "r1b2r2/2p1k3/ppP1p2R/1q6/3PB2P/1Q6/PP2NpP1/3RbK2 w - - 1 28", "preMove": "Qg3", "source": "lichess:J00fG", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Qxe2+", "Kxe2", "f1=Q+"], "engine": true, "hint": "Attire une pièce adverse (souvent le roi) sur une mauvaise case.", "explanation": "Promotion ! Solution : **Dxe2+ Rxe2 f1=D+**."},
+    {"type": "move", "id": "m6-pions-p6", "fen": "1k6/1p1q1p1p/pr1Pp1b1/4B3/5P2/P6P/KP4P1/3R4 b - - 1 30", "preMove": "Qb5", "source": "lichess:oksZb", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["d7+", "Ka7", "d8=Q"], "engine": true, "hint": "En bougeant une pièce, tu ouvres la ligne d’une autre.", "explanation": "Promotion ! Solution : **d7+ Ra7 d8=D**."}
+  ]
+}

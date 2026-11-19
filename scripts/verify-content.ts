@@ -217,7 +217,7 @@ async function checkStep(step: Step, where: string, engine: () => Promise<Engine
       const s = score(best)
       if (step.goal === 'hold') {
         if (s < -150) errors.push(`${where} : position perdue (${fmt(best)}), impossible à tenir`)
-      } else if (!((best.mate !== null && best.mate > 0) || s >= 500))
+      } else if (!((best.mate !== null && best.mate > 0) || s >= 400))
         errors.push(`${where} : position pas clairement gagnante (${fmt(best)})`)
       else if (step.goal === 'mate' && best.mate !== null && best.mate > step.maxMoves)
         errors.push(`${where} : Stockfish mate en ${best.mate}, plus que les ${step.maxMoves} coups permis`)

@@ -90,7 +90,7 @@ async function main() {
       if (r < s.ph.min || r > s.ph.max || userMoves > (s.ph.maxMoves ?? 2)) return
       if (!s.ph.themes.every((t) => list.includes(t))) return
       // Une leçon qui ne parle pas de mat ne reçoit pas de puzzles de mat (hors sujet).
-      if (!isMate(s.ph.themes) && isMate(list)) return
+      if (!isMate(s.ph.themes) && !s.ph.allowMate && isMate(list)) return
       candidates[i].push({ id, fen, moves, rating: r, themes: list })
     })
   }

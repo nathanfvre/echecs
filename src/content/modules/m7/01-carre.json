@@ -1,0 +1,13 @@
+{
+  "id": "m7-carre",
+  "title": "La règle du carré",
+  "intro": "Le roi peut-il rattraper le pion ? Trace le **carré** du pion : du pion jusqu'à la case de promotion, et autant de cases sur le côté. Si le roi adverse peut **entrer dans le carré** (à son tour de jouer), il rattrape le pion. Sinon, le pion fait dame.",
+  "steps": [
+    {"type": "demo", "fen": "8/8/8/P3k3/8/8/8/7K w - - 0 1", "text": "Le carré du pion a5 : a5–d5–d8–a8. Le roi noir en e5 est **dehors**. Aux Blancs de jouer : a6, et le roi ne le rattrapera jamais.", "highlight": ["a5", "b5", "c5", "d5", "a6", "b6", "c6", "d6", "a7", "b7", "c7", "d7", "a8", "b8", "c8", "d8"]},
+    {"type": "squares", "id": "m7-carre-1", "fen": "8/8/8/P3k3/8/8/8/7K w - - 0 1", "prompt": "Clique sur les **4 coins** du carré du pion a5, puis valide.", "answer": ["a5", "a8", "d5", "d8"], "hint": "Du pion à la case de promotion : 3 cases. Le carré fait donc 4 cases de côté.", "explanation": "a5, a8, d8, d5 : le roi doit pouvoir entrer dans ce carré pour rattraper le pion."},
+    {"type": "practice", "id": "m7-carre-2", "fen": "8/8/8/P3k3/8/8/8/7K w - - 0 1", "prompt": "Fais dame contre Stockfish.", "goal": "promote", "maxMoves": 4, "hint": "Le roi noir est hors du carré : pousse ton pion sans attendre.", "explanation": "Le roi noir était hors du carré : le pion ne pouvait pas être rattrapé."},
+    {"type": "choice", "id": "m7-carre-5", "prompt": "Le pion blanc est en e4, le roi noir en a4. Aux Noirs de jouer. Peuvent-ils le rattraper ?", "options": ["Oui : le roi entre dans le carré e4–a4–a8–e8", "Non", "On ne peut pas savoir"], "answer": 0, "explanation": "Le carré du pion e4 va de e4 à a4, a8 et e8. Le roi a4 est **dans** le carré : il rattrape le pion."},
+    {"type": "choice", "id": "m7-carre-3", "prompt": "Même position, mais c'est aux **Noirs** de jouer. Le roi noir peut-il rattraper le pion ?", "options": ["Oui : Rd6 entre dans le carré", "Non, jamais", "Seulement si les Blancs jouent mal"], "answer": 0, "explanation": "Avec le trait, **Rd6** entre dans le carré (d6 est dans a5–d5–d8–a8) : après a6 Rc7 a7 Rb7, le pion tombe."},
+    {"type": "practice", "id": "m7-carre-4", "fen": "8/8/1k6/8/8/6P1/8/7K w - - 0 1", "prompt": "Ici, le roi noir est loin. Fais dame contre Stockfish.", "goal": "promote", "maxMoves": 6, "hint": "Compte : le pion g3 a 5 cases à faire. Le roi b6 peut-il entrer dans le carré g3–b3–b8–g8 ?", "explanation": "Le roi noir est juste hors du carré : en poussant tout de suite, le pion passe."}
+  ]
+}

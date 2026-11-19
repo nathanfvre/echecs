@@ -1,0 +1,13 @@
+{
+  "id": "m6-piece-piegee",
+  "title": "La pièce piégée",
+  "intro": "Une pièce **piégée** n'a plus de case de fuite : il suffit de l'attaquer pour la gagner. Les fous qui prennent un pion au bord (…Fxa2, …Fxh2) et les cavaliers au bord sont les victimes habituelles.",
+  "steps": [
+    {"type": "move", "id": "m6-piece-piegee-p1", "fen": "r7/2k2p2/6p1/1R1pP3/2p1bP1P/2P3K1/4N3/8 w - - 3 46", "preMove": "Rc5+", "source": "lichess:VjysC", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Kb6", "Rc8", "Rxc8"], "engine": true, "hint": "Une pièce adverse n’a plus de case de fuite.", "explanation": "Pièce piégée ! Solution : **Rb6 Tc8 Txc8**."},
+    {"type": "move", "id": "m6-piece-piegee-p2", "fen": "n7/p7/1pK5/8/8/P7/1P4k1/8 b - - 3 46", "preMove": "Kf3", "source": "lichess:zmPin", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Kb7", "b5", "Kxa8"], "engine": true, "hint": "Une pièce adverse n’a plus de case de fuite.", "explanation": "Pièce piégée ! Solution : **Rb7 b5 Rxa8**."},
+    {"type": "move", "id": "m6-piece-piegee-p3", "fen": "8/5p2/8/6P1/7p/1K2k2P/8/6N1 w - - 0 44", "preMove": "Kc2", "source": "lichess:Mlg7p", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Kf2", "Ne2", "Kxe2"], "engine": true, "hint": "Une pièce adverse n’a plus de case de fuite.", "explanation": "Pièce piégée ! Solution : **Rf2 Ce2 Rxe2**."},
+    {"type": "move", "id": "m6-piece-piegee-p4", "fen": "r2qk1nr/pb1pbp1p/1p2p1pQ/8/3NP3/2NB4/PPP2PPP/R3K2R w KQkq - 6 12", "preMove": "Qg7", "source": "lichess:UzvAQ", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Bf6", "Qxg8+", "Rxg8"], "engine": true, "hint": "Une pièce adverse n’a plus de case de fuite.", "explanation": "Pièce piégée ! Solution : **Ff6 Dxg8+ Txg8**."},
+    {"type": "move", "id": "m6-piece-piegee-p5", "fen": "r4rk1/1ppbqpp1/p1nbpn1p/4N3/1PBP4/P3P3/1B2NPPP/R2Q1RK1 b - - 5 12", "preMove": "Nxe5", "source": "lichess:hYUU9", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["dxe5", "Bxe5", "Bxe5"], "engine": true, "hint": "Une de tes pièces peut attaquer deux cibles à la fois.", "explanation": "Pièce piégée ! Solution : **dxe5 Fxe5 Fxe5**."},
+    {"type": "move", "id": "m6-piece-piegee-p6", "fen": "2k1qb1r/pp3ppp/2r1pn2/2ppNb2/Q2P1B2/2P1P3/PP1N1PPP/R3K2R w KQ - 0 12", "preMove": "Qxa7", "source": "lichess:fseQ9", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Ra6", "Qxa6", "bxa6"], "engine": true, "hint": "Une pièce adverse n’a plus de case de fuite.", "explanation": "Pièce piégée ! Solution : **Ta6 Dxa6 bxa6**."}
+  ]
+}

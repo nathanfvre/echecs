@@ -1,0 +1,13 @@
+{
+  "id": "m6-bilan",
+  "title": "Bilan du module 6",
+  "intro": "Des positions de milieu de partie tirées de vraies parties. Applique la routine : menace adverse, puis échecs, captures, menaces.",
+  "steps": [
+    {"type": "move", "id": "m6-bilan-p1", "fen": "3rr1k1/2pq1bpp/p4pn1/1p1N4/4P3/P3NP2/1P3QPP/3RR1K1 b - - 0 21", "preMove": "c6", "source": "lichess:ThXg8", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Nxf6+", "gxf6", "Rxd7"], "engine": true, "hint": "En bougeant une pièce, tu ouvres la ligne d’une autre.", "explanation": "Attaque sur le roi ! Solution : **Cxf6+ gxf6 Txd7**."},
+    {"type": "move", "id": "m6-bilan-p2", "fen": "rn3rk1/4qppp/2p1p3/4P3/BpbPN1Q1/3nR3/PP3PPP/R5K1 b - - 5 18", "preMove": "Nxb2", "source": "lichess:Qs3uw", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Nf6+", "Qxf6", "exf6"], "engine": true, "hint": "Une pièce adverse ne peut pas bouger sans exposer une pièce plus importante derrière elle.", "explanation": "Attaque sur le roi ! Solution : **Cf6+ Dxf6 exf6**."},
+    {"type": "move", "id": "m6-bilan-p3", "fen": "5k2/1R6/p1p2K2/2Pr1N2/8/3r1P2/P1b5/8 b - - 2 59", "preMove": "Rxf3", "source": "lichess:4PY5C", "prompt": "Mat en 2.", "solution": ["Rb8+", "Rd8", "Rxd8#"], "goal": "mate", "engine": true, "hint": "Commence par un échec (ou une menace) qui ne laisse presque aucun choix.", "explanation": "Roi exposé ! Solution : **Tb8+ Td8 Txd8#**."},
+    {"type": "move", "id": "m6-bilan-p4", "fen": "r1bq1rk1/bpppnpp1/p3n2B/4P3/2B1N3/2PQ4/PP3PPP/R4RK1 b - - 0 12", "preMove": "gxh6", "source": "lichess:GkL2M", "prompt": "Mat en 2.", "solution": ["Nf6+", "Kg7", "Qh7#"], "goal": "mate", "engine": true, "hint": "Commence par un échec (ou une menace) qui ne laisse presque aucun choix.", "explanation": "Roi exposé ! Solution : **Cf6+ Rg7 Dh7#**."},
+    {"type": "move", "id": "m6-bilan-p5", "fen": "3b4/k7/1pPBp3/1p1pP2p/3Pp1pP/1K2P1P1/8/8 b - - 1 44", "preMove": "Ka6", "source": "lichess:zLcQA", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["c7", "Bxc7", "Bxc7"], "engine": true, "hint": "Une pièce adverse n’a plus de case de fuite.", "explanation": "Pièce piégée ! Solution : **c7 Fxc7 Fxc7**."},
+    {"type": "move", "id": "m6-bilan-p6", "fen": "1K6/PR6/4pkp1/2P5/8/8/2P4p/r7 w - - 0 62", "preMove": "a8=Q", "source": "lichess:Fleus", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Rxa8+", "Kxa8", "h1=Q"], "engine": true, "hint": "Un pion est tout près de devenir dame.", "explanation": "Le pion avancé décide ! Solution : **Txa8+ Rxa8 h1=D**."}
+  ]
+}

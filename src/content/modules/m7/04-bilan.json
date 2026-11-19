@@ -1,0 +1,13 @@
+{
+  "id": "m7-bilan",
+  "title": "Bilan du module 7",
+  "intro": "Des finales tirées de vraies parties, puis une finale de pion à jouer contre Stockfish.",
+  "steps": [
+    {"type": "move", "id": "m7-bilan-p1", "fen": "8/2p5/3p1k2/p1pP1pp1/2P2P1p/PP1K2PP/8/8 w - - 0 33", "preMove": "fxg5+", "source": "lichess:nudlf", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Kxg5", "g4", "fxg4"], "engine": true, "hint": "Échecs, captures, menaces.", "explanation": "Finale de pions ! Solution : **Rxg5 g4 fxg4**."},
+    {"type": "move", "id": "m7-bilan-p2", "fen": "8/8/7p/p2kp1pP/P5P1/3K1P2/8/8 b - - 1 45", "preMove": "Kc5", "source": "lichess:dr3eo", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Ke4", "Kb4", "Kxe5"], "engine": true, "hint": "Échecs, captures, menaces.", "explanation": "Finale de pions ! Solution : **Re4 Rb4 Rxe5**."},
+    {"type": "move", "id": "m7-bilan-p3", "fen": "8/8/p7/1p2pk2/6p1/P3K3/1PP4P/8 b - - 1 45", "preMove": "Kg5", "source": "lichess:DDEmR", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Ke4", "Kh4", "Kxe5"], "engine": true, "hint": "Échecs, captures, menaces.", "explanation": "Finale de pions ! Solution : **Re4 Rh4 Rxe5**."},
+    {"type": "move", "id": "m7-bilan-p4", "fen": "7k/1r5p/R7/3PP3/4K3/p5r1/8/7R w - - 1 42", "preMove": "Ra4", "source": "lichess:ZoWUK", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Rg4+", "Kf3", "Rxa4"], "engine": true, "hint": "Attaque une pièce importante : quand elle bouge, celle de derrière tombe.", "explanation": "Finale de tours ! Solution : **Tg4+ Rf3 Txa4**."},
+    {"type": "move", "id": "m7-bilan-p5", "fen": "8/5R2/6p1/2r5/6k1/4Kp2/1P5P/8 w - - 0 38", "preMove": "Rb7", "source": "lichess:OekHR", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Re5+", "Kf2", "Re2+"], "engine": true, "hint": "Échecs, captures, menaces.", "explanation": "Finale de tours ! Solution : **Te5+ Rf2 Te2+**."},
+    {"type": "practice", "id": "m7-bilan-1", "fen": "8/8/1k6/8/1K6/8/1P6/8 w - - 0 1", "prompt": "Fais dame contre Stockfish.", "goal": "promote", "maxMoves": 15, "hint": "Ton roi doit passer devant ton pion. Prends l'opposition.", "explanation": "Module 7 terminé : tu sais convertir un pion de plus."}
+  ]
+}

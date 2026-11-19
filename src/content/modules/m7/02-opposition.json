@@ -1,0 +1,13 @@
+{
+  "id": "m7-opposition",
+  "title": "Roi et pion contre roi",
+  "intro": "Avec roi et pion contre roi, tout dépend de **l'opposition** : les rois face à face, une case entre eux. Celui qui **n'a pas** à jouer gagne le duel. Règle d'or pour gagner : **ton roi devant ton pion**. Pour faire nulle : **ton roi devant le pion adverse**.",
+  "steps": [
+    {"type": "demo", "fen": "3k4/8/3K4/3P4/8/8/8/8 w - - 0 1", "text": "Le roi blanc est **devant** son pion, sur la 6e rangée : c'est toujours gagné (sauf pion de la colonne a ou h). Le roi blanc va sur le côté, le pion avance.", "moves": ["Kc6", "Kc8", "d6", "Kd8", "d7", "Ke7", "Kc7"]},
+    {"type": "practice", "id": "m7-opposition-1", "fen": "3k4/8/3K4/3P4/8/8/8/8 w - - 0 1", "prompt": "Fais dame contre Stockfish.", "goal": "promote", "maxMoves": 8, "hint": "Ne pousse pas le pion trop tôt : place d'abord ton roi sur le côté (c6 ou e6) pour lui ouvrir la route.", "explanation": "Roi devant le pion : la case de promotion était contrôlée par ton roi."},
+    {"type": "choice", "id": "m7-opposition-2", "prompt": "Qu'est-ce que **l'opposition** ?", "options": ["Les deux rois face à face avec une case entre eux", "Les deux rois sur la même diagonale", "Le roi qui attaque un pion"], "answer": 0, "explanation": "Rois face à face, une case entre eux : le camp **qui doit jouer** doit céder le passage."},
+    {"type": "choice", "id": "m7-opposition-5", "prompt": "Tu défends avec roi seul contre roi et pion. Où doit aller ton roi ?", "options": ["Devant le pion adverse", "Derrière le pion adverse", "Le plus loin possible"], "answer": 0, "explanation": "**Devant le pion** : c'est la seule façon de bloquer sa route. Avec l'opposition au bon moment, c'est nulle."},
+    {"type": "practice", "id": "m7-opposition-3", "fen": "8/8/4k3/4P3/4K3/8/8/8 b - - 0 1", "prompt": "Tu as les Noirs : fais **nulle** contre Stockfish en tenant 12 coups.", "goal": "hold", "maxMoves": 12, "hint": "Reste devant le pion. Quand le roi blanc avance, prends l'opposition (mets-toi face à lui).", "explanation": "Bien défendu : roi devant le pion et opposition, c'est nulle."},
+    {"type": "practice", "id": "m7-opposition-4", "fen": "8/8/3k4/8/3K4/8/3P4/8 w - - 0 1", "prompt": "Plus difficile : fais dame contre Stockfish.", "goal": "promote", "maxMoves": 15, "hint": "Ton roi est déjà deux cases devant ton pion : garde-le devant, prends l'opposition, et ne pousse le pion que quand il est protégé.", "explanation": "Le roi d'abord, le pion ensuite : c'est toute la technique."}
+  ]
+}
