@@ -1,0 +1,56 @@
+# Publication automatique sur GitHub Pages à chaque envoi (push) sur la branche main.
+# 1. « verifier » : tests + vérification de tout le contenu (chess.js et Stockfish, ~5-8 min).
+# 2. « construire » : fabrique le site (dossier dist/).
+# 3. « publier » : met le site en ligne, seulement si les deux étapes précédentes ont réussi.
+name: Publier le site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # bouton « Run workflow » dans l'onglet Actions
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  verifier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 26
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run verify
+
+  construire:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 26
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  publier:
+    needs: [verifier, construire]
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploiement.outputs.page_url }}
+    steps:
+      - id: deploiement
+        uses: actions/deploy-pages@v4

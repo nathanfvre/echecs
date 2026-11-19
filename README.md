@@ -184,13 +184,53 @@ et toujours affichés en notation française (`Cf3`) : R = roi, D = dame, T = to
 - [x] Phase d — bot Stockfish et analyse
 - [x] Phase e — modules 1 à 9, entraîneur d'ouvertures
 - [x] Phase f — tableau de bord et plan d'entraînement
-- [ ] Phase g — déploiement
+- [x] Phase g — déploiement
 
-*(La section « Déploiement » sera écrite à la phase g.)*
+## Déploiement (mettre l'appli en ligne, gratuitement)
+
+L'appli est un site **statique** (pas de serveur) : GitHub Pages l'héberge gratuitement. Le fichier
+`.github/workflows/deploy.yml` fait tout automatiquement à chaque envoi sur la branche `main` :
+tests, vérification complète du contenu (Stockfish), construction, puis mise en ligne. Si une vérification
+échoue, le site en ligne n'est pas modifié.
+
+### 1. Créer le dépôt sur GitHub (une seule fois)
+1. Sur github.com, bouton **+** en haut à droite → **New repository**.
+2. Nom : par exemple `echecs`. Choisis **Public** (obligatoire : Pages est gratuit pour les dépôts publics,
+   et la licence de Stockfish demande que le code soit public). **Ne coche rien** d'autre (pas de README).
+3. **Create repository**.
+
+### 2. Envoyer le code
+Le plus simple sans ligne de commande : l'application **GitHub Desktop** (desktop.github.com).
+1. Connecte-toi avec ton compte GitHub dans l'application.
+2. **File → Add Local Repository** → choisis le dossier `Échecs`.
+3. **Repository → Repository Settings → Remote** : colle l'adresse du dépôt
+   (`https://github.com/<ton-pseudo>/echecs.git`), puis **Push origin**.
+
+Ou en ligne de commande (Terminal), depuis le dossier du projet :
+```bash
+git remote add origin https://github.com/<ton-pseudo>/echecs.git
+git push -u origin main
+```
+`git remote add` indique à Git où est ton dépôt GitHub ; `git push` y envoie tes commits. Git demande alors de
+te connecter : avec une adresse https, le « mot de passe » est un **jeton d'accès** à créer sur GitHub
+(Settings → Developer settings → Personal access tokens), pas ton mot de passe GitHub.
+
+### 3. Activer GitHub Pages (une seule fois)
+Dans le dépôt : **Settings → Pages → Build and deployment → Source : GitHub Actions**.
+Puis onglet **Actions** → « Publier le site » → **Run workflow** (ou envoie un nouveau commit).
+Après 5 à 10 minutes (la vérification Stockfish est longue), le site est en ligne à :
+`https://<ton-pseudo>.github.io/echecs/`
+
+### Ensuite
+- Chaque `git push` sur `main` met le site à jour (suivi dans l'onglet **Actions** : vert = en ligne).
+- La progression est enregistrée **par navigateur et par adresse** : celle du site en ligne est séparée de
+  celle de `npm run dev`. Pour la transférer : Progrès → Exporter, puis Importer sur l'autre.
+- Pour tester le site construit avant de l'envoyer : `npm run build` puis `npx vite preview --base /echecs/`.
 
 ## Licences
 
 - Stockfish (moteur, paquet npm `stockfish`) : GPL-3.0. Comme l'appli l'embarque, son code doit rester public
-  (c'est le cas si le dépôt GitHub est public).
+  (c'est le cas si le dépôt GitHub est public). Code source de Stockfish : github.com/official-stockfish/Stockfish
+  et github.com/nmrugg/stockfish.js (version WebAssembly).
 - chess.js : BSD-2. react-chessboard : MIT.
-- Puzzles : base de puzzles Lichess, CC0.
+- Puzzles : base de puzzles Lichess, CC0. Noms d'ouvertures : lichess-org/chess-openings, CC0.
