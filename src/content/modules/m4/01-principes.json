@@ -1,0 +1,13 @@
+{
+  "id": "m4-principes",
+  "title": "Les 3 principes de l'ouverture",
+  "intro": "Dans les 10 premiers coups :\n1. **occupe le centre** avec tes pions (e4, d4) ;\n2. **développe** tes cavaliers et tes fous vers le centre, une pièce à la fois ;\n3. **roque** tôt pour mettre ton roi à l'abri.\nÉvite de sortir la dame trop tôt et de bouger deux fois la même pièce.",
+  "steps": [
+    {"type": "squares", "id": "m4-principes-1", "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "prompt": "Clique sur les **4 cases du centre**, puis valide.", "answer": ["d4", "d5", "e4", "e5"], "hint": "Elles sont au milieu de l'échiquier, sur les colonnes d et e.", "explanation": "d4, e4, d5, e5 : les pièces placées là contrôlent le plus de cases."},
+    {"type": "choice", "id": "m4-principes-2", "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "prompt": "Quel premier coup suit les principes ?", "options": ["e4", "h4", "f3"], "answer": 0, "engineChoice": true, "explanation": "**e4** occupe le centre et ouvre la route à la dame et au fou. h4 ne fait rien pour le centre, f3 affaiblit ton roi."},
+    {"type": "choice", "id": "m4-principes-3", "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2", "prompt": "Après 1.e4 e5, quel coup choisir ?", "options": ["Nf3", "f3", "Ke2"], "answer": 0, "engineChoice": true, "explanation": "**Cf3** développe une pièce **et** attaque le pion e5. f3 affaiblit le roi, Re2 l'empêche de roquer."},
+    {"type": "choice", "id": "m4-principes-4", "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3", "prompt": "Après 1.e4 e5 2.Cf3 Cc6, quel coup choisir ?", "options": ["Bc4", "Rg1", "h4"], "answer": 0, "engineChoice": true, "explanation": "**Fc4** développe le fou vers le centre et vise f7, le point faible des Noirs. Tg1 et h4 ne développent rien."},
+    {"type": "choice", "id": "m4-principes-5", "fen": "r1bqk2r/ppp2ppp/2np1n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQK2R w KQkq - 0 6", "prompt": "Les cavaliers et les fous sont sortis. Que faire maintenant ?", "options": ["O-O", "Kf1", "Rg1"], "answer": 0, "engineChoice": true, "explanation": "**Le roque (O-O)** met le roi à l'abri et active la tour. Rf1 perd le droit de roquer."},
+    {"type": "choice", "id": "m4-principes-6", "prompt": "Pourquoi faut-il éviter de bouger la même pièce plusieurs fois dans l'ouverture ?", "options": ["Pendant ce temps, les autres pièces restent à la maison", "C'est interdit par les règles", "Ça fatigue la pièce"], "answer": 0, "explanation": "Chaque coup compte : l'ouverture est une **course au développement**. Celui qui a le plus de pièces actives attaque le premier."}
+  ]
+}

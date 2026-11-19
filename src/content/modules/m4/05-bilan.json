@@ -1,0 +1,13 @@
+{
+  "id": "m4-bilan",
+  "title": "Bilan du module 4",
+  "intro": "Des positions d'ouverture tirées de vraies parties : quelqu'un vient de faire une erreur. Trouve comment en profiter.",
+  "steps": [
+    {"type": "choice", "id": "m4-bilan-1", "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2", "prompt": "Après 1.e4 e5, les Blancs hésitent. Quel coup respecte le mieux les principes ?", "options": ["Nf3", "f3", "Ke2"], "answer": 0, "engineChoice": true, "explanation": "**Cf3** développe et attaque e5."},
+    {"type": "move", "id": "m4-bilan-p1", "fen": "r1b1kbnr/pp1ppppp/1q6/1B1N4/3pP3/8/PPPP1PPP/R1BQK2R b KQkq - 1 6", "preMove": "Qxb5", "source": "lichess:g35Xn", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Nc7+", "Kd8", "Nxb5"], "engine": true, "hint": "L'adversaire vient de faire une erreur d'ouverture. Échecs, captures, menaces !", "explanation": "Piège d'ouverture ! Solution : **Cc7+ Rd8 Cxb5**."},
+    {"type": "move", "id": "m4-bilan-p2", "fen": "r1b1k1nr/pp2ppbp/6p1/q3N3/8/2N1Q3/PPP3PP/R1B1KB1R b KQkq - 2 10", "preMove": "Bxe5", "source": "lichess:aHhCd", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Bb5+", "Kf8", "Qxe5"], "engine": true, "hint": "L'adversaire vient de faire une erreur d'ouverture. Échecs, captures, menaces !", "explanation": "Piège d'ouverture ! Solution : **Fb5+ Rf8 Dxe5**."},
+    {"type": "move", "id": "m4-bilan-p3", "fen": "r1b1k2r/pp3ppp/2n2b2/qBP5/3pN3/2P2P2/PP4PP/R2QK1NR b KQkq - 0 11", "preMove": "Qxb5", "source": "lichess:qum4Y", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Nd6+", "Ke7", "Nxb5"], "engine": true, "hint": "L'adversaire vient de faire une erreur d'ouverture. Échecs, captures, menaces !", "explanation": "Piège d'ouverture ! Solution : **Cd6+ Re7 Cxb5**."},
+    {"type": "move", "id": "m4-bilan-p4", "fen": "r2qnrk1/pbp2p1p/1p1bp1p1/4N2Q/2PP4/1P1B4/P4PPP/R1B1R1K1 w - - 0 15", "preMove": "Qh6", "source": "lichess:FFRTP", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Bxe5", "dxe5", "Qxd3"], "engine": true, "hint": "L'adversaire vient de faire une erreur d'ouverture. Échecs, captures, menaces !", "explanation": "Piège d'ouverture ! Solution : **Fxe5 dxe5 Dxd3**."},
+    {"type": "move", "id": "m4-bilan-p5", "fen": "r1bqk2r/1pp2ppp/p1nbpn2/3pN3/3P4/1P1BP3/PBP2PPP/RN1QK2R b KQkq - 4 7", "preMove": "Nxe5", "source": "lichess:bllBF", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["dxe5", "Be7", "exf6"], "engine": true, "hint": "L'adversaire vient de faire une erreur d'ouverture. Échecs, captures, menaces !", "explanation": "Piège d'ouverture ! Solution : **dxe5 Fe7 exf6**."}
+  ]
+}

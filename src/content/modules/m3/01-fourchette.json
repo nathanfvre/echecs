@@ -1,0 +1,15 @@
+{
+  "id": "m3-fourchette",
+  "title": "La fourchette",
+  "intro": "Une **fourchette**, c'est une pièce qui attaque **deux cibles à la fois**. L'adversaire ne peut en sauver qu'une.\nLe cavalier est le roi des fourchettes, mais toutes les pièces (même les pions et le roi) peuvent en faire.",
+  "steps": [
+    {"type": "demo", "fen": "q3k3/8/8/3N4/8/8/8/4K3 w - - 0 1", "text": "**Cc7+** attaque à la fois le roi e8 et la dame a8. Le roi doit bouger… et le cavalier prend la dame.", "moves": ["Nc7+", "Kd7", "Nxa8"], "arrows": [["c7", "e8"],["c7", "a8"]]},
+    {"type": "move", "id": "m3-fourchette-1", "fen": "q3k3/8/8/3N4/8/8/8/4K3 w - - 0 1", "prompt": "Gagne la dame.", "solution": ["Nc7+"], "engine": true, "hint": "Cherche une case d'où le cavalier attaque le roi et la dame.", "explanation": "**Cc7+** : fourchette roi-dame."},
+    {"type": "move", "id": "m3-fourchette-2", "fen": "6k1/5ppp/2n1r3/8/3P4/8/5PPP/3R2K1 w - - 0 1", "prompt": "Un simple pion peut faire une fourchette ici.", "solution": ["d5"], "engine": true, "hint": "Un pion attaque les deux cases en diagonale devant lui.", "explanation": "**d5** attaque le cavalier c6 et la tour e6 : une des deux pièces tombe."},
+    {"type": "move", "id": "m3-fourchette-p1", "fen": "3r4/pb5N/np1p1kp1/2pP4/2P3p1/8/PP3PPP/4R1K1 b - - 0 23", "preMove": "Kg7", "source": "lichess:eZdpJ", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Re7+", "Kh6", "Rxb7"], "engine": true, "hint": "Une de tes pièces peut attaquer deux cibles à la fois.", "explanation": "Fourchette ! Solution : **Te7+ Rh6 Txb7**."},
+    {"type": "move", "id": "m3-fourchette-p2", "fen": "8/1r4k1/1P3p2/B5p1/3p1n2/7P/5PP1/1R4K1 w - - 3 39", "preMove": "Rc1", "source": "lichess:vDdNf", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Ne2+", "Kf1", "Nxc1"], "engine": true, "hint": "Une de tes pièces peut attaquer deux cibles à la fois.", "explanation": "Fourchette ! Solution : **Ce2+ Rf1 Cxc1**."},
+    {"type": "move", "id": "m3-fourchette-p3", "fen": "4r1k1/p4pp1/1p5p/3pPN2/5P2/2Pn4/P5KP/5R2 b - - 6 31", "preMove": "Rc8", "source": "lichess:x3uVG", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Ne7+", "Kf8", "Nxc8"], "engine": true, "hint": "Une de tes pièces peut attaquer deux cibles à la fois.", "explanation": "Fourchette ! Solution : **Ce7+ Rf8 Cxc8**."},
+    {"type": "move", "id": "m3-fourchette-p4", "fen": "2b1Rr1k/6pp/5Q2/8/8/1p4PP/7K/8 b - - 0 39", "preMove": "gxf6", "source": "lichess:lAGC2", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Rxf8+", "Kg7", "Rxc8"], "engine": true, "hint": "Une pièce adverse n’est pas (assez) protégée.", "explanation": "Fourchette ! Solution : **Txf8+ Rg7 Txc8**."},
+    {"type": "move", "id": "m3-fourchette-p5", "fen": "r1b1q1k1/3p2bp/p3p1p1/2p3N1/1p1nP3/1PNP2Q1/1PPB2PP/5RK1 w - - 2 20", "preMove": "Na4", "source": "lichess:wAARh", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Ne2+", "Kf2", "Nxg3"], "engine": true, "hint": "Une de tes pièces peut attaquer deux cibles à la fois.", "explanation": "Fourchette ! Solution : **Ce2+ Rf2 Cxg3**."}
+  ]
+}

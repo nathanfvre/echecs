@@ -1,0 +1,13 @@
+{
+  "id": "m4-berger",
+  "title": "Le coup du berger",
+  "intro": "Le **coup du berger** : la dame (en h5 ou f3) et le fou c4 visent **f7**, défendu seulement par le roi. Il faut savoir le parer… et le punir : la dame sortie trop tôt devient une cible.",
+  "steps": [
+    {"type": "demo", "fen": "r1bqkbnr/pppp1ppp/2n5/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR b KQkq - 3 3", "text": "La dame h5 et le fou c4 visent **f7**. La dame attaque aussi e5. Les Noirs doivent parer **Dxf7#**.", "arrows": [["h5", "f7"], ["c4", "f7"]]},
+    {"type": "choice", "id": "m4-berger-0", "fen": "rnbqkbnr/pppp1ppp/8/4p2Q/4P3/8/PPPP1PPP/RNB1KBNR b KQkq - 1 2", "prompt": "Les Blancs jouent 2.Dh5, qui attaque e5. Que joues-tu ?", "options": ["Nc6", "g6", "Ke7"], "answer": 0, "engineChoice": true, "hint": "Défends le pion e5 en développant une pièce.", "explanation": "**Cc6** défend e5 et développe. g6 ?? perd sur **Dxe5+**, qui attaque à la fois le roi et la tour h8. Re7 ?? enferme ton fou et ta dame."},
+    {"type": "move", "id": "m4-berger-1", "fen": "r1bqkbnr/pppp1ppp/2n5/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR b KQkq - 3 3", "prompt": "Pare la menace de mat.", "solution": ["g6"], "accept": ["Qe7"], "engine": true, "hint": "Un pion peut chasser la dame tout en protégeant f7.", "explanation": "**g6** chasse la dame. De7 marchait aussi (elle défend f7 et e5), mais bloque ton fou f8."},
+    {"type": "move", "id": "m4-berger-2", "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5Q2/PPPP1PPP/RNB1K1NR b KQkq - 3 3", "prompt": "Même idée, avec la dame en f3. Pare la menace.", "solution": ["Nf6"], "engine": true, "hint": "Une pièce peut se mettre entre la dame et f7, tout en se développant.", "explanation": "**Cf6** bloque la colonne f et développe le cavalier. Le meilleur des deux mondes."},
+    {"type": "move", "id": "m4-berger-3", "fen": "r1bqkbnr/pppp1ppp/8/4p2Q/2BnP3/8/PPPP1PPP/RNB1K1NR w KQkq - 4 4", "prompt": "Les Noirs ont oublié la menace (3...Cd4 ??). Punis-les.", "solution": ["Qxf7#"], "goal": "mate", "hint": "Que visent ta dame et ton fou ?", "explanation": "**Dxf7#** : voilà pourquoi il faut toujours regarder ce que menace l'adversaire."},
+    {"type": "move", "id": "m4-berger-4", "fen": "rnbqkb1r/pppp1ppp/5n2/4p2Q/4P3/8/PPPP1PPP/RNB1KBNR w KQkq - 2 3", "prompt": "Les Noirs ont attaqué ta dame avec 2...Cf6, mais ont oublié quelque chose.", "solution": ["Qxe5+"], "engine": true, "hint": "Un pion noir n'est plus défendu.", "explanation": "**Dxe5+** gagne le pion e5, avec échec."}
+  ]
+}

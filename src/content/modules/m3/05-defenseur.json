@@ -1,0 +1,13 @@
+{
+  "id": "m3-defenseur",
+  "title": "Éliminer le défenseur",
+  "intro": "Une pièce adverse est **défendue** ? Prends (ou chasse) **la pièce qui la défend**. La cible se retrouve sans protection et tombe au coup suivant.",
+  "steps": [
+    {"type": "choice", "id": "m3-defenseur-1", "fen": "6k1/pp3npp/3b4/7B/8/8/P4PPP/3R2K1 w - - 0 1", "prompt": "Le fou noir d6 n'est défendu que par le cavalier f7. Ta tour l'attaque. Quel coup le gagne ?", "options": ["Rxd6", "Bxf7+", "Rd2"], "answer": 1, "engineChoice": true, "hint": "Que se passe-t-il si le cavalier f7 disparaît ?", "explanation": "**Fxf7+** élimine le défenseur, en plus avec échec : après Rxf7, **Txd6** gagne le fou. Txd6 tout de suite ? Cxd6 : tu donnes ta tour (5) contre un fou (3)."},
+    {"type": "move", "id": "m3-defenseur-p1", "fen": "1r4k1/2r3p1/5pP1/2n1b2p/2NpPp1P/PP1B1P2/K7/3R2R1 w - - 1 35", "preMove": "b4", "source": "lichess:vPgM2", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Nxd3", "Rxd3", "Rxc4"], "engine": true, "hint": "En bougeant une pièce, tu ouvres la ligne d’une autre.", "explanation": "Élimination du défenseur ! Solution : **Cxd3 Txd3 Txc4**."},
+    {"type": "move", "id": "m3-defenseur-p2", "fen": "5qk1/5pp1/4p2p/3p4/1Q6/1PnN4/r4PPP/2R2K2 b - - 0 34", "preMove": "Qxb4", "source": "lichess:RMvQr", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Nxb4", "Rb2", "Rxc3"], "engine": true, "hint": "Prends la pièce qui protège la cible.", "explanation": "Élimination du défenseur ! Solution : **Cxb4 Tb2 Txc3**."},
+    {"type": "move", "id": "m3-defenseur-p3", "fen": "r4r1k/p4p1p/1p3pq1/4n3/5Q2/4R3/P3BPPP/R5K1 b - - 2 24", "preMove": "Qg5", "source": "lichess:w2utZ", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Qxg5", "fxg5", "Rxe5"], "engine": true, "hint": "Prends la pièce qui protège la cible.", "explanation": "Élimination du défenseur ! Solution : **Dxg5 fxg5 Txe5**."},
+    {"type": "move", "id": "m3-defenseur-p4", "fen": "r1bqr1k1/pp3pp1/5n1p/3pN2P/3p4/2PB2R1/PP3QP1/1K3R2 w - - 0 25", "preMove": "Qxf6", "source": "lichess:j6m4N", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Qxf6", "Rxf6", "Rxe5"], "engine": true, "hint": "Prends la pièce qui protège la cible.", "explanation": "Élimination du défenseur ! Solution : **Dxf6 Txf6 Txe5**."},
+    {"type": "move", "id": "m3-defenseur-p5", "fen": "r4rk1/ppp3bp/3pbqp1/3B4/2n5/1QN3P1/PP3P1P/R1B2RK1 b - - 3 14", "preMove": "Bxd5", "source": "lichess:D23B8", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Nxd5", "Qf7", "Qxc4"], "engine": true, "hint": "Prends la pièce qui protège la cible.", "explanation": "Élimination du défenseur ! Solution : **Cxd5 Df7 Dxc4**."}
+  ]
+}

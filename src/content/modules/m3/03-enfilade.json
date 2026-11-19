@@ -1,0 +1,14 @@
+{
+  "id": "m3-enfilade",
+  "title": "L'enfilade",
+  "intro": "L'**enfilade**, c'est un clouage à l'envers : on attaque une pièce **importante** (le roi, la dame) et, quand elle s'écarte, on prend la pièce qui était **derrière** elle.",
+  "steps": [
+    {"type": "demo", "fen": "7q/8/8/4k3/8/8/1B3PPP/6K1 b - - 0 1", "text": "Le fou b2 donne échec au roi e5. Le roi doit quitter la diagonale… et le fou prend la dame h8 qui était derrière.", "arrows": [["b2", "h8"]]},
+    {"type": "move", "id": "m3-enfilade-1", "fen": "7q/8/8/4k3/8/8/5PPP/2B3K1 w - - 0 1", "prompt": "Gagne la dame.", "solution": ["Bb2+"], "engine": true, "hint": "Le roi et la dame noirs sont sur la même diagonale.", "explanation": "**Fb2+** : le roi s'écarte et **Fxh8** gagne la dame."},
+    {"type": "move", "id": "m3-enfilade-p1", "fen": "b7/P7/8/4k3/3p4/3Kp3/2P5/5B2 b - - 1 61", "preMove": "Kd5", "source": "lichess:uZ1U3", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Bg2+", "Kc5", "Bxa8"], "engine": true, "hint": "Attaque une pièce importante : quand elle bouge, celle de derrière tombe.", "explanation": "Enfilade ! Solution : **Fg2+ Rc5 Fxa8**."},
+    {"type": "move", "id": "m3-enfilade-p2", "fen": "r2k2r1/ppp5/3b2p1/1N3R1p/8/3K4/PPP5/6R1 b - - 0 26", "preMove": "gxf5", "source": "lichess:MXFpg", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Rxg8+", "Kd7", "Rxa8"], "engine": true, "hint": "Une pièce adverse n’est pas (assez) protégée.", "explanation": "Enfilade ! Solution : **Txg8+ Rd7 Txa8**."},
+    {"type": "move", "id": "m3-enfilade-p3", "fen": "r1b1k1nr/p2p1p1p/2p1p1p1/4P1q1/3Q4/3B4/PPP2PPP/RN2K2R w KQkq - 3 12", "preMove": "g3", "source": "lichess:Wkhqw", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Qc1+", "Ke2", "Qxh1"], "engine": true, "hint": "Attaque une pièce importante : quand elle bouge, celle de derrière tombe.", "explanation": "Enfilade ! Solution : **Dc1+ Re2 Dxh1**."},
+    {"type": "move", "id": "m3-enfilade-p4", "fen": "8/1pb4p/4k3/1P3p2/2P5/4BK1P/8/8 b - - 1 42", "preMove": "Ke5", "source": "lichess:UJafz", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Bf4+", "Kd4", "Bxc7"], "engine": true, "hint": "Attaque une pièce importante : quand elle bouge, celle de derrière tombe.", "explanation": "Enfilade ! Solution : **Ff4+ Rd4 Fxc7**."},
+    {"type": "move", "id": "m3-enfilade-p5", "fen": "2q3k1/R5p1/2p2p1p/1pPp4/1P1PPQ1P/4K3/1r4PB/8 w - - 0 37", "preMove": "Qg3", "source": "lichess:ePCRj", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Rb3+", "Kf2", "Rxg3"], "engine": true, "hint": "Attaque une pièce importante : quand elle bouge, celle de derrière tombe.", "explanation": "Enfilade ! Solution : **Tb3+ Rf2 Txg3**."}
+  ]
+}
