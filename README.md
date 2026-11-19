@@ -172,7 +172,7 @@ et toujours affichés en notation française (`Cf3`) : R = roi, D = dame, T = to
 - [x] Phase b — moteur de leçons et d'exercices, module 0
 - [x] Phase c — puzzles et répétition espacée
 - [x] Phase d — bot Stockfish et analyse
-- [ ] Phase e — modules 1 à 9, entraîneur d'ouvertures (fait : modules 1 à 7 et entraîneur d'ouvertures)
+- [x] Phase e — modules 1 à 9, entraîneur d'ouvertures
 - [ ] Phase f — tableau de bord
 - [ ] Phase g — déploiement
 

@@ -1,0 +1,13 @@
+{
+  "id": "m9-defense",
+  "title": "Se défendre",
+  "intro": "Les parties ne se gagnent pas qu'en attaquant. Quand l'adversaire a une menace, cherche **le** coup qui la pare, souvent un seul. Dans ces puzzles, l'adversaire vient de créer une menace : trouve la défense.",
+  "steps": [
+    {"type": "move", "id": "m9-defense-p1", "fen": "3b4/8/5p1p/1K6/PP3P2/4B3/6p1/5k2 b - - 0 48", "preMove": "g1=Q", "source": "lichess:IYnY6", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Bxg1", "Kxg1", "a5"], "engine": true, "hint": "Que menace l'adversaire ? Cherche le seul coup qui pare tout.", "explanation": "Bonne défense ! Solution : **Fxg1 Rxg1 a5**."},
+    {"type": "move", "id": "m9-defense-p2", "fen": "5bk1/1p5p/p2P2p1/P1B1p3/4Pp2/2p2P2/6PP/6K1 b - - 0 31", "preMove": "Bxd6", "source": "lichess:z1pkf", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Bxd6", "c2", "Ba3"], "engine": true, "hint": "Que menace l'adversaire ? Cherche le seul coup qui pare tout.", "explanation": "Bonne défense ! Solution : **Fxd6 c2 Fa3**."},
+    {"type": "move", "id": "m9-defense-p3", "fen": "r4rk1/2p1npp1/p2p3p/3Pp3/1PP1n3/PB2qN1P/6PK/R3QR2 b - - 5 19", "preMove": "Qf4+", "source": "lichess:O2lwK", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["g3", "Nxg3", "Qxg3"], "engine": true, "hint": "Que menace l'adversaire ? Cherche le seul coup qui pare tout.", "explanation": "Bonne défense ! Solution : **g3 Cxg3 Dxg3**."},
+    {"type": "move", "id": "m9-defense-p4", "fen": "8/8/3p1rk1/8/1P6/P5p1/1K3pQ1/8 w - - 0 62", "preMove": "Qxg3+", "source": "lichess:JjBcq", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Kf7", "Qg4", "f1=Q"], "engine": true, "hint": "Que menace l'adversaire ? Cherche le seul coup qui pare tout.", "explanation": "Bonne défense ! Solution : **Rf7 Dg4 f1=D**."},
+    {"type": "move", "id": "m9-defense-p5", "fen": "1rr3k1/2q2pb1/b6p/p2p2pP/2p5/P1N1QN2/KPPR1PP1/7R b - - 1 31", "preMove": "Rxb2+", "source": "lichess:cix6d", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Kxb2", "Qb8+", "Ka2"], "engine": true, "hint": "Que menace l'adversaire ? Cherche le seul coup qui pare tout.", "explanation": "Bonne défense ! Solution : **Rxb2 Db8+ Ra2**."},
+    {"type": "move", "id": "m9-defense-p6", "fen": "r5k1/1pp3b1/p4qp1/3Pp3/2P3B1/P6Q/1P3r2/2K2R1R b - - 1 23", "preMove": "Qf4+", "source": "lichess:TUZi8", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Kb1", "Rxf1+", "Rxf1"], "engine": true, "hint": "Que menace l'adversaire ? Cherche le seul coup qui pare tout.", "explanation": "Bonne défense ! Solution : **Rb1 Txf1+ Txf1**."}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "m8-intermezzo",
+  "title": "Coup intermédiaire et coup tranquille",
+  "intro": "Avant de reprendre une pièce automatiquement, cherche un **coup intermédiaire** : un échec ou une menace plus forte qui change tout. Et parfois le meilleur coup n'est ni un échec ni une capture : c'est un **coup tranquille** qui crée une menace imparable.",
+  "steps": [
+    {"type": "move", "id": "m8-intermezzo-p1", "fen": "r2q1k1r/4n1pp/p2pPQ2/1ppNp3/4p3/2P5/PP3PPP/R1B1K2R b KQ - 0 16", "preMove": "gxf6", "source": "lichess:3FPaO", "prompt": "Mat en 2.", "solution": ["Bh6+", "Kg8", "Nxf6#"], "goal": "mate", "engine": true, "hint": "Commence par un échec (ou une menace) qui ne laisse presque aucun choix.", "explanation": "Coup intermédiaire ! Solution : **Fh6+ Rg8 Cxf6#**."},
+    {"type": "move", "id": "m8-intermezzo-p2", "fen": "r1b1k2r/pp3ppp/4p3/q7/1bNn4/P1NB4/1PQ2PPP/R3K2R w KQkq - 0 13", "preMove": "Nxa5", "source": "lichess:cMiNH", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Nxc2+", "Bxc2", "Bxa5"], "engine": true, "hint": "Échecs, captures, menaces.", "explanation": "Coup intermédiaire ! Solution : **Cxc2+ Fxc2 Fxa5**."},
+    {"type": "move", "id": "m8-intermezzo-p3", "fen": "1k1br1r1/pp4q1/3p3p/2pN2p1/6B1/1P1Q3P/P1P3P1/R3R2K w - - 6 32", "preMove": "Rxe8", "source": "lichess:YrOIw", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Qxa1+", "Kh2", "Rxe8"], "engine": true, "hint": "Une pièce adverse n’est pas (assez) protégée.", "explanation": "Coup intermédiaire ! Solution : **Dxa1+ Rh2 Txe8**."},
+    {"type": "move", "id": "m8-intermezzo-p4", "fen": "r3r1k1/ppp2ppp/4bq2/2P3b1/Q3N1n1/5P2/PP2PP1P/3RKB1R b K - 0 15", "preMove": "Nxf2", "source": "lichess:rz0SM", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Nxf6+", "Bxf6", "Kxf2"], "engine": true, "hint": "Échecs, captures, menaces.", "explanation": "Coup intermédiaire ! Solution : **Cxf6+ Fxf6 Rxf2**."},
+    {"type": "move", "id": "m8-intermezzo-p5", "fen": "7r/3r2k1/5p1p/P5p1/8/8/P1P2PPP/5QK1 w - - 0 30", "preMove": "c4", "source": "lichess:H8kzF", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Rhd8", "h4", "Rd1"], "engine": true, "hint": "Une pièce adverse ne peut pas bouger sans exposer une pièce plus importante derrière elle.", "explanation": "Coup tranquille ! Solution : **Thd8 h4 Td1**."},
+    {"type": "move", "id": "m8-intermezzo-p6", "fen": "8/8/5kpK/8/7P/8/8/8 w - - 4 75", "preMove": "h5", "source": "lichess:h0Z98", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["g5", "Kh7", "g4"], "engine": true, "hint": "Échecs, captures, menaces.", "explanation": "Coup tranquille ! Solution : **g5 Rh7 g4**."}
+  ]
+}

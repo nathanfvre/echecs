@@ -1,0 +1,12 @@
+{
+  "id": "m9-temps",
+  "title": "Gérer sa pendule en 10+0",
+  "intro": "En 10 minutes pour toute la partie, le temps est une ressource comme une pièce. Repères :\n- **ouverture** : joue ton répertoire vite ;\n- **milieu** : prends ton temps dans les positions critiques (captures, échecs, menaces, choix d'un plan) ;\n- **sous 1 minute** : coups simples et sûrs.",
+  "steps": [
+    {"type": "choice", "id": "m9-temps-1", "prompt": "En partie 10+0, combien de temps en moyenne par coup ?", "options": ["Environ 15 secondes, plus dans les moments critiques", "Environ 1 minute", "2 secondes"], "answer": 0, "explanation": "10 minutes pour environ 40 coups : **15 secondes** en moyenne. Gagne du temps dans l'ouverture pour pouvoir réfléchir aux moments importants."},
+    {"type": "choice", "id": "m9-temps-2", "prompt": "Quand faut-il réfléchir plus longtemps ?", "options": ["Quand il y a des captures, des échecs ou des menaces dans l'air", "À chaque coup d'ouverture", "Quand la position est calme et sans danger"], "answer": 0, "explanation": "Les **positions tactiques** décident les parties : c'est là qu'il faut investir ton temps."},
+    {"type": "choice", "id": "m9-temps-3", "prompt": "Il te reste 1 minute, ton adversaire en a 5. Que fais-tu ?", "options": ["Je joue des coups simples et sûrs, rapidement", "Je cherche la combinaison parfaite", "J'abandonne"], "answer": 0, "explanation": "Au temps, une partie perdue l'est vraiment. **Coups simples, roi en sécurité, pièces protégées.**"},
+    {"type": "choice", "id": "m9-temps-4", "prompt": "Juste avant de toucher une pièce, tu vérifies :", "options": ["Que mon coup ne laisse ni pièce en prise ni mat en 1", "Que mon coup est original", "Que ma dame est active"], "answer": 0, "explanation": "C'est la **vérification anti-gaffe** (la checklist du mode Jouer) : quelques secondes qui sauvent des parties."},
+    {"type": "choice", "id": "m9-temps-5", "prompt": "Tu as une position gagnante et beaucoup de temps. Que faire ?", "options": ["Simplifier : échanger les pièces et éviter tout risque", "Attaquer à tout prix", "Jouer vite pour finir"], "answer": 0, "explanation": "Avec du matériel en plus, **chaque échange** te rapproche d'une finale facile à gagner."}
+  ]
+}

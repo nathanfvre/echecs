@@ -1,0 +1,14 @@
+{
+  "id": "m9-bilan",
+  "title": "Bilan final",
+  "intro": "Le grand examen : un peu de tout ce que tu as appris. Ensuite, la meilleure progression : **jouer** (Lichess, 10+0), **analyser** chaque partie, **réviser** chaque jour et faire des **puzzles**.",
+  "steps": [
+    {"type": "move", "id": "m9-bilan-p1", "fen": "2k1r3/Qpp3p1/3b4/6Bp/3P3P/8/PPP2rq1/6RK w - - 0 33", "preMove": "Rxg2", "source": "lichess:Li30X", "prompt": "Mat en 2.", "solution": ["Re1+", "Rg1", "Rh2#"], "goal": "mate", "engine": true, "hint": "Commence par un échec (ou une menace) qui ne laisse presque aucun choix.", "explanation": "Mat ! Solution : **Te1+ Tg1 Th2#**."},
+    {"type": "move", "id": "m9-bilan-p2", "fen": "r1bqkb1r/ppp2ppp/3p4/P2P4/4n3/2P2N2/P4PPP/RNBQK2R b KQkq - 0 10", "preMove": "Be7", "source": "lichess:uX368", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Qa4+", "Bd7", "Qxe4"], "engine": true, "hint": "Une de tes pièces peut attaquer deux cibles à la fois.", "explanation": "Fourchette ! Solution : **Da4+ Fd7 Dxe4**."},
+    {"type": "move", "id": "m9-bilan-p3", "fen": "8/1p2k1b1/p4p2/3qp3/2rp3B/8/PPP4Q/1K2R3 b - - 3 36", "preMove": "Rc7", "source": "lichess:DNz4Z", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Rxe5+", "Qxe5", "Qxe5+"], "engine": true, "hint": "Une pièce adverse ne peut pas bouger sans exposer une pièce plus importante derrière elle.", "explanation": "Clouage ! Solution : **Txe5+ Dxe5 Dxe5+**."},
+    {"type": "move", "id": "m9-bilan-p4", "fen": "8/2p2k2/5pp1/5P2/2P1P3/1K1P4/r7/8 w - - 0 70", "preMove": "Kxa2", "source": "lichess:yZnzZ", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["g5", "Kb3", "g4"], "engine": true, "hint": "Que menace l'adversaire ?", "explanation": "Bonne défense ! Solution : **g5 Rb3 g4**."},
+    {"type": "move", "id": "m9-bilan-p5", "fen": "8/7p/2k2p2/2p3p1/2K2P2/4P1PP/8/8 w - - 1 40", "preMove": "fxg5", "source": "lichess:CLXtQ", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["fxg5", "e4", "Kd6"], "engine": true, "hint": "Échecs, captures, menaces.", "explanation": "Finale de pions ! Solution : **fxg5 e4 Rd6**."},
+    {"type": "line", "id": "m9-bilan-1", "line": "w-italienne", "hint": "Ton ouverture : c3, d3, roque, Te1, Fb3.", "explanation": "Ton répertoire est en place."},
+    {"type": "practice", "id": "m9-bilan-2", "fen": "8/8/8/8/4k3/8/8/Q3K3 w - - 0 1", "prompt": "Pour finir : mate avec la dame contre Stockfish.", "goal": "mate", "maxMoves": 20, "hint": "La boîte qui rétrécit, puis le roi qui s'approche. Attention au pat !", "explanation": "Cours terminé, bravo ! Place au jeu : vise 1000 en rapide sur Lichess."}
+  ]
+}

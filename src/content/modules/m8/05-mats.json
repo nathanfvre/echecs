@@ -1,0 +1,13 @@
+{
+  "id": "m8-mats",
+  "title": "Mats en 2 et en 3",
+  "intro": "Pour trouver un mat en plusieurs coups : regarde les **échecs** d'abord, puis les coups qui **enlèvent les dernières cases** du roi. Imagine la position après chaque réponse forcée.",
+  "steps": [
+    {"type": "move", "id": "m8-mats-p1", "fen": "r4r2/1p3p1k/2p1pBpp/p3P3/3P1P1R/2n2R2/6PP/6K1 b - - 1 25", "preMove": "Ne4", "source": "lichess:u3YxX", "prompt": "Mat en 2.", "solution": ["Rxh6+", "Kxh6", "Rh3#"], "goal": "mate", "engine": true, "hint": "Commence par un échec (ou une menace) qui ne laisse presque aucun choix.", "explanation": "Mat ! Solution : **Txh6+ Rxh6 Th3#**."},
+    {"type": "move", "id": "m8-mats-p2", "fen": "8/4Qrkp/p3N1p1/4P3/2p5/2P4P/P2q2P1/6K1 b - - 5 39", "preMove": "Kg8", "source": "lichess:VwVmR", "prompt": "Mat en 2.", "solution": ["Qe8+", "Rf8", "Qxf8#"], "goal": "mate", "engine": true, "hint": "Commence par un échec (ou une menace) qui ne laisse presque aucun choix.", "explanation": "Mat ! Solution : **De8+ Tf8 Dxf8#**."},
+    {"type": "move", "id": "m8-mats-p3", "fen": "3Rr2k/4P1p1/2q4p/1p3P2/2r5/5P2/4Q2P/4R2K w - - 3 47", "preMove": "Qe6", "source": "lichess:Dkvwq", "prompt": "Mat en 2.", "solution": ["Qxf3+", "Kg1", "Rg4#"], "goal": "mate", "engine": true, "hint": "Commence par un échec (ou une menace) qui ne laisse presque aucun choix.", "explanation": "Mat ! Solution : **Dxf3+ Rg1 Tg4#**."},
+    {"type": "move", "id": "m8-mats-p4", "fen": "1k1r4/ppp3p1/8/5Q2/5P2/7P/PPP2qP1/2K4R w - - 2 20", "preMove": "Qe4", "source": "lichess:2WNE2", "prompt": "Mat en 3.", "solution": ["Qd2+", "Kb1", "Qd1+", "Rxd1", "Rxd1#"], "goal": "mate", "engine": true, "hint": "Le roi est enfermé derrière ses pions : vise la dernière rangée.", "explanation": "Mat ! Solution : **Dd2+ Rb1 Dd1+ Txd1 Txd1#**."},
+    {"type": "move", "id": "m8-mats-p5", "fen": "r1b2r2/1pp1k1pQ/p3pqB1/8/8/2P5/P4PPP/R3R1K1 w - - 5 21", "preMove": "Re3", "source": "lichess:QUr7H", "prompt": "Mat en 3.", "solution": ["Qxf2+", "Kh1", "Qf1+", "Rxf1", "Rxf1#"], "goal": "mate", "engine": true, "hint": "Le roi est enfermé derrière ses pions : vise la dernière rangée.", "explanation": "Mat ! Solution : **Dxf2+ Rh1 Df1+ Txf1 Txf1#**."},
+    {"type": "move", "id": "m8-mats-p6", "fen": "r5k1/3b2pp/p3pb2/3p2P1/P2q4/2N2Q2/1P4PP/5R1K b - - 0 25", "preMove": "Bxg5", "source": "lichess:fkTQ1", "prompt": "Mat en 3.", "solution": ["Qf7+", "Kh8", "Qf8+", "Rxf8", "Rxf8#"], "goal": "mate", "engine": true, "hint": "Le roi est enfermé derrière ses pions : vise la dernière rangée.", "explanation": "Mat ! Solution : **Df7+ Rh8 Df8+ Txf8 Txf8#**."}
+  ]
+}

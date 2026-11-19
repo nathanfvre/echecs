@@ -1,0 +1,13 @@
+{
+  "id": "m9-analyser",
+  "title": "Analyser ses parties",
+  "intro": "Après chaque partie (surtout perdue) :\n1. cherche **seul** le moment où tout a basculé ;\n2. vérifie avec la page **Analyse** (Stockfish) ;\n3. ajoute tes **gaffes aux révisions** : tu les rejoueras jusqu'à ne plus les refaire.",
+  "steps": [
+    {"type": "choice", "id": "m9-analyser-1", "prompt": "Dans l'analyse d'une partie, quels coups regarder en priorité ?", "options": ["Les gaffes (??) : elles décident la plupart des parties", "Les imprécisions (?!)", "Les coups d'ouverture"], "answer": 0, "explanation": "À ton niveau, **une gaffe** décide presque toujours la partie. Commence par elles."},
+    {"type": "choice", "id": "m9-analyser-2", "prompt": "Pourquoi chercher ses erreurs seul avant d'utiliser le moteur ?", "options": ["Pour entraîner son propre jugement", "Le moteur se trompe souvent", "C'est obligatoire"], "answer": 0, "explanation": "Le moteur donne la réponse, mais c'est **en cherchant** que tu progresses. Utilise-le ensuite pour vérifier."},
+    {"type": "choice", "id": "m9-analyser-3", "prompt": "Tu perds souvent des pièces en prise. Que faire ?", "options": ["Activer la checklist anti-gaffe et faire des puzzles « pièce en prise »", "Jouer plus vite", "Changer d'ouverture"], "answer": 0, "explanation": "Corrige la cause : **la vérification avant chaque coup**. Les puzzles du thème entraînent l'œil."},
+    {"type": "move", "id": "m9-analyser-p1", "fen": "2k3rr/1pnq4/p1p5/P7/5N2/1Q5R/1P3PP1/2R3K1 b - - 0 29", "preMove": "Rxh3", "source": "lichess:tlmrP", "prompt": "Trouve le meilleur coup.", "solution": ["Qxg8+"], "engine": true, "hint": "Une pièce adverse n’est pas (assez) protégée.", "explanation": "Pièce en prise ! Solution : **Dxg8+**."},
+    {"type": "move", "id": "m9-analyser-p2", "fen": "rnbqkbnr/pp1p1p1p/4p1p1/8/2BQP3/5N2/PPP2PPP/RNB1K2R b KQkq - 0 5", "preMove": "Nc6", "source": "lichess:Gil0W", "prompt": "Trouve le meilleur coup.", "solution": ["Qxh8"], "engine": true, "hint": "Une pièce adverse n’est pas (assez) protégée.", "explanation": "Pièce en prise ! Solution : **Dxh8**."},
+    {"type": "move", "id": "m9-analyser-p3", "fen": "r2qkbnr/pp2pppp/2n5/5b2/3PN3/8/PP3PPP/R1BQKBNR w KQkq - 1 7", "preMove": "Nf3", "source": "lichess:sk0Wx", "prompt": "Trouve le meilleur coup.", "solution": ["Bxe4"], "engine": true, "hint": "Une pièce adverse n’est pas (assez) protégée.", "explanation": "Pièce en prise ! Solution : **Fxe4**."}
+  ]
+}

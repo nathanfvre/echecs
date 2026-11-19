@@ -1,0 +1,13 @@
+{
+  "id": "m8-attraction",
+  "title": "L'attraction",
+  "intro": "L'**attraction** force une pièce adverse (souvent le **roi**) à venir sur une mauvaise case, en général par un sacrifice. Une fois là, elle subit une fourchette, un clouage ou un mat.",
+  "steps": [
+    {"type": "move", "id": "m8-attraction-p1", "fen": "r4r1k/1pq2p1b/p4P1R/6Q1/8/P7/2P2PPP/5RK1 b - - 0 28", "preMove": "Rg8", "source": "lichess:K1oOP", "prompt": "Mat en 2.", "solution": ["Rxh7+", "Kxh7", "Qh5#"], "goal": "mate", "engine": true, "hint": "Commence par un échec (ou une menace) qui ne laisse presque aucun choix.", "explanation": "Attraction ! Solution : **Txh7+ Rxh7 Dh5#**."},
+    {"type": "move", "id": "m8-attraction-p2", "fen": "4Rrk1/pp3rpp/1qnPQ3/8/3p4/2P5/PP3PPP/4R1K1 b - - 5 23", "preMove": "dxc3", "source": "lichess:V0USS", "prompt": "Mat en 2.", "solution": ["Rxf8+", "Kxf8", "Qe8#"], "goal": "mate", "engine": true, "hint": "Commence par un échec (ou une menace) qui ne laisse presque aucun choix.", "explanation": "Attraction ! Solution : **Txf8+ Rxf8 De8#**."},
+    {"type": "move", "id": "m8-attraction-p3", "fen": "r1bqkb1r/p4ppp/2p1p3/3p2N1/2B5/8/PPP2PPP/R1BQK2R b KQkq - 1 9", "preMove": "dxc4", "source": "lichess:e0Whf", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Qxd8+", "Kxd8", "Nxf7+"], "engine": true, "hint": "Attire une pièce adverse (souvent le roi) sur une mauvaise case.", "explanation": "Attraction ! Solution : **Dxd8+ Rxd8 Cxf7+**."},
+    {"type": "move", "id": "m8-attraction-p4", "fen": "r3r2k/pp1b1p1p/2p2PpQ/3p4/5R2/2P5/P1qB2PP/5R1K b - - 1 21", "preMove": "Rg8", "source": "lichess:eTIH1", "prompt": "Mat en 2.", "solution": ["Qxh7+", "Kxh7", "Rh4#"], "goal": "mate", "engine": true, "hint": "Commence par un échec (ou une menace) qui ne laisse presque aucun choix.", "explanation": "Attraction ! Solution : **Dxh7+ Rxh7 Th4#**."},
+    {"type": "move", "id": "m8-attraction-p5", "fen": "6rk/2p3rn/1p3Q2/3PpP2/2n1P3/2P3BR/P5PP/2q2RK1 b - - 2 34", "preMove": "Qxc3", "source": "lichess:pRe9R", "prompt": "Mat en 2.", "solution": ["Rxh7+", "Kxh7", "Qh4#"], "goal": "mate", "engine": true, "hint": "Commence par un échec (ou une menace) qui ne laisse presque aucun choix.", "explanation": "Attraction ! Solution : **Txh7+ Rxh7 Dh4#**."},
+    {"type": "move", "id": "m8-attraction-p6", "fen": "5rkr/pbpnqp2/1p1ppRP1/8/3P2Q1/2PB2P1/P1P3P1/5RK1 b - - 0 24", "preMove": "Nxf6", "source": "lichess:S6Wgy", "prompt": "Mat en 2.", "solution": ["gxf7+", "Kxf7", "Qg6#"], "goal": "mate", "engine": true, "hint": "Commence par un échec (ou une menace) qui ne laisse presque aucun choix.", "explanation": "Attraction ! Solution : **gxf7+ Rxf7 Dg6#**."}
+  ]
+}

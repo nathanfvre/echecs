@@ -1,0 +1,13 @@
+{
+  "id": "m8-bilan",
+  "title": "Bilan du module 8",
+  "intro": "Les combinaisons de tout le module, au niveau 1100–1300. Prends ton temps : c'est le niveau de tes futures parties.",
+  "steps": [
+    {"type": "move", "id": "m8-bilan-p1", "fen": "8/8/8/2R5/2k1p3/4B3/2qp1PKP/8 b - - 1 56", "preMove": "Kd3", "source": "lichess:gv7OQ", "prompt": "Trouve la bonne suite (3 coups).", "solution": ["Rxc2", "d1=Q", "Rd2+", "Qxd2", "Bxd2"], "engine": true, "hint": "Une de tes pièces peut attaquer deux cibles à la fois.", "explanation": "Fourchette ! Solution : **Txc2 d1=D Td2+ Dxd2 Fxd2**."},
+    {"type": "move", "id": "m8-bilan-p2", "fen": "r5k1/pp1bQ1qp/2p3p1/3p4/6r1/3B4/PPP5/1K2R2R b - - 1 28", "preMove": "Rf4", "source": "lichess:WB7SV", "prompt": "Trouve la bonne suite (3 coups).", "solution": ["Qxg7+", "Kxg7", "Re7+", "Kf6", "Rxd7"], "engine": true, "hint": "Une de tes pièces peut attaquer deux cibles à la fois.", "explanation": "Fourchette ! Solution : **Dxg7+ Rxg7 Te7+ Rf6 Txd7**."},
+    {"type": "move", "id": "m8-bilan-p3", "fen": "2r3k1/P5p1/3p1p1p/3PpP2/4P3/7P/2p2P2/2R3K1 b - - 0 33", "preMove": "Kf7", "source": "lichess:HRM7N", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Rxc2", "Rxc2", "a8=Q"], "engine": true, "hint": "Force une pièce adverse à quitter son poste de défense.", "explanation": "Déviation ! Solution : **Txc2 Txc2 a8=D**."},
+    {"type": "move", "id": "m8-bilan-p4", "fen": "5rk1/2b5/ppn4p/2pp2p1/4n3/PPN1PQPq/1B3P1P/2R1R1K1 w - - 0 26", "preMove": "Qg2", "source": "lichess:0RlEL", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Qxg2+", "Kxg2", "Rxf2+"], "engine": true, "hint": "Attire une pièce adverse (souvent le roi) sur une mauvaise case.", "explanation": "Attraction ! Solution : **Dxg2+ Rxg2 Txf2+**."},
+    {"type": "move", "id": "m8-bilan-p5", "fen": "7k/p2q1prp/1p1p3Q/2bNp1r1/2PnP2N/7R/PP3PPP/5RK1 b - - 2 23", "preMove": "Qxh3", "source": "lichess:yjZbR", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["Ng6+", "R5xg6", "Qxh3"], "engine": true, "hint": "Une pièce adverse ne peut pas bouger sans exposer une pièce plus importante derrière elle.", "explanation": "Attaque à la découverte ! Solution : **Cg6+ T5xg6 Dxh3**."},
+    {"type": "move", "id": "m8-bilan-p6", "fen": "2r2r1k/pp2bpB1/1q2p2p/8/2pPn1N1/2P3RP/PP1Q1PP1/R5K1 b - - 0 22", "preMove": "Kxg7", "source": "lichess:mmTRC", "prompt": "Mat en 2.", "solution": ["Qxh6+", "Kg8", "Nf6#"], "goal": "mate", "engine": true, "hint": "Commence par un échec (ou une menace) qui ne laisse presque aucun choix.", "explanation": "Mat ! Solution : **Dxh6+ Rg8 Cf6#**."}
+  ]
+}

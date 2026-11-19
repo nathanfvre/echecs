@@ -1,0 +1,12 @@
+{
+  "id": "m8-calcul",
+  "title": "Calculer plus loin",
+  "intro": "Ces puzzles demandent **3 coups**. Méthode : pour chaque coup candidat, demande-toi « que peut répondre l'adversaire ? », et ne joue que si **toutes** ses réponses te conviennent.",
+  "steps": [
+    {"type": "move", "id": "m8-calcul-p1", "fen": "8/3Q3p/2p2p1k/2q2p2/4pP2/7P/1P1P2P1/r1B2R1K w - - 1 32", "preMove": "d3", "source": "lichess:63clX", "prompt": "Trouve la bonne suite (3 coups).", "solution": ["Rxc1", "Rxc1", "Qxc1+", "Kh2", "Qxf4+"], "engine": true, "hint": "Échecs, captures, menaces.", "explanation": "Bien calculé ! Solution : **Txc1 Txc1 Dxc1+ Rh2 Dxf4+**."},
+    {"type": "move", "id": "m8-calcul-p2", "fen": "8/8/4P3/3K1k2/p7/8/8/8 b - - 0 67", "preMove": "Kf6", "source": "lichess:YUifR", "prompt": "Trouve la bonne suite (3 coups).", "solution": ["Kd6", "a3", "e7", "Kf7", "Kd7"], "engine": true, "hint": "Échecs, captures, menaces.", "explanation": "Bien calculé ! Solution : **Rd6 a3 e7 Rf7 Rd7**."},
+    {"type": "move", "id": "m8-calcul-p3", "fen": "1k6/pp3pp1/n1q4p/1Np2PnP/8/PQ4P1/1PP2B2/1K6 w - - 1 30", "preMove": "a4", "source": "lichess:MEqA9", "prompt": "Trouve la bonne suite (3 coups).", "solution": ["Qh1+", "Ka2", "Nb4+", "Qxb4", "cxb4"], "engine": true, "hint": "Échecs, captures, menaces.", "explanation": "Bien calculé ! Solution : **Dh1+ Ra2 Cb4+ Dxb4 cxb4**."},
+    {"type": "move", "id": "m8-calcul-p4", "fen": "3rr1k1/p1q1bp1p/1pN1pnp1/6Q1/2PB4/1P4RR/P4PP1/6K1 b - - 1 28", "preMove": "Qxc6", "source": "lichess:1Yccs", "prompt": "Trouve la bonne suite (3 coups).", "solution": ["Bxf6", "e5", "Bxe7", "Rxe7", "Qxe7"], "engine": true, "hint": "Échecs, captures, menaces.", "explanation": "Bien calculé ! Solution : **Fxf6 e5 Fxe7 Txe7 Dxe7**."},
+    {"type": "move", "id": "m8-calcul-p5", "fen": "r5k1/1pp3b1/3p2B1/4P3/1Q1P4/pP6/P3qB2/2K3R1 b - - 0 29", "preMove": "Qxf2", "source": "lichess:xT1qj", "prompt": "Trouve la bonne suite (3 coups).", "solution": ["Qc4+", "Kh8", "Rh1+", "Bh6+", "Rxh6+"], "engine": true, "hint": "Échecs, captures, menaces.", "explanation": "Bien calculé ! Solution : **Dc4+ Rh8 Th1+ Fh6+ Txh6+**."}
+  ]
+}

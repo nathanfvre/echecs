@@ -1,0 +1,13 @@
+{
+  "id": "m8-sacrifice",
+  "title": "Les sacrifices",
+  "intro": "Donner du matériel n'est pas grave si tu récupères **plus** juste après, ou si tu mates. Avant de sacrifier, calcule les réponses **forcées** (échecs, captures) jusqu'au bout.",
+  "steps": [
+    {"type": "move", "id": "m8-sacrifice-p1", "fen": "2kr4/ppp5/5Q2/P5p1/1P1B1b1P/2Pqp3/5PP1/R5K1 w - - 0 33", "preMove": "Bxe3", "source": "lichess:lhHNl", "prompt": "Mat en 2.", "solution": ["Qd1+", "Rxd1", "Rxd1#"], "goal": "mate", "engine": true, "hint": "Commence par un échec (ou une menace) qui ne laisse presque aucun choix.", "explanation": "Sacrifice ! Solution : **Dd1+ Txd1 Txd1#**."},
+    {"type": "move", "id": "m8-sacrifice-p2", "fen": "r3r1k1/p1Q2pp1/2p2n2/7p/6q1/2N2R2/PPP3PP/3R3K w - - 0 19", "preMove": "Rg3", "source": "lichess:CuaSn", "prompt": "Mat en 2.", "solution": ["Qxd1+", "Nxd1", "Re1#"], "goal": "mate", "engine": true, "hint": "Commence par un échec (ou une menace) qui ne laisse presque aucun choix.", "explanation": "Sacrifice ! Solution : **Dxd1+ Cxd1 Te1#**."},
+    {"type": "move", "id": "m8-sacrifice-p3", "fen": "8/8/1p6/p2B1P2/b1pk4/3p1P2/1P1K4/8 b - - 0 52", "preMove": "b5", "source": "lichess:4JaL8", "prompt": "Trouve la bonne suite (2 coups).", "solution": ["f6", "Kxd5", "f7"], "engine": true, "hint": "Échecs, captures, menaces.", "explanation": "Sacrifice ! Solution : **f6 Rxd5 f7**."},
+    {"type": "move", "id": "m8-sacrifice-p4", "fen": "5rk1/p1qnbppp/6b1/3Q4/2BP4/2P2P2/PP1N2PP/2KR3R w - - 1 18", "preMove": "Bb3", "source": "lichess:F07eJ", "prompt": "Mat en 2.", "solution": ["Qxc3+", "bxc3", "Ba3#"], "goal": "mate", "engine": true, "hint": "Commence par un échec (ou une menace) qui ne laisse presque aucun choix.", "explanation": "Sacrifice ! Solution : **Dxc3+ bxc3 Fa3#**."},
+    {"type": "move", "id": "m8-sacrifice-p5", "fen": "6k1/4q2p/2R2np1/1P3p2/4pP2/4P1NP/2Q3P1/r5K1 w - - 5 33", "preMove": "Kh2", "source": "lichess:m9qi0", "prompt": "Mat en 2.", "solution": ["Ng4+", "hxg4", "Qh4#"], "goal": "mate", "engine": true, "hint": "Commence par un échec (ou une menace) qui ne laisse presque aucun choix.", "explanation": "Sacrifice ! Solution : **Cg4+ hxg4 Dh4#**."},
+    {"type": "move", "id": "m8-sacrifice-p6", "fen": "5rk1/1p3p2/n5p1/p2p2q1/3P4/P7/5r2/KQ4RR b - - 1 28", "preMove": "Qe3", "source": "lichess:6Qtwx", "prompt": "Mat en 2.", "solution": ["Rxg6+", "fxg6", "Qxg6#"], "goal": "mate", "engine": true, "hint": "Commence par un échec (ou une menace) qui ne laisse presque aucun choix.", "explanation": "Sacrifice ! Solution : **Txg6+ fxg6 Dxg6#**."}
+  ]
+}
