@@ -1,0 +1,13 @@
+{
+  "id": "m5-italienne",
+  "title": "Blancs : l'Italienne",
+  "intro": "Ton ouverture avec les Blancs : **1.e4 e5 2.Cf3 Cc6 3.Fc4**. Le fou vise f7, et le plan est simple : **c3, d3, roque, Te1, Fb3**, puis le cavalier b1 rejoint le roi par d2–f1–g3.\nRejoue chaque ligne de mémoire : la flèche orange t'aide après une erreur.",
+  "steps": [
+    {"type": "demo", "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "text": "Rejoue la ligne principale coup par coup. Remarque : aucun coup n'est compliqué, chaque pièce va sur sa meilleure case.", "moves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "c3", "Nf6", "d3", "d6", "O-O", "O-O", "Re1", "a6", "Bb3", "Ba7", "Nbd2"]},
+    {"type": "line", "id": "m5-italienne-1", "line": "w-italienne", "hint": "Rappelle-toi l'idée de la ligne : développement, centre, roque.", "explanation": "Le plan tranquille : **c3 et d3** tiennent le centre, on roque, **Te1**, le fou recule en **b3** pour éviter ...Ca5 ou ...d5, puis le cavalier fait le tour **Cbd2–f1–g3**. Pas de théorie à apprendre : des coups naturels et un roi en sécurité."},
+    {"type": "line", "id": "m5-italienne-2", "line": "w-italienne-d5", "hint": "Quand les Noirs ouvrent le centre, prends et attaque e5.", "explanation": "Si les Noirs jouent **...d5**, on prend (**exd5**) et **Te1** attaque tout de suite le pion e5, défendu une seule fois."},
+    {"type": "choice", "id": "m5-italienne-3", "fen": "r1bq1rk1/1pp2ppp/p1np1n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQR1K1 w - - 0 8", "prompt": "Les Noirs jouent ...a6 : ils menacent ...b5 puis ...Ca5 contre ton fou. Que fais-tu ?", "options": ["Bb3", "Bxf7+", "Bxa6"], "answer": 0, "engineChoice": true, "explanation": "**Fb3** : le fou recule sur la même diagonale, toujours tourné vers f7. Fxf7+ ? Txf7 et Fxa6 ? bxa6 donnent une pièce."},
+    {"type": "line", "id": "m5-italienne-4", "line": "w-deux-cavaliers", "hint": "Contre 3...Cf6, protège e4 et garde le même plan.", "explanation": "Contre **3...Cf6**, **4.d3** protège e4 et on garde le plan de l'Italienne (roque, Te1, c3). **4.Cg5** est plus agressif mais demande de la théorie (4...d5 5.exd5 Ca5 !) : à garder pour plus tard."},
+    {"type": "choice", "id": "m5-italienne-5", "prompt": "Contre la défense des deux cavaliers (3...Cf6), pourquoi jouer 4.d3 plutôt que 4.Cg5 ?", "options": ["Le plan reste simple et sûr, sans théorie à apprendre", "4.Cg5 est illégal", "4.d3 gagne un pion"], "answer": 0, "explanation": "4.Cg5 attaque f7 mais après **4...d5 5.exd5 Ca5 !** il faut connaître beaucoup de théorie. **4.d3** garde ton plan habituel : c'est le bon choix pour progresser."}
+  ]
+}

@@ -1,0 +1,550 @@
+{
+ "r1b1kbnr/pp3ppp/1qn1p3/2ppP3/3P4/P1P2N2/1P3PPP/RNBQKB1R b KQkq -": [
+  "C02",
+  "French Defense: Advance Variation, Main Line"
+ ],
+ "r1bq1rk1/2p1bppp/p1np1n2/1p2p3/4P3/1BP2N2/PP1P1PPP/RNBQR1K1 w - -": [
+  "C90",
+  "Ruy Lopez: Closed"
+ ],
+ "r1bq1rk1/ppp2ppp/2n2n2/2bpp3/2B1P3/2PP1N2/PP3PPP/RNBQ1RK1 w - -": [
+  "C54",
+  "Italian Game: Classical Variation, Giuoco Pianissimo"
+ ],
+ "r1bq1rk1/ppp2ppp/2np1n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQ1RK1 w - -": [
+  "C54",
+  "Italian Game: Classical Variation, Giuoco Pianissimo"
+ ],
+ "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/2P2N2/PP1P1PPP/RNBQK2R b KQkq -": [
+  "C53",
+  "Italian Game: Classical Variation"
+ ],
+ "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq -": [
+  "C50",
+  "Italian Game: Giuoco Piano"
+ ],
+ "r1bqk2r/1pppbppp/p1n2n2/4p3/B3P3/5N2/PPPP1PPP/RNBQ1RK1 w kq -": [
+  "C84",
+  "Ruy Lopez: Closed"
+ ],
+ "r1bqk2r/2ppbppp/p1n2n2/1p2p3/4P3/1B3N2/PPPP1PPP/RNBQR1K1 b kq -": [
+  "C88",
+  "Ruy Lopez: Closed"
+ ],
+ "r1bqk2r/ppp2ppp/2np1n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQ1RK1 b kq -": [
+  "C54",
+  "Italian Game: Classical Variation, Giuoco Pianissimo"
+ ],
+ "r1bqk2r/ppp2ppp/2np1n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQK2R w KQkq -": [
+  "C54",
+  "Italian Game: Classical Variation, Giuoco Pianissimo"
+ ],
+ "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/2P2N2/PP1P1PPP/RNBQK2R w KQkq -": [
+  "C54",
+  "Italian Game: Classical Variation"
+ ],
+ "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQK2R b KQkq -": [
+  "C54",
+  "Italian Game: Classical Variation, Giuoco Pianissimo"
+ ],
+ "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2BPP3/2P2N2/PP3PPP/RNBQK2R b KQkq -": [
+  "C54",
+  "Italian Game: Classical Variation, Center Attack"
+ ],
+ "r1bqk2r/pppp1ppp/2n2n2/2b5/2BPP3/5N2/PP3PPP/RNBQK2R b KQkq -": [
+  "C54",
+  "Italian Game: Classical Variation, Greco Gambit, Traditional Line"
+ ],
+ "r1bqk2r/ppppbppp/2n2n2/4p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq -": [
+  "C55",
+  "Italian Game: Two Knights Defense, Modern Bishop's Opening"
+ ],
+ "r1bqkb1r/1ppp1ppp/p1n2n2/4p3/B3P3/5N2/PPPP1PPP/RNBQ1RK1 b kq -": [
+  "C78",
+  "Ruy Lopez: Morphy Defense"
+ ],
+ "r1bqkb1r/p1pp1ppp/2p2n2/4P3/8/8/PPP2PPP/RNBQKB1R b KQkq -": [
+  "C45",
+  "Scotch Game: Mieses Variation"
+ ],
+ "r1bqkb1r/pp3ppp/2n1pn2/2pp4/3P1B2/2P1PN2/PP1N1PPP/R2QKB1R b KQkq -": [
+  "D02",
+  "Queen's Pawn Game: London System"
+ ],
+ "r1bqkb1r/pppn1ppp/4pn2/3p2B1/2PP4/2N5/PP2PPPP/R2QKBNR w KQkq -": [
+  "D51",
+  "Queen's Gambit Declined: Modern Variation, Knight Defense"
+ ],
+ "r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/2N5/PPPP1PPP/R1BQK1NR w KQkq -": [
+  "C28",
+  "Vienna Game: Stanley Variation, Three Knights Variation"
+ ],
+ "r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/2NP4/PPP2PPP/R1BQK1NR b KQkq -": [
+  "C24",
+  "Bishop's Opening: Vienna Hybrid"
+ ],
+ "r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R b KQkq -": [
+  "C55",
+  "Italian Game: Two Knights Defense, Modern Bishop's Opening"
+ ],
+ "r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq -": [
+  "C55",
+  "Italian Game: Two Knights Defense"
+ ],
+ "r1bqkb1r/pppp1ppp/2n2n2/8/3NP3/8/PPP2PPP/RNBQKB1R w KQkq -": [
+  "C45",
+  "Scotch Game: Schmidt Variation"
+ ],
+ "r1bqkb1r/pppp1ppp/2n2n2/8/4P3/4Q3/PPP2PPP/RNB1KBNR w KQkq -": [
+  "C22",
+  "Center Game: Berger Variation"
+ ],
+ "r1bqkbnr/1pp2ppp/p1p5/4p3/4P3/5N2/PPPP1PPP/RNBQ1RK1 b kq -": [
+  "C69",
+  "Ruy Lopez: Exchange Variation, Normal Variation"
+ ],
+ "r1bqkbnr/1pp3pp/p1p2p2/4p3/4P3/5N2/PPPP1PPP/RNBQ1RK1 w kq -": [
+  "C69",
+  "Ruy Lopez: Exchange Variation, Gligoric Variation"
+ ],
+ "r1bqkbnr/1ppp1ppp/p1B5/4p3/4P3/5N2/PPPP1PPP/RNBQK2R b KQkq -": [
+  "C68",
+  "Ruy Lopez: Exchange Variation"
+ ],
+ "r1bqkbnr/1ppp1ppp/p1n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R w KQkq -": [
+  "C70",
+  "Ruy Lopez: Morphy Defense"
+ ],
+ "r1bqkbnr/pp3ppp/2n1p3/2ppP3/3P4/2P2N2/PP3PPP/RNBQKB1R b KQkq -": [
+  "C02",
+  "French Defense: Advance Variation, Paulsen Attack"
+ ],
+ "r1bqkbnr/pp3ppp/2n1p3/2ppP3/3P4/2P5/PP3PPP/RNBQKBNR w KQkq -": [
+  "C02",
+  "French Defense: Advance Variation"
+ ],
+ "r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R b KQkq -": [
+  "C60",
+  "Ruy Lopez"
+ ],
+ "r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R b KQkq -": [
+  "C50",
+  "Italian Game"
+ ],
+ "r1bqkbnr/pppp1ppp/2n5/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R b KQkq -": [
+  "C44",
+  "Scotch Game"
+ ],
+ "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq -": [
+  "C44",
+  "King's Knight Opening: Normal Variation"
+ ],
+ "r1bqkbnr/pppp1ppp/2n5/8/3NP3/8/PPP2PPP/RNBQKB1R b KQkq -": [
+  "C45",
+  "Scotch Game"
+ ],
+ "r1bqkbnr/pppp1ppp/2n5/8/3QP3/8/PPP2PPP/RNB1KBNR w KQkq -": [
+  "C22",
+  "Center Game: Normal Variation"
+ ],
+ "r1bqkbnr/pppp1ppp/2n5/8/3pP3/5N2/PPP2PPP/RNBQKB1R w KQkq -": [
+  "C44",
+  "Scotch Game"
+ ],
+ "r1bqkbnr/pppp1ppp/2n5/8/4P3/4Q3/PPP2PPP/RNB1KBNR b KQkq -": [
+  "C22",
+  "Center Game: Paulsen Attack Variation"
+ ],
+ "rn1qkb1r/ppp1pppp/8/3n4/3P2b1/5N2/PPP2PPP/RNBQKB1R w KQkq -": [
+  "B01",
+  "Scandinavian Defense: Modern Variation, Gipslis Variation"
+ ],
+ "rn1qkbnr/pp2pppp/2p5/3pPb2/3P4/5N2/PPP2PPP/RNBQKB1R b KQkq -": [
+  "B12",
+  "Caro-Kann Defense: Advance Variation, Short Variation"
+ ],
+ "rn2kb1r/pp2pppp/5n2/2pq4/3P2b1/2P2N2/PP3PPP/RNBQKB1R w KQkq -": [
+  "B22",
+  "Sicilian Defense: Alapin Variation, Barmen Defense, Modern Line"
+ ],
+ "rnb1kb1r/ppp1pppp/5n2/q7/3P4/2N5/PPP2PPP/R1BQKBNR w KQkq -": [
+  "B01",
+  "Scandinavian Defense: Main Line, Mieses Variation"
+ ],
+ "rnb1kbnr/pp2pppp/8/2pq4/8/2P5/PP1P1PPP/RNBQKBNR w KQkq -": [
+  "B22",
+  "Sicilian Defense: Alapin Variation, Barmen Defense"
+ ],
+ "rnb1kbnr/ppp1pppp/8/3q4/8/8/PPPP1PPP/RNBQKBNR w KQkq -": [
+  "B01",
+  "Scandinavian Defense: Mieses-Kotrč Variation"
+ ],
+ "rnb1kbnr/ppp1pppp/8/q7/8/2N5/PPPP1PPP/R1BQKBNR w KQkq -": [
+  "B01",
+  "Scandinavian Defense: Main Line"
+ ],
+ "rnbq1rk1/p1p1bpp1/1p2pn1p/3p4/2PP3B/2N1PN2/PP3PPP/R2QKB1R w KQ -": [
+  "D58",
+  "Queen's Gambit Declined: Tartakower Defense"
+ ],
+ "rnbq1rk1/pp3ppp/4pn2/2bp4/2P2B2/2N1PN2/PP3PPP/R2QKB1R w KQ -": [
+  "D37",
+  "Queen's Gambit Declined: Harrwitz Attack, Main Line"
+ ],
+ "rnbq1rk1/ppp1bpp1/4pn1p/3p2B1/2PP4/2N1PN2/PP3PPP/R2QKB1R w KQ -": [
+  "D55",
+  "Queen's Gambit Declined: Neo-Orthodox Variation"
+ ],
+ "rnbq1rk1/ppp1bpp1/4pn1p/3p4/2PP3B/2N1PN2/PP3PPP/R2QKB1R b KQ -": [
+  "D55",
+  "Queen's Gambit Declined: Neo-Orthodox Variation, Main Line"
+ ],
+ "rnbq1rk1/ppp1bppp/4pn2/3p2B1/2PP4/2N1PN2/PP3PPP/R2QKB1R b KQ -": [
+  "D55",
+  "Queen's Gambit Declined: Modern Variation, Normal Line"
+ ],
+ "rnbq1rk1/ppp1ppbp/3p1np1/8/3P1B2/4PN2/PPP1BPPP/RN1QK2R w KQ -": [
+  "A48",
+  "London System, with Be2"
+ ],
+ "rnbqk1nr/ppp2ppp/3p4/2b1p3/4PP2/2P2N2/PP1P2PP/RNBQKB1R b KQkq -": [
+  "C30",
+  "King's Gambit Declined: Classical Variation"
+ ],
+ "rnbqk1nr/pppp1ppp/8/2b1p3/4PP2/8/PPPP2PP/RNBQKBNR w KQkq -": [
+  "C30",
+  "King's Gambit Declined: Classical Variation"
+ ],
+ "rnbqk2r/pp2bppp/2p2n2/3p2B1/3P4/2N1P3/PP3PPP/R2QKBNR w KQkq -": [
+  "D35",
+  "Queen's Gambit Declined: Exchange Variation, Positional Variation"
+ ],
+ "rnbqk2r/ppp1bppp/4pn2/3p2B1/2PP4/2N5/PP2PPPP/R2QKBNR w KQkq -": [
+  "D53",
+  "Queen's Gambit Declined"
+ ],
+ "rnbqk2r/ppp1bppp/4pn2/3p4/2PP1B2/2N2N2/PP2PPPP/R2QKB1R b KQkq -": [
+  "D37",
+  "Queen's Gambit Declined: Harrwitz Attack"
+ ],
+ "rnbqk2r/ppp1bppp/4pn2/3p4/8/5NP1/PPPPPPBP/RNBQ1RK1 w kq -": [
+  "A07",
+  "King's Indian Attack, with e6"
+ ],
+ "rnbqk2r/ppp1bppp/8/3pP3/4n3/2N2N2/PPPP2PP/R1BQKB1R w KQkq -": [
+  "C29",
+  "Vienna Game: Vienna Gambit, Breyer Variation"
+ ],
+ "rnbqk2r/ppp1ppbp/3p1np1/8/3PP3/2N2N2/PPP1BPPP/R1BQK2R b KQkq -": [
+  "B08",
+  "Pirc Defense: Classical Variation, Quiet System"
+ ],
+ "rnbqk2r/ppp1ppbp/3p1np1/8/3PP3/2N2N2/PPP2PPP/R1BQKB1R w KQkq -": [
+  "B08",
+  "Pirc Defense: Classical Variation"
+ ],
+ "rnbqk2r/ppppppbp/5np1/8/3P1B2/4PN2/PPP2PPP/RN1QKB1R b KQkq -": [
+  "A48",
+  "London System"
+ ],
+ "rnbqkb1r/pp1ppppp/8/3nP3/3p4/2P5/PP3PPP/RNBQKBNR w KQkq -": [
+  "B22",
+  "Sicilian Defense: Alapin Variation, Smith-Morra Declined"
+ ],
+ "rnbqkb1r/pp3ppp/2p2n2/3p2B1/3P4/2N5/PP2PPPP/R2QKBNR w KQkq -": [
+  "D35",
+  "Queen's Gambit Declined: Exchange Variation, Positional Variation"
+ ],
+ "rnbqkb1r/pp3ppp/4pn2/2pp4/3P4/2PBPN2/PP3PPP/RNBQK2R b KQkq -": [
+  "D05",
+  "Queen's Pawn Game: Colle System, Traditional Colle"
+ ],
+ "rnbqkb1r/ppp1pp1p/3p1np1/8/3PP3/2N2N2/PPP2PPP/R1BQKB1R b KQkq -": [
+  "B08",
+  "Pirc Defense: Classical Variation"
+ ],
+ "rnbqkb1r/ppp1pp1p/3p1np1/8/3PP3/2N5/PPP2PPP/R1BQKBNR w KQkq -": [
+  "B07",
+  "Pirc Defense"
+ ],
+ "rnbqkb1r/ppp1pppp/3p1n2/8/3PP3/8/PPP2PPP/RNBQKBNR w KQkq -": [
+  "B00",
+  "Pirc Defense"
+ ],
+ "rnbqkb1r/ppp1pppp/5n2/3P4/3P4/8/PPP2PPP/RNBQKBNR b KQkq -": [
+  "B01",
+  "Scandinavian Defense: Modern Variation"
+ ],
+ "rnbqkb1r/ppp1pppp/5n2/3P4/8/8/PPPP1PPP/RNBQKBNR w KQkq -": [
+  "B01",
+  "Scandinavian Defense: Modern Variation"
+ ],
+ "rnbqkb1r/ppp1pppp/5n2/3p4/3P4/4PN2/PPP2PPP/RNBQKB1R b KQkq -": [
+  "D04",
+  "Queen's Pawn Game: Colle System"
+ ],
+ "rnbqkb1r/ppp1pppp/5n2/3p4/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq -": [
+  "D02",
+  "Queen's Pawn Game: Symmetrical Variation"
+ ],
+ "rnbqkb1r/ppp1pppp/5n2/3p4/8/5NP1/PPPPPP1P/RNBQKB1R w KQkq -": [
+  "A05",
+  "King's Indian Attack"
+ ],
+ "rnbqkb1r/ppp1pppp/8/3n4/3P4/8/PPP2PPP/RNBQKBNR w KQkq -": [
+  "B01",
+  "Scandinavian Defense: Marshall Variation"
+ ],
+ "rnbqkb1r/ppp2ppp/3p1n2/4N3/4P3/8/PPPP1PPP/RNBQKB1R w KQkq -": [
+  "C42",
+  "Petrov's Defense"
+ ],
+ "rnbqkb1r/ppp2ppp/3p1n2/8/3NP3/8/PPP2PPP/RNBQKB1R w KQkq -": [
+  "C41",
+  "Philidor Defense: Exchange Variation"
+ ],
+ "rnbqkb1r/ppp2ppp/3p1n2/8/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq -": [
+  "C42",
+  "Petrov's Defense"
+ ],
+ "rnbqkb1r/ppp2ppp/3p4/8/3Pn3/5N2/PPP2PPP/RNBQKB1R b KQkq -": [
+  "C42",
+  "Petrov's Defense: Classical Attack"
+ ],
+ "rnbqkb1r/ppp2ppp/3p4/8/4n3/5N2/PPPP1PPP/RNBQKB1R w KQkq -": [
+  "C42",
+  "Petrov's Defense"
+ ],
+ "rnbqkb1r/ppp2ppp/4pn2/3P4/3P4/2N5/PP2PPPP/R1BQKBNR b KQkq -": [
+  "D35",
+  "Queen's Gambit Declined: Exchange Variation"
+ ],
+ "rnbqkb1r/ppp2ppp/4pn2/3p2B1/2PP4/2N5/PP2PPPP/R2QKBNR b KQkq -": [
+  "D50",
+  "Queen's Gambit Declined: Modern Variation"
+ ],
+ "rnbqkb1r/ppp2ppp/4pn2/3p4/2PP4/2N2N2/PP2PPPP/R1BQKB1R b KQkq -": [
+  "D37",
+  "Queen's Gambit Declined: Three Knights Variation"
+ ],
+ "rnbqkb1r/ppp2ppp/4pn2/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq -": [
+  "D35",
+  "Queen's Gambit Declined: Normal Defense"
+ ],
+ "rnbqkb1r/ppp2ppp/4pn2/3p4/3P4/3BPN2/PPP2PPP/RNBQK2R b KQkq -": [
+  "D05",
+  "Queen's Pawn Game: Colle System"
+ ],
+ "rnbqkb1r/ppp2ppp/4pn2/3p4/3P4/4PN2/PPP2PPP/RNBQKB1R w KQkq -": [
+  "D05",
+  "Queen's Pawn Game: Colle System"
+ ],
+ "rnbqkb1r/ppp2ppp/4pn2/3p4/8/5NP1/PPPPPPBP/RNBQK2R w KQkq -": [
+  "A07",
+  "King's Indian Attack, with e6"
+ ],
+ "rnbqkb1r/ppp2ppp/5n2/3p2B1/3P4/2N5/PP2PPPP/R2QKBNR b KQkq -": [
+  "D35",
+  "Queen's Gambit Declined: Exchange Variation, Positional Variation"
+ ],
+ "rnbqkb1r/ppp2ppp/5n2/3pp3/4PP2/2N5/PPPP2PP/R1BQKBNR w KQkq -": [
+  "C29",
+  "Vienna Game: Vienna Gambit, Main Line"
+ ],
+ "rnbqkb1r/pppp1ppp/5n2/4N3/4P3/8/PPPP1PPP/RNBQKB1R b KQkq -": [
+  "C42",
+  "Petrov's Defense"
+ ],
+ "rnbqkb1r/pppp1ppp/5n2/4p3/2B1P3/2N5/PPPP1PPP/R1BQK1NR b KQkq -": [
+  "C26",
+  "Vienna Game: Stanley Variation"
+ ],
+ "rnbqkb1r/pppp1ppp/5n2/4p3/2B1P3/8/PPPP1PPP/RNBQK1NR w KQkq -": [
+  "C24",
+  "Bishop's Opening: Berlin Defense"
+ ],
+ "rnbqkb1r/pppp1ppp/5n2/4p3/4P3/2N5/PPPP1PPP/R1BQKBNR w KQkq -": [
+  "C26",
+  "Vienna Game: Falkbeer Variation"
+ ],
+ "rnbqkb1r/pppp1ppp/5n2/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq -": [
+  "C42",
+  "Petrov's Defense"
+ ],
+ "rnbqkb1r/pppp1ppp/5n2/4p3/4PP2/2N5/PPPP2PP/R1BQKBNR b KQkq -": [
+  "C29",
+  "Vienna Game: Vienna Gambit"
+ ],
+ "rnbqkb1r/pppp1ppp/8/4N3/4n3/8/PPPP1PPP/RNBQKB1R w KQkq -": [
+  "C42",
+  "Petrov's Defense: Damiano Variation"
+ ],
+ "rnbqkb1r/pppppppp/5n2/8/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq -": [
+  "A45",
+  "Indian Defense: Accelerated London System"
+ ],
+ "rnbqkb1r/pppppppp/5n2/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq -": [
+  "A45",
+  "Indian Defense"
+ ],
+ "rnbqkbnr/pp1ppppp/2p5/8/3PP3/8/PPP2PPP/RNBQKBNR b KQkq -": [
+  "B12",
+  "Caro-Kann Defense"
+ ],
+ "rnbqkbnr/pp1ppppp/2p5/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq -": [
+  "B10",
+  "Caro-Kann Defense"
+ ],
+ "rnbqkbnr/pp1ppppp/8/2p5/4P3/2P5/PP1P1PPP/RNBQKBNR b KQkq -": [
+  "B22",
+  "Sicilian Defense: Alapin Variation"
+ ],
+ "rnbqkbnr/pp1ppppp/8/2p5/4P3/8/PPPP1PPP/RNBQKBNR w KQkq -": [
+  "B20",
+  "Sicilian Defense"
+ ],
+ "rnbqkbnr/pp2pppp/2p5/3p4/3PP3/8/PPP2PPP/RNBQKBNR w KQkq -": [
+  "B12",
+  "Caro-Kann Defense"
+ ],
+ "rnbqkbnr/pp2pppp/2p5/3pP3/3P4/8/PPP2PPP/RNBQKBNR b KQkq -": [
+  "B12",
+  "Caro-Kann Defense: Advance Variation"
+ ],
+ "rnbqkbnr/pp2pppp/8/2pp4/3P1B2/8/PPP1PPPP/RN1QKBNR w KQkq -": [
+  "D00",
+  "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"
+ ],
+ "rnbqkbnr/pp3ppp/4p3/2ppP3/3P4/2P5/PP3PPP/RNBQKBNR b KQkq -": [
+  "C02",
+  "French Defense: Advance Variation"
+ ],
+ "rnbqkbnr/pp3ppp/4p3/2ppP3/3P4/8/PPP2PPP/RNBQKBNR w KQkq -": [
+  "C02",
+  "French Defense: Advance Variation"
+ ],
+ "rnbqkbnr/ppp1pppp/3p4/8/3PP3/8/PPP2PPP/RNBQKBNR b KQkq -": [
+  "B00",
+  "Pirc Defense"
+ ],
+ "rnbqkbnr/ppp1pppp/3p4/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq -": [
+  "B00",
+  "Pirc Defense"
+ ],
+ "rnbqkbnr/ppp1pppp/8/3p4/2PP4/8/PP2PPPP/RNBQKBNR b KQkq -": [
+  "D06",
+  "Queen's Gambit"
+ ],
+ "rnbqkbnr/ppp1pppp/8/3p4/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq -": [
+  "D00",
+  "Queen's Pawn Game: Accelerated London System"
+ ],
+ "rnbqkbnr/ppp1pppp/8/3p4/3P4/5N2/PPP1PPPP/RNBQKB1R b KQkq -": [
+  "D02",
+  "Queen's Pawn Game: Zukertort Variation"
+ ],
+ "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq -": [
+  "D00",
+  "Queen's Pawn Game"
+ ],
+ "rnbqkbnr/ppp1pppp/8/3p4/4P3/8/PPPP1PPP/RNBQKBNR w KQkq -": [
+  "B01",
+  "Scandinavian Defense"
+ ],
+ "rnbqkbnr/ppp1pppp/8/3p4/8/5N2/PPPPPPPP/RNBQKB1R w KQkq -": [
+  "A06",
+  "Zukertort Opening"
+ ],
+ "rnbqkbnr/ppp1pppp/8/3p4/8/5NP1/PPPPPP1P/RNBQKB1R b KQkq -": [
+  "A07",
+  "King's Indian Attack"
+ ],
+ "rnbqkbnr/ppp2ppp/3p4/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R b KQkq -": [
+  "C41",
+  "Philidor Defense"
+ ],
+ "rnbqkbnr/ppp2ppp/3p4/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq -": [
+  "C41",
+  "Philidor Defense"
+ ],
+ "rnbqkbnr/ppp2ppp/3p4/8/3NP3/8/PPP2PPP/RNBQKB1R b KQkq -": [
+  "C41",
+  "Philidor Defense: Exchange Variation"
+ ],
+ "rnbqkbnr/ppp2ppp/3p4/8/3pP3/5N2/PPP2PPP/RNBQKB1R w KQkq -": [
+  "C41",
+  "Philidor Defense: Exchange Variation"
+ ],
+ "rnbqkbnr/ppp2ppp/4p3/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq -": [
+  "D31",
+  "Queen's Gambit Declined: Queen's Knight Variation"
+ ],
+ "rnbqkbnr/ppp2ppp/4p3/3p4/2PP4/8/PP2PPPP/RNBQKBNR w KQkq -": [
+  "D30",
+  "Queen's Gambit Declined"
+ ],
+ "rnbqkbnr/ppp2ppp/4p3/3p4/3PP3/8/PPP2PPP/RNBQKBNR w KQkq -": [
+  "C00",
+  "French Defense"
+ ],
+ "rnbqkbnr/ppp2ppp/4p3/3pP3/3P4/8/PPP2PPP/RNBQKBNR b KQkq -": [
+  "C02",
+  "French Defense: Advance Variation"
+ ],
+ "rnbqkbnr/pppp1ppp/4p3/8/3PP3/8/PPP2PPP/RNBQKBNR b KQkq -": [
+  "C00",
+  "French Defense: Normal Variation"
+ ],
+ "rnbqkbnr/pppp1ppp/4p3/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq -": [
+  "C00",
+  "French Defense"
+ ],
+ "rnbqkbnr/pppp1ppp/8/4p2Q/4P3/8/PPPP1PPP/RNB1KBNR b KQkq -": [
+  "C20",
+  "King's Pawn Game: Wayward Queen Attack"
+ ],
+ "rnbqkbnr/pppp1ppp/8/4p3/2B1P3/8/PPPP1PPP/RNBQK1NR b KQkq -": [
+  "C23",
+  "Bishop's Opening"
+ ],
+ "rnbqkbnr/pppp1ppp/8/4p3/3PP3/8/PPP2PPP/RNBQKBNR b KQkq -": [
+  "C20",
+  "Center Game"
+ ],
+ "rnbqkbnr/pppp1ppp/8/4p3/4P3/2N5/PPPP1PPP/R1BQKBNR b KQkq -": [
+  "C25",
+  "Vienna Game"
+ ],
+ "rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq -": [
+  "C40",
+  "King's Knight Opening"
+ ],
+ "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq -": [
+  "C20",
+  "King's Pawn Game"
+ ],
+ "rnbqkbnr/pppp1ppp/8/4p3/4PP2/8/PPPP2PP/RNBQKBNR b KQkq -": [
+  "C30",
+  "King's Gambit"
+ ],
+ "rnbqkbnr/pppp1ppp/8/8/3QP3/8/PPP2PPP/RNB1KBNR b KQkq -": [
+  "C21",
+  "Center Game"
+ ],
+ "rnbqkbnr/pppp1ppp/8/8/3pP3/8/PPP2PPP/RNBQKBNR w KQkq -": [
+  "C21",
+  "Center Game Accepted"
+ ],
+ "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq -": [
+  "A40",
+  "Queen's Pawn Game"
+ ],
+ "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq -": [
+  "B00",
+  "King's Pawn Game"
+ ],
+ "rnbqkbnr/pppppppp/8/8/8/5N2/PPPPPPPP/RNBQKB1R b KQkq -": [
+  "A04",
+  "Zukertort Opening"
+ ]
+}

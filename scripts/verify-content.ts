@@ -16,12 +16,17 @@ import { Chess, validateFen } from 'chess.js'
 import { factOf, isMoveAccepted, squaresAnswer } from '../src/content/logic'
 import type { Lesson, Step } from '../src/content/types'
 import { Engine, score } from './engine'
+import { buildNames } from './build-openings'
+import type { OpeningLine } from '../src/features/openings/data'
 
 const ROOT = join(import.meta.dirname, '../src/content/modules')
 const DEPTH = Number(process.env.DEPTH ?? 18)
 const WINNING = 300 // centipions : « clairement gagnant »
 const CLOSE = 30 // centipions : « aussi bon que le meilleur coup »
 const CHOICE_MARGIN = 30 // la bonne option d'un QCM moteur doit dépasser les autres d'au moins 0,3 pion
+
+const REPERTOIRE: OpeningLine[] = JSON.parse(readFileSync(join(import.meta.dirname, '../src/content/repertoire.json'), 'utf8'))
+const OPENING_MAX_LOSS = 80 // centipions : un coup du répertoire ne doit pas perdre plus que ça par rapport au meilleur
 
 const errors: string[] = []
 const warnings: string[] = []
@@ -102,9 +107,10 @@ async function checkStep(step: Step, where: string, engine: () => Promise<Engine
     errors.push(`${where} : emplacement "puzzles" non rempli — lance npm run lesson:puzzles`)
     return
   }
-  const fp = fenProblem(step.fen ?? '')
-  if (step.fen !== undefined && fp) {
-    errors.push(`${where} : ${fp} — ${step.fen}`)
+  const fen = 'fen' in step ? step.fen : undefined
+  const fp = fenProblem(fen ?? '')
+  if (fen !== undefined && fp) {
+    errors.push(`${where} : ${fp} — ${fen}`)
     return
   }
 
@@ -195,6 +201,9 @@ async function checkStep(step: Step, where: string, engine: () => Promise<Engine
       }
       break
     }
+    case 'line':
+      if (!REPERTOIRE.some((l) => l.id === step.line)) errors.push(`${where} : ligne d'ouverture inconnue « ${step.line} »`)
+      break
     case 'practice': {
       if (step.maxMoves < 1) errors.push(`${where} : "maxMoves" doit être au moins 1`)
       const g = new Chess(step.fen)
@@ -217,6 +226,37 @@ async function checkStep(step: Step, where: string, engine: () => Promise<Engine
       break
     }
   }
+}
+
+/**
+ * Répertoire d'ouvertures : coups légaux et bien écrits, chaque ligne finit par un coup de l'élève,
+ * et Stockfish confirme qu'aucun coup de l'élève n'est une erreur. Les noms Lichess doivent être à jour.
+ */
+async function checkRepertoire(engine: () => Promise<Engine>) {
+  const ids = new Set<string>()
+  for (const line of REPERTOIRE) {
+    const where = `répertoire [${line.id}]`
+    if (ids.has(line.id)) errors.push(`${where} : id en double`)
+    ids.add(line.id)
+    if ((line.moves.length % 2 === 1) !== (line.side === 'w')) errors.push(`${where} : la ligne doit finir par un coup de l'élève`)
+    const g = new Chess()
+    for (const [i, san] of line.moves.entries()) {
+      const fen = g.fen()
+      if (!playSan(g, san, `${where} (coup ${i + 1})`)) break
+      if ((i % 2 === 0) !== (line.side === 'w')) continue // coup adverse : pas de contrôle
+      const e = await engine()
+      engineChecks++
+      const [best] = await e.analyse(fen, 14)
+      const mine = best.bestmove === uci(new Chess(fen), san) ? best : (await e.analyse(fen, 14, { searchmoves: [uci(new Chess(fen), san)] }))[0]
+      const loss = score(best) - score(mine)
+      if (loss > OPENING_MAX_LOSS)
+        errors.push(`${where} (coup ${i + 1}) : ${san} perd ${(loss / 100).toFixed(2)} pion selon Stockfish (meilleur : ${new Chess(fen).move(best.bestmove).san})`)
+    }
+  }
+  const names = await buildNames()
+  const saved = readFileSync(join(import.meta.dirname, '../src/content/opening-names.json'), 'utf8')
+  if (JSON.stringify(names, null, 1) + '\n' !== saved) errors.push('opening-names.json pas à jour : lance npm run build:openings')
+  console.log(`${REPERTOIRE.length} lignes d'ouverture contrôlées.`)
 }
 
 async function main() {
@@ -261,6 +301,8 @@ async function main() {
       }
     }
   }
+
+  await checkRepertoire(engine)
 
   const started = enginePromise as Promise<Engine> | null // (assigné dans la fonction engine())
   if (started) (await started).quit()

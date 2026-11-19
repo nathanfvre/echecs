@@ -1,0 +1,12 @@
+{
+  "id": "m5-noirs-e5",
+  "title": "Noirs : 1...e5 contre l'Italienne, l'Écossaise et l'Espagnole",
+  "intro": "Avec les Noirs, contre **1.e4**, tu joues **1...e5** : les mêmes principes qu'avec les Blancs. Les trois ouvertures les plus fréquentes : l'Italienne (3.Fc4), l'Écossaise (3.d4) et l'Espagnole (3.Fb5).",
+  "steps": [
+    {"type": "line", "id": "m5-noirs-e5-1", "line": "b-italienne", "hint": "Comme les Blancs : Fc5, Cf6, d6, roque.", "explanation": "Avec les Noirs, même plan que les Blancs : **...Fc5, ...Cf6, ...d6**, et roque. Attention au point **f7** : ne le laisse jamais défendu par le roi seul quand la dame et le fou blancs le visent."},
+    {"type": "line", "id": "m5-noirs-e5-2", "line": "b-italienne-d4", "hint": "Prends en d4, échec en b4, puis frappe le centre avec ...d5.", "explanation": "Si les Blancs jouent tout de suite **d4**, on prend (**...exd4**), on donne échec en **b4**, on échange les fous puis **...d5 !** attaque le centre blanc."},
+    {"type": "line", "id": "m5-noirs-e5-3", "line": "b-ecossaise", "hint": "Après l'échange en c6, attaque le pion e5.", "explanation": "Après **3.d4 exd4 4.Cxd4 Cf6**, les Noirs attaquent e4. Variante principale : **5.Cxc6 bxc6 6.e5 De7 7.De2 Cd5 8.c4 Fa6**, le fou cloue le pion c4."},
+    {"type": "line", "id": "m5-noirs-e5-4", "line": "b-espagnole", "hint": "Pose la question au fou avec ...a6, puis développement classique.", "explanation": "Contre **3.Fb5**, **3...a6** pose la question au fou. Développement classique : **...Cf6, ...Fe7, ...b5, ...d6** et roque."},
+    {"type": "line", "id": "m5-noirs-e5-5", "line": "b-espagnole-echange", "hint": "Reprends vers le côté dame pour libérer ton fou c8.", "explanation": "Si le fou prend en c6, on reprend **vers le centre… du côté dame** (**dxc6**) pour libérer le fou c8. **...f6** protège e5. Les Noirs ont la paire de fous."}
+  ]
+}

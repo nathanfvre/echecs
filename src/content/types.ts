@@ -119,7 +119,17 @@ export type PuzzlesPlaceholder = {
   hint?: string
 }
 
-export type ExerciseStep = MoveStep | SquaresStep | ChoiceStep | PracticeStep
+/** Rejouer une ligne du répertoire d'ouvertures (src/content/repertoire.json). */
+export type LineStep = {
+  type: 'line'
+  id: string
+  /** Identifiant de la ligne dans repertoire.json. */
+  line: string
+  hint: string
+  explanation: string
+}
+
+export type ExerciseStep = MoveStep | SquaresStep | ChoiceStep | PracticeStep | LineStep
 export type Step = DemoStep | ExerciseStep
 
 export type Lesson = {

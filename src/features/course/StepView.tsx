@@ -3,6 +3,8 @@ import { ChoiceExercise } from './ChoiceExercise'
 import { DemoView } from './DemoView'
 import { MoveExercise } from './MoveExercise'
 import { PracticeExercise } from './PracticeExercise'
+import { OpeningDrill } from '../openings/OpeningDrill'
+import { findLine } from '../openings/data'
 import { SquaresExercise } from './SquaresExercise'
 
 /** Affiche une étape de leçon (démo ou exercice). */
@@ -21,5 +23,9 @@ export function ExerciseView({ step, onDone }: { step: ExerciseStep; onDone: (ok
       return <ChoiceExercise step={step} onDone={onDone} />
     case 'practice':
       return <PracticeExercise step={step} onDone={onDone} />
+    case 'line': {
+      const line = findLine(step.line)
+      return line ? <OpeningDrill line={line} onDone={onDone} /> : null
+    }
   }
 }

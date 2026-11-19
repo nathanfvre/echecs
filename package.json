@@ -12,7 +12,8 @@
     "build:puzzles": "tsx scripts/build-puzzles.ts",
     "predev": "node scripts/copy-stockfish.mjs",
     "prebuild": "node scripts/copy-stockfish.mjs",
-    "lesson:puzzles": "tsx scripts/lesson-puzzles.ts"
+    "lesson:puzzles": "tsx scripts/lesson-puzzles.ts",
+    "build:openings": "tsx scripts/build-openings.ts"
   },
   "dependencies": {
     "chess.js": "^1.4.0",

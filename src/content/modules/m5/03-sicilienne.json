@@ -1,0 +1,12 @@
+{
+  "id": "m5-sicilienne",
+  "title": "Blancs : la Sicilienne Alapin",
+  "intro": "Contre **1...c5** (la Sicilienne), on joue **2.c3** : on prépare **d4** pour avoir deux pions au centre, sans avoir à apprendre la théorie énorme des autres variantes.",
+  "steps": [
+    {"type": "choice", "id": "m5-sicilienne-1", "fen": "rnbqkbnr/pp1ppppp/8/2p5/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2", "prompt": "Les Noirs jouent 1...c5. Que joues-tu ?", "options": ["c3", "Qh5", "b4"], "answer": 0, "engineChoice": true, "explanation": "**2.c3** prépare d4. La dame en h5 se ferait chasser, et b4 donne un pion sans compensation claire."},
+    {"type": "line", "id": "m5-sicilienne-2", "line": "w-alapin-d5", "hint": "Développe tes pièces normalement ; garde le centre.", "explanation": "Contre la Sicilienne, **2.c3** prépare d4 pour avoir deux pions au centre. Après **2...d5**, la dame noire en d5 ne craint rien, mais les Blancs se développent tranquillement et gardent un beau centre."},
+    {"type": "line", "id": "m5-sicilienne-3", "line": "w-alapin-nf6", "hint": "Chasse le cavalier avec ton pion e.", "explanation": "Après **2...Cf6**, on chasse le cavalier avec **3.e5**, puis d4 : les Blancs ont plus d'espace. **Fc4** met la pression sur le cavalier d5."},
+    {"type": "line", "id": "m5-sicilienne-4", "line": "w-alapin-nc6", "hint": "Réalise ton plan : d4.", "explanation": "Contre **2...Cc6**, on réalise le plan : **d4**, et on reprend avec le pion c. Si la dame noire vient en d5, on développe avec gain de temps."},
+    {"type": "choice", "id": "m5-sicilienne-5", "prompt": "Quel est le but du coup 2.c3 ?", "options": ["Préparer d4 et reprendre en d4 avec un pion", "Sortir la dame en a4", "Protéger le roi"], "answer": 0, "explanation": "Après **d4** et **cxd4**, les Blancs ont deux pions au centre (d4 et e4 ou e5)."}
+  ]
+}

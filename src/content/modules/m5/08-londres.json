@@ -1,0 +1,13 @@
+{
+  "id": "m5-londres",
+  "title": "Option : le Système de Londres",
+  "intro": "Le **Système de Londres** (1.d4 et 2.Ff4) est une alternative à 1.e4 : on joue presque toujours les mêmes coups (**d4, Ff4, e3, Cf3, c3, Cbd2, Fd3**), quelle que soit la réponse adverse. Moins tactique que l'Italienne, mais très facile à jouer.",
+  "steps": [
+    {"type": "demo", "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "text": "La structure type : pions d4, e3, c3 et le fou f4 sorti **avant** e3 (sinon il serait enfermé).", "moves": ["d4", "d5", "Bf4", "Nf6", "e3", "e6", "Nf3", "c5", "c3", "Nc6", "Nbd2", "Bd6", "Bg3", "O-O", "Bd3"]},
+    {"type": "choice", "id": "m5-londres-1", "prompt": "Pourquoi sortir le fou en f4 **avant** de jouer e3 ?", "options": ["Sinon le pion e3 bloque le fou c1", "Pour attaquer le roi tout de suite", "Pour protéger le pion d4"], "answer": 0, "explanation": "Après e3, le fou c1 ne peut plus sortir par la diagonale c1–h6. Dans le Londres, il sort d'abord en **f4**."},
+    {"type": "line", "id": "m5-londres-2", "line": "w-londres-d5", "hint": "Toujours la même structure.", "explanation": "Le **Système de Londres** : toujours la même structure (**d4, Ff4, e3, Cf3, c3, Cbd2, Fd3**). Contre ...Fd6, on garde le fou avec **Fg3**."},
+    {"type": "line", "id": "m5-londres-3", "line": "w-londres-indienne", "hint": "Même schéma, et h3 pour garder le fou.", "explanation": "Contre le fianchetto ...g6/...Fg7, même schéma. **h3** offre une case de retraite au fou (h2) et empêche ...Cg4."},
+    {"type": "line", "id": "m5-londres-4", "line": "w-londres-db6", "hint": "Oppose ta dame à la dame noire.", "explanation": "Quand la dame noire attaque b2 (**...Db6**), on oppose sa dame (**Db3**). Après **...c4**, la dame revient en **c2**, d'où elle vise h7."},
+    {"type": "choice", "id": "m5-londres-5", "prompt": "Contre ...Fd6, qui propose d'échanger les fous, que fait le fou f4 ?", "options": ["Il recule en g3 pour rester sur la diagonale", "Il prend en d6", "Il va en h6"], "answer": 0, "explanation": "**Fg3** garde le fou sur la même diagonale. Si ...Fxg3, hxg3 ouvre la colonne h pour la tour."}
+  ]
+}

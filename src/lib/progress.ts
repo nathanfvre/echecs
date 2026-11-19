@@ -189,6 +189,16 @@ export function recordCardReview(key: string, ok: boolean) {
   save({ ...state, cards })
 }
 
+/**
+ * Ligne d'ouverture jouée : la première fois, elle entre en boîte 1 (révision demain) ;
+ * ensuite, chaque passage compte comme une révision.
+ */
+export function recordOpening(lineId: string, ok: boolean) {
+  const key = `opening:${lineId}`
+  if (state.cards[key]) recordCardReview(key, ok)
+  else addCards([failedCard(key, today())])
+}
+
 /** Ajoute des cartes (ex. erreurs tirées d'une partie). Les cartes déjà présentes sont gardées telles quelles. */
 export function addCards(cards: Card[]) {
   const next = { ...state.cards }

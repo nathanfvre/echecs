@@ -1,0 +1,13 @@
+{
+  "id": "m5-noirs-e5-autres",
+  "title": "Noirs : les autres coups blancs",
+  "intro": "Les Blancs essaient souvent des ouvertures moins classiques, surtout en dessous de 1200 : Gambit du roi, Viennoise, dame sortie tôt… Pour chacune, une réponse simple et sûre.",
+  "steps": [
+    {"type": "line", "id": "m5-noirs-autres-1", "line": "b-berger", "hint": "Défends e5, pare le mat sur f7 et chasse la dame.", "explanation": "Contre la dame sortie tôt : **...Cc6** défend e5, **...g6** pare le mat et chasse la dame, **...Cf6** pare la deuxième menace sur f7. Ensuite, la dame blanche est mal placée."},
+    {"type": "line", "id": "m5-noirs-autres-2", "line": "b-gambit-roi", "hint": "Refuse le gambit : ton fou vise g1.", "explanation": "Contre **2.f4**, on refuse simplement le gambit : **2...Fc5 !** vise g1 et empêche le petit roque blanc. Puis **...d6** et **...Cf6**."},
+    {"type": "line", "id": "m5-noirs-autres-3", "line": "b-viennoise-f4", "hint": "Contre-attaque au centre.", "explanation": "Contre la Viennoise avec **3.f4**, la contre-attaque **3...d5 !** au centre est la meilleure réponse. Le cavalier s'installe en e4."},
+    {"type": "line", "id": "m5-noirs-autres-4", "line": "b-viennoise-fc4", "hint": "Développement simple.", "explanation": "Contre **3.Fc4**, développement simple : **...Cc6, ...Fc5, ...d6**. Après f4, ...d6 tient e5."},
+    {"type": "line", "id": "m5-noirs-autres-5", "line": "b-fou-c4", "hint": "Attaque e4 avec ton cavalier.", "explanation": "Contre l'ouverture du fou, **...Cf6** attaque e4. Après d3, on se développe comme dans l'Italienne."},
+    {"type": "line", "id": "m5-noirs-autres-6", "line": "b-centre", "hint": "Chasse la dame avec gain de temps.", "explanation": "Après **2.d4 exd4 3.Dxd4**, **...Cc6** chasse la dame **avec gain de temps**, puis **...Cf6**."}
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "m5-e5-autres",
+  "title": "Blancs : Philidor et Petrov",
+  "intro": "Les Noirs ne jouent pas toujours 2...Cc6. Contre **2...d6** (Philidor), on ouvre le centre avec **3.d4**. Contre **2...Cf6** (Petrov), on prend en e5, et il y a un piège très fréquent à connaître.",
+  "steps": [
+    {"type": "line", "id": "m5-e5-autres-1", "line": "w-philidor", "hint": "Contre 2...d6, ouvre le centre.", "explanation": "Contre **2...d6**, **3.d4** ouvre le centre. Après l'échange en d4, les Blancs ont plus d'espace : développement simple et roque."},
+    {"type": "line", "id": "m5-e5-autres-2", "line": "w-petrov", "hint": "Chasse d'abord le cavalier e4 avant de penser à reprendre.", "explanation": "Contre **2...Cf6**, on prend en e5. Attention : il faut **chasser le cavalier (3...d6)** avant de reprendre e4. Ensuite **d4 et Fd3** : développement facile."},
+    {"type": "line", "id": "m5-e5-autres-3", "line": "w-petrov-piege", "hint": "Le cavalier e4 est sur la même colonne que le roi noir.", "explanation": "Erreur très fréquente : **3...Cxe4 ?** (au lieu de 3...d6). **4.De2 !** cloue le cavalier sur la colonne e. Si **4...Cf6 ??**, **5.Cc6+** est un échec à la découverte qui gagne la dame d8. (Le mieux pour les Noirs : 4...De7.)"},
+    {"type": "move", "id": "m5-e5-autres-4", "fen": "rnbqkb1r/pppp1ppp/5n2/4N3/8/8/PPPPQPPP/RNB1KB1R w KQkq - 2 5", "prompt": "Les Noirs viennent de jouer 4...Cf6 ??. Gagne la dame.", "solution": ["Nc6+"], "engine": true, "hint": "Ta dame est sur la colonne e, comme le roi noir. Que se passe-t-il si le cavalier e5 bouge ?", "explanation": "**Cc6+** : échec à la découverte de la dame e2, et le cavalier attaque la dame d8."},
+    {"type": "choice", "id": "m5-e5-autres-5", "prompt": "Dans la Petrov, après 1.e4 e5 2.Cf3 Cf6 3.Cxe5, pourquoi les Noirs doivent-ils jouer 3...d6 avant ...Cxe4 ?", "options": ["Pour chasser le cavalier e5, sinon De2 cloue le cavalier e4", "Pour roquer plus vite", "Pour attaquer la dame"], "answer": 0, "explanation": "Après **3...Cxe4 ? 4.De2 !**, le cavalier e4 est cloué sur la colonne e et les Noirs ont des problèmes. **3...d6** d'abord."}
+  ]
+}

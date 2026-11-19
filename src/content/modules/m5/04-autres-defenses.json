@@ -1,0 +1,13 @@
+{
+  "id": "m5-autres-defenses",
+  "title": "Blancs : Française, Caro-Kann, Scandinave",
+  "intro": "Contre la **Française** (1...e6) et la **Caro-Kann** (1...c6), on joue la **variante d'avance** (e5) : de l'espace et un plan clair. Contre la **Scandinave** (1...d5), on prend et on développe en chassant la dame.",
+  "steps": [
+    {"type": "line", "id": "m5-autres-1", "line": "w-francaise", "hint": "Soutiens ta chaîne de pions d4–e5.", "explanation": "Contre la Française, **3.e5** gagne de l'espace. Les Noirs attaquent la chaîne de pions (...c5, ...Cc6, ...Db6) : on la soutient avec **c3 et Cf3**, et **a3** prépare b4."},
+    {"type": "line", "id": "m5-autres-2", "line": "w-caro-kann", "hint": "Même idée : espace, puis développement simple.", "explanation": "Même idée qu'en Française : **3.e5** prend de l'espace, développement simple (**Cf3, Fe2, Fe3**) et roque. Le fou e3 soutient d4."},
+    {"type": "choice", "id": "m5-autres-3", "fen": "rnb1kbnr/ppp1pppp/8/3q4/8/8/PPPP1PPP/RNBQKBNR w KQkq - 0 3", "prompt": "Après 1.e4 d5 2.exd5 Dxd5, que joues-tu ?", "options": ["Nc3", "Ke2", "Bd3"], "answer": 0, "engineChoice": true, "explanation": "**3.Cc3** développe **en attaquant la dame** : tu gagnes du temps. Fd3 ?? Dxg2 perd la tour h1."},
+    {"type": "line", "id": "m5-autres-4", "line": "w-scandinave-da5", "hint": "Développe en gagnant du temps sur la dame.", "explanation": "Contre la Scandinave, on prend en d5 et **3.Cc3** chasse la dame **avec gain de temps**. Ensuite d4, Cf3, Fc4 : les Blancs sont en avance de développement. **Fd2** prépare Cd5 ou Cb5 contre la dame a5."},
+    {"type": "line", "id": "m5-autres-5", "line": "w-scandinave-cf6", "hint": "d4 puis développement normal.", "explanation": "Si les Noirs reprennent en d5 avec le cavalier, **d4** et développement normal. Fe2 enlève le clouage du fou g4."},
+    {"type": "line", "id": "m5-autres-6", "line": "w-pirc", "hint": "Prends le centre avec deux pions, puis développe.", "explanation": "Contre **1...d6** ou **1...g6**, les Blancs prennent le centre avec **e4 et d4**, puis variante classique : Cc3, Cf3, Fe2 et roque."}
+  ]
+}

@@ -9,6 +9,8 @@ import { ExerciseView } from '../course/StepView'
 import { MoveExercise } from '../course/MoveExercise'
 import { Button, Panel } from '../course/ui'
 import { puzzleToStep, usePuzzles } from '../puzzles/data'
+import { OpeningDrill } from '../openings/OpeningDrill'
+import { findLine } from '../openings/data'
 
 const SESSION_MAX = 20
 
@@ -41,7 +43,7 @@ export function ReviewPage() {
     if (kind === 'puzzle') {
       const p = puzzleById.get(id)
       if (p) recordPuzzle(p, ok, true)
-    } else if (kind === 'mistake') recordCardReview(card.key, ok)
+    } else if (kind === 'mistake' || kind === 'opening') recordCardReview(card.key, ok)
     else recordExerciseReview(id, ok)
     if (ok) setScore(score + 1)
     setIndex(index + 1)
@@ -90,6 +92,9 @@ export function ReviewPage() {
       const { step, preMove } = puzzleToStep(p)
       content = <MoveExercise key={card.key} step={step} preMove={preMove} onDone={done} />
     }
+  } else if (kind === 'opening') {
+    const line = findLine(id)
+    content = line ? <OpeningDrill key={card.key} line={line} onDone={done} /> : <Missing onSkip={() => setIndex(index + 1)} />
   } else if (kind === 'mistake' && card.mistake) {
     const m = card.mistake
     content = (
@@ -118,7 +123,7 @@ export function ReviewPage() {
       <div className="flex items-baseline justify-between">
         <h1 className="text-2xl font-semibold">Révisions du jour</h1>
         <span className="text-sm text-stone-500">
-          {index + 1} / {queue.length} · {kind === 'puzzle' ? 'puzzle' : kind === 'mistake' ? 'erreur de partie' : 'exercice de leçon'} · boîte {card.box}
+          {index + 1} / {queue.length} · {kind === 'puzzle' ? 'puzzle' : kind === 'mistake' ? 'erreur de partie' : kind === 'opening' ? 'ouverture' : 'exercice de leçon'} · boîte {card.box}
         </span>
       </div>
       {content}

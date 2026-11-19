@@ -117,9 +117,26 @@ npm run build:puzzles
 ```
 Télécharge la base Lichess (~300 Mo, une seule fois, dans `scripts/.cache/`), filtre et réécrit le fichier.
 
+## Ouvertures
+
+Le répertoire est dans `src/content/repertoire.json` : une ligne = un identifiant, le camp de l'élève (`"w"` ou
+`"b"`), un titre, les coups (notation anglaise, depuis la position de départ) et une courte idée en français.
+- **Vérification** : `npm run verify` rejoue chaque ligne et demande à Stockfish (profondeur 14) si chaque coup
+  de l'élève est bon : un coup qui perd plus de 0,8 pion par rapport au meilleur est refusé. Les coups adverses
+  ne sont pas contrôlés (ils peuvent être des erreurs, c'est le principe des pièges).
+- **Noms officiels** : codes ECO et noms de la base ouverte
+  [lichess-org/chess-openings](https://github.com/lichess-org/chess-openings) (CC0). Après avoir modifié le
+  répertoire, lance `npm run build:openings` (télécharge les fichiers une fois, puis écrit
+  `src/content/opening-names.json`).
+- Dans une leçon, l'étape `{ "type": "line", "id": "…", "line": "w-italienne", "hint": "…", "explanation": "…" }`
+  fait rejouer une ligne du répertoire.
+- L'explorateur d'ouvertures de Lichess (statistiques des parties) demande désormais un compte : il n'est pas
+  utilisé par le script. Pour voir ce qui se joue vraiment à ton niveau, ouvre l'onglet « Explorateur » sur
+  lichess.org/analysis.
+
 ## Répétition espacée
 
-Système de Leitner à 5 boîtes (`src/lib/srs.ts`). Un exercice de leçon ou un puzzle raté entre en boîte 1 et
+Système de Leitner à 5 boîtes (`src/lib/srs.ts`). Un exercice de leçon ou un puzzle raté (ou une ligne d'ouverture travaillée) entre en boîte 1 et
 revient le lendemain dans **Révisions**. Chaque réussite le fait monter d'une boîte (révisions à 1, 3, 7, 14
 puis 30 jours) ; une erreur le renvoie en boîte 1 ; réussi en boîte 5, il est acquis.
 
@@ -153,7 +170,7 @@ et toujours affichés en notation française (`Cf3`) : R = roi, D = dame, T = to
 - [x] Phase b — moteur de leçons et d'exercices, module 0
 - [x] Phase c — puzzles et répétition espacée
 - [x] Phase d — bot Stockfish et analyse
-- [ ] Phase e — modules 1 à 9, entraîneur d'ouvertures (fait : modules 1 à 4)
+- [ ] Phase e — modules 1 à 9, entraîneur d'ouvertures (fait : modules 1 à 5 et entraîneur d'ouvertures)
 - [ ] Phase f — tableau de bord
 - [ ] Phase g — déploiement
 

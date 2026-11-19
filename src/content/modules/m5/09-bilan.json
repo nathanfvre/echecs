@@ -1,0 +1,13 @@
+{
+  "id": "m5-bilan",
+  "title": "Bilan du module 5",
+  "intro": "Une ligne de chaque grande ouverture, sans aide. Ensuite, l'entraîneur d'ouvertures (menu **Ouvertures**) te fera réviser toutes les lignes à intervalles croissants.",
+  "steps": [
+    {"type": "line", "id": "m5-bilan-1", "line": "w-italienne", "hint": "Rappelle-toi l'idée de la ligne : développement, centre, roque.", "explanation": "Le plan tranquille : **c3 et d3** tiennent le centre, on roque, **Te1**, le fou recule en **b3** pour éviter ...Ca5 ou ...d5, puis le cavalier fait le tour **Cbd2–f1–g3**. Pas de théorie à apprendre : des coups naturels et un roi en sécurité."},
+    {"type": "line", "id": "m5-bilan-2", "line": "w-alapin-d5", "hint": "Rappelle-toi l'idée de la ligne : développement, centre, roque.", "explanation": "Contre la Sicilienne, **2.c3** prépare d4 pour avoir deux pions au centre. Après **2...d5**, la dame noire en d5 ne craint rien, mais les Blancs se développent tranquillement et gardent un beau centre."},
+    {"type": "line", "id": "m5-bilan-3", "line": "w-francaise", "hint": "Rappelle-toi l'idée de la ligne : développement, centre, roque.", "explanation": "Contre la Française, **3.e5** gagne de l'espace. Les Noirs attaquent la chaîne de pions (...c5, ...Cc6, ...Db6) : on la soutient avec **c3 et Cf3**, et **a3** prépare b4."},
+    {"type": "line", "id": "m5-bilan-4", "line": "b-italienne-d4", "hint": "Rappelle-toi l'idée de la ligne : développement, centre, roque.", "explanation": "Si les Blancs jouent tout de suite **d4**, on prend (**...exd4**), on donne échec en **b4**, on échange les fous puis **...d5 !** attaque le centre blanc."},
+    {"type": "line", "id": "m5-bilan-5", "line": "b-espagnole", "hint": "Rappelle-toi l'idée de la ligne : développement, centre, roque.", "explanation": "Contre **3.Fb5**, **3...a6** pose la question au fou. Développement classique : **...Cf6, ...Fe7, ...b5, ...d6** et roque."},
+    {"type": "line", "id": "m5-bilan-6", "line": "d-orthodoxe", "hint": "Rappelle-toi l'idée de la ligne : développement, centre, roque.", "explanation": "Contre **1.d4 d5 2.c4**, on soutient d5 avec **...e6** (Gambit dame refusé). Développement : **...Cf6, ...Fe7**, roque, **...h6** pour questionner le fou, puis **...b6** et ...Fb7."}
+  ]
+}

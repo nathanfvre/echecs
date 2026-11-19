@@ -1,3 +1,4 @@
+import { OpeningsPage } from './features/openings/OpeningsPage'
 import { HashRouter, NavLink, Route, Routes } from 'react-router-dom'
 import { Home } from './pages/Home'
 import { Sandbox } from './pages/Sandbox'
@@ -61,7 +62,7 @@ export default function App() {
             <Route path="/cours/:lessonId" element={<LessonPage />} />
             <Route path="/puzzles" element={<PuzzlePage />} />
             <Route path="/revisions" element={<ReviewPage />} />
-            <Route path="/ouvertures" element={<Placeholder title="Entraîneur d'ouvertures" phase="e" />} />
+            <Route path="/ouvertures" element={<OpeningsPage />} />
             <Route path="/jouer" element={<PlayPage />} />
             <Route path="/analyse" element={<AnalysisPage />} />
             <Route

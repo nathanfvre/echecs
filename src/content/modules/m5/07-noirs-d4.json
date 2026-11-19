@@ -1,0 +1,16 @@
+{
+  "id": "m5-noirs-d4",
+  "title": "Noirs : le Gambit dame refusé",
+  "intro": "Contre **1.d4**, tu joues **1...d5** puis **...e6** : c'est le **Gambit dame refusé**, l'une des défenses les plus solides. Le même schéma (...d5, ...e6, ...Cf6, ...Fe7 ou ...Fd6, roque, ...c5) marche contre le Londres, le Colle et 1.Cf3.",
+  "steps": [
+    {"type": "choice", "id": "m5-noirs-d4-1", "fen": "rnbqkbnr/ppp1pppp/8/3p4/2PP4/8/PP2PPPP/RNBQKBNR b KQkq - 0 2", "prompt": "Les Blancs jouent 1.d4 d5 2.c4 (le Gambit dame). Que joues-tu ?", "options": ["e6", "f6", "g5"], "answer": 0, "engineChoice": true, "explanation": "**2...e6** soutient le pion d5 : c'est le Gambit dame refusé."},
+    {"type": "line", "id": "m5-noirs-d4-2", "line": "d-orthodoxe", "hint": "Développement : Cf6, Fe7, roque, puis h6 et b6.", "explanation": "Contre **1.d4 d5 2.c4**, on soutient d5 avec **...e6** (Gambit dame refusé). Développement : **...Cf6, ...Fe7**, roque, **...h6** pour questionner le fou, puis **...b6** et ...Fb7."},
+    {"type": "line", "id": "m5-noirs-d4-3", "line": "d-echange", "hint": "Reprends avec le pion e.", "explanation": "Si les Blancs échangent en d5, on reprend avec le pion e (**...exd5**) : le fou c8 respire. **...c6** solidifie d5."},
+    {"type": "line", "id": "m5-noirs-d4-4", "line": "d-ff4", "hint": "Libère ton jeu avec ...c5.", "explanation": "Contre **Ff4**, la poussée **...c5** libère le jeu noir. Après dxc5, le fou reprend en c5, bien actif."},
+    {"type": "line", "id": "m5-noirs-d4-5", "line": "d-elephant", "hint": "Le cavalier f6 n'est pas vraiment cloué : la dame blanche aussi est en danger.", "explanation": "Après **...Cbd7**, le cavalier f6 semble cloué : si **Cxd5 ??**, **...Cxd5 !** offre la dame, car après **Fxd8 Fb4+** la dame blanche tombe aussi. Les Noirs gagnent une pièce."},
+    {"type": "move", "id": "m5-noirs-d4-6", "fen": "r1bqkb1r/pppn1ppp/5n2/3N2B1/3P4/8/PP2PPPP/R2QKBNR b KQkq - 0 6", "prompt": "Les Blancs viennent de prendre en d5 (6.Cxd5 ??). Punis-les : le piège de l'éléphant.", "solution": ["Nxd5"], "engine": true, "hint": "N'aie pas peur pour ta dame : si le fou la prend, tu as un échec qui gagne la dame blanche.", "explanation": "**Cxd5 !** Si **Fxd8 Fb4+** puis la dame blanche tombe : les Noirs gagnent une pièce."},
+    {"type": "line", "id": "m5-noirs-d4-7", "line": "d-londres", "hint": "Propose l'échange des fous avec ...Fd6, puis ...c5.", "explanation": "Contre le Londres, **...Fd6** propose l'échange du fou f4. Puis roque et **...c5** pour attaquer le centre."},
+    {"type": "line", "id": "m5-noirs-d4-8", "line": "d-colle", "hint": "Même schéma : e6, c5, Cc6, Fd6, roque.", "explanation": "Contre d4/e3/Fd3 (système Colle), même schéma : **...e6, ...c5, ...Cc6, ...Fd6** et roque."},
+    {"type": "line", "id": "m5-noirs-d4-9", "line": "d-cf3", "hint": "Structure solide : d5, Cf6, e6, Fe7, roque.", "explanation": "Contre les débuts de flanc, même structure solide : **...d5, ...Cf6, ...e6, ...Fe7** et roque."}
+  ]
+}
