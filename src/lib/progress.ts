@@ -35,6 +35,8 @@ export type Progress = {
   cards: Record<string, Card>
   /** Classement puzzles de l'élève (type Elo), départ à 600. */
   puzzleRating: number
+  /** Classement puzzles à la fin de chaque jour d'entraînement (pour la courbe de progression). */
+  ratingHistory: { date: string; rating: number }[]
   /** Puzzles déjà vus (ids Lichess), pour ne pas les reproposer tout de suite. */
   puzzlesSeen: string[]
   /** Réussite par thème tactique (clé Lichess). */
@@ -52,6 +54,7 @@ const empty = (): Progress => ({
   lessons: {},
   cards: {},
   puzzleRating: 600,
+  ratingHistory: [],
   puzzlesSeen: [],
   themes: {},
   days: [],
@@ -164,10 +167,13 @@ export function recordPuzzle(p: { id: string; rating: number; themes: string[] }
     const s = themes[t] ?? { ok: 0, total: 0 }
     themes[t] = { ok: s.ok + (ok ? 1 : 0), total: s.total + 1 }
   }
+  const d = today()
+  const ratingHistory = [...state.ratingHistory.filter((h) => h.date !== d), { date: d, rating: puzzleRating }].slice(-365)
   save({
     ...state,
     cards,
     puzzleRating,
+    ratingHistory,
     themes,
     puzzlesSeen: state.puzzlesSeen.includes(p.id) ? state.puzzlesSeen : [...state.puzzlesSeen, p.id],
   })

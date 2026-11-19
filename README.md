@@ -156,6 +156,16 @@ puis 30 jours) ; une erreur le renvoie en boîte 1 ; réussi en boîte 5, il est
 - **Import Lichess** : API publique `lichess.org/api/games/user/<pseudo>` (15 dernières parties rapides,
   lentes et blitz), sans compte ni clé. Ou coller un PGN (Lichess, Chess.com).
 
+## Tableau de bord et plan d'entraînement
+
+La page **Progrès** (`src/features/dashboard/DashboardPage.tsx`) montre : la série de jours, les leçons réussies,
+le classement puzzles et sa courbe, les cartes à réviser, la séance conseillée du jour, l'avancement par module,
+la réussite par thème tactique (un thème est « à travailler » avec au moins 5 puzzles et moins de 65 % de
+réussite), l'activité des 4 dernières semaines, le bilan des parties (gaffes par partie analysée, meilleur bot
+battu) et ton classement rapide Lichess (API publique, avec le pseudo indiqué dans Analyse).
+Les calculs sont dans `src/lib/stats.ts` (testés) ; la semaine type et les jalons vers 1000, avec leurs
+objectifs vérifiés automatiquement, dans `src/content/plan.ts` : modifie ce fichier pour adapter le plan.
+
 ## Sauvegarde de la progression
 
 La progression est stockée dans le navigateur. Page **Progrès → Sauvegarde** : « Exporter » télécharge
@@ -173,7 +183,7 @@ et toujours affichés en notation française (`Cf3`) : R = roi, D = dame, T = to
 - [x] Phase c — puzzles et répétition espacée
 - [x] Phase d — bot Stockfish et analyse
 - [x] Phase e — modules 1 à 9, entraîneur d'ouvertures
-- [ ] Phase f — tableau de bord
+- [x] Phase f — tableau de bord et plan d'entraînement
 - [ ] Phase g — déploiement
 
 *(La section « Déploiement » sera écrite à la phase g.)*

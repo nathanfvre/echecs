@@ -3,7 +3,7 @@ import { HashRouter, NavLink, Route, Routes } from 'react-router-dom'
 import { Home } from './pages/Home'
 import { Sandbox } from './pages/Sandbox'
 import { Placeholder } from './pages/Placeholder'
-import { Backup } from './pages/Backup'
+import { DashboardPage } from './features/dashboard/DashboardPage'
 import { CoursePage } from './features/course/CoursePage'
 import { LessonPage } from './features/course/LessonPlayer'
 import { PuzzlePage } from './features/puzzles/PuzzlePage'
@@ -65,15 +65,7 @@ export default function App() {
             <Route path="/ouvertures" element={<OpeningsPage />} />
             <Route path="/jouer" element={<PlayPage />} />
             <Route path="/analyse" element={<AnalysisPage />} />
-            <Route
-              path="/progres"
-              element={
-                <div className="space-y-6">
-                  <Placeholder title="Tableau de bord" phase="f" />
-                  <Backup />
-                </div>
-              }
-            />
+            <Route path="/progres" element={<DashboardPage />} />
             <Route path="*" element={<Placeholder title="Page introuvable" phase="—" />} />
           </Routes>
         </main>

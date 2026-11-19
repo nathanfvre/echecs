@@ -1,4 +1,5 @@
 import { useCallback, useMemo, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { MoveExercise } from '../course/MoveExercise'
 import { Panel } from '../course/ui'
@@ -10,7 +11,12 @@ import { PUZZLE_THEMES, THEME_LABEL, type Puzzle } from './themes'
 export function PuzzlePage() {
   const { puzzles, error } = usePuzzles()
   const progress = useProgress()
-  const [theme, setTheme] = useState('all')
+  // ?theme=fork : arriver directement sur un thème (lien depuis le tableau de bord).
+  const [params] = useSearchParams()
+  const [theme, setTheme] = useState(() => {
+    const t = params.get('theme')
+    return t && PUZZLE_THEMES.some((x) => x.key === t) ? t : 'all'
+  })
   const [difficulty, setDifficulty] = useState<Difficulty>('auto')
   const [current, setCurrent] = useState<Puzzle | null>(null)
   const [result, setResult] = useState<{ ok: boolean; delta: number } | null>(null)
