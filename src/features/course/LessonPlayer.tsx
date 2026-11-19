@@ -2,12 +2,9 @@ import { useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { RichText } from '../../components/RichText'
 import { ALL_LESSONS, findLesson } from '../../content'
-import { PASS_RATE, isExercise, type Lesson, type Step } from '../../content/types'
+import { PASS_RATE, isExercise, type Lesson } from '../../content/types'
 import { recordLesson, useProgress } from '../../lib/progress'
-import { ChoiceExercise } from './ChoiceExercise'
-import { DemoView } from './DemoView'
-import { MoveExercise } from './MoveExercise'
-import { SquaresExercise } from './SquaresExercise'
+import { StepView } from './StepView'
 import { Button, Panel } from './ui'
 import { isUnlocked } from './unlock'
 
@@ -120,17 +117,4 @@ function LessonPlayer({ lesson, moduleTitle }: { lesson: Lesson; moduleTitle: st
       )}
     </div>
   )
-}
-
-function StepView({ step, onNext }: { step: Step; onNext: (r?: { id: string; ok: boolean }) => void }) {
-  if (!isExercise(step)) return <DemoView step={step} onNext={() => onNext()} />
-  const done = (ok: boolean) => onNext({ id: step.id, ok })
-  switch (step.type) {
-    case 'move':
-      return <MoveExercise step={step} onDone={done} />
-    case 'squares':
-      return <SquaresExercise step={step} onDone={done} />
-    case 'choice':
-      return <ChoiceExercise step={step} onDone={done} />
-  }
 }

@@ -32,7 +32,9 @@ npm run verify
 ```
 Vérifie **tout le contenu du cours** : chaque position (FEN) est légale, chaque coup de solution est légal
 et bien écrit, les réponses aux questions correspondent à la position, et Stockfish confirme les
-solutions des exercices tactiques. Le script s'arrête en erreur au moindre problème.
+solutions des exercices tactiques. Vérifie aussi les puzzles : légalité de tous, et Stockfish sur un
+échantillon de 150 (`SAMPLE=all npm run verify` pour les contrôler tous, ~1 min).
+Le script s'arrête en erreur au moindre problème.
 
 ```bash
 npm run build
@@ -85,6 +87,23 @@ Règles importantes :
 
 3. Lance `npm run verify` : corrige jusqu'à ce que tout soit vert.
 
+## Puzzles
+
+Les puzzles viennent de la [base ouverte de Lichess](https://database.lichess.org/#puzzles) (licence CC0).
+Le fichier `public/puzzles.json` (~3900 puzzles notés 400 à 1300, 14 thèmes) est déjà dans le dépôt.
+Pour le régénérer (par exemple pour changer les thèmes ou les quotas dans `src/features/puzzles/themes.ts`) :
+
+```bash
+npm run build:puzzles
+```
+Télécharge la base Lichess (~300 Mo, une seule fois, dans `scripts/.cache/`), filtre et réécrit le fichier.
+
+## Répétition espacée
+
+Système de Leitner à 5 boîtes (`src/lib/srs.ts`). Un exercice de leçon ou un puzzle raté entre en boîte 1 et
+revient le lendemain dans **Révisions**. Chaque réussite le fait monter d'une boîte (révisions à 1, 3, 7, 14
+puis 30 jours) ; une erreur le renvoie en boîte 1 ; réussi en boîte 5, il est acquis.
+
 ## Sauvegarde de la progression
 
 La progression est stockée dans le navigateur. Page **Progrès → Sauvegarde** : « Exporter » télécharge
@@ -99,7 +118,7 @@ et toujours affichés en notation française (`Cf3`) : R = roi, D = dame, T = to
 
 - [x] Phase a — squelette, navigation, échiquier interactif
 - [x] Phase b — moteur de leçons et d'exercices, module 0
-- [ ] Phase c — puzzles et répétition espacée
+- [x] Phase c — puzzles et répétition espacée
 - [ ] Phase d — bot Stockfish et analyse
 - [ ] Phase e — modules 1 à 9, entraîneur d'ouvertures
 - [ ] Phase f — tableau de bord
@@ -112,3 +131,4 @@ et toujours affichés en notation française (`Cf3`) : R = roi, D = dame, T = to
 - Stockfish (moteur, paquet npm `stockfish`) : GPL-3.0. Comme l'appli l'embarque, son code doit rester public
   (c'est le cas si le dépôt GitHub est public).
 - chess.js : BSD-2. react-chessboard : MIT.
+- Puzzles : base de puzzles Lichess, CC0.

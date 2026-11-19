@@ -5,11 +5,16 @@ import { Placeholder } from './pages/Placeholder'
 import { Backup } from './pages/Backup'
 import { CoursePage } from './features/course/CoursePage'
 import { LessonPage } from './features/course/LessonPlayer'
+import { PuzzlePage } from './features/puzzles/PuzzlePage'
+import { ReviewPage } from './features/review/ReviewPage'
+import { today, useProgress } from './lib/progress'
+import { isDue } from './lib/srs'
 
 const NAV = [
   { to: '/', label: 'Accueil', icon: '♔' },
   { to: '/cours', label: 'Cours', icon: '♕' },
   { to: '/puzzles', label: 'Puzzles', icon: '♘' },
+  { to: '/revisions', label: 'Révisions', icon: '↻' },
   { to: '/ouvertures', label: 'Ouvertures', icon: '♗' },
   { to: '/jouer', label: 'Jouer', icon: '♖' },
   { to: '/analyse', label: 'Analyse', icon: '♙' },
@@ -20,6 +25,8 @@ const NAV = [
 // HashRouter : les adresses ressemblent à /#/cours. C'est ce qui permet à
 // GitHub Pages de servir toutes les pages sans configuration particulière.
 export default function App() {
+  const progress = useProgress()
+  const due = Object.values(progress.cards).filter((c) => isDue(c, today())).length
   return (
     <HashRouter>
       <div className="flex min-h-screen flex-col md:flex-row">
@@ -38,6 +45,9 @@ export default function App() {
             >
               <span className="w-4 text-center">{n.icon}</span>
               {n.label}
+              {n.to === '/revisions' && due > 0 && (
+                <span className="ml-auto rounded-full bg-amber-400 px-1.5 text-xs font-semibold text-stone-900">{due}</span>
+              )}
             </NavLink>
           ))}
         </nav>
@@ -47,7 +57,8 @@ export default function App() {
             <Route path="/libre" element={<Sandbox />} />
             <Route path="/cours" element={<CoursePage />} />
             <Route path="/cours/:lessonId" element={<LessonPage />} />
-            <Route path="/puzzles" element={<Placeholder title="Puzzles" phase="c" />} />
+            <Route path="/puzzles" element={<PuzzlePage />} />
+            <Route path="/revisions" element={<ReviewPage />} />
             <Route path="/ouvertures" element={<Placeholder title="Entraîneur d'ouvertures" phase="e" />} />
             <Route path="/jouer" element={<Placeholder title="Jouer contre le bot" phase="d" />} />
             <Route path="/analyse" element={<Placeholder title="Analyse de parties" phase="d" />} />

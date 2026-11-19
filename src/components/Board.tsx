@@ -1,4 +1,4 @@
-import { useMemo, useState, type CSSProperties } from 'react'
+import { Component, useMemo, useState, type CSSProperties, type ReactNode } from 'react'
 import { Chessboard } from 'react-chessboard'
 import { Chess, type PieceSymbol, type Square } from 'chess.js'
 import { kingSquare } from '../lib/chess'
@@ -109,9 +109,11 @@ export function Board({
   }
 
   const promoColor = game.turn() === 'w' ? 0 : 1
+  const [safeMode, setSafeMode] = useState(0)
 
   return (
     <div className="relative w-full select-none">
+      <BoardGuard key={safeMode} onError={() => setSafeMode((n) => n + 1)}>
       <Chessboard
         options={{
           position: fen,
@@ -133,8 +135,11 @@ export function Board({
           lightSquareStyle: { backgroundColor: 'var(--color-board-light)' },
           boardStyle: { borderRadius: '6px', boxShadow: '0 4px 14px rgba(0,0,0,0.18)' },
           animationDurationInMs: 180,
+          // Après une erreur d'animation, on redessine sans animation.
+          showAnimations: safeMode === 0,
         }}
       />
+      </BoardGuard>
 
       {pendingPromo && (
         <div className="absolute inset-0 z-10 flex items-center justify-center rounded-md bg-black/40">
@@ -165,4 +170,22 @@ export function Board({
       )}
     </div>
   )
+}
+
+/**
+ * react-chessboard lève parfois une erreur pendant une animation si l'échiquier n'est pas encore
+ * mesuré (fenêtre en train de changer de taille). Plutôt que de faire planter toute la page,
+ * on intercepte l'erreur et on redessine l'échiquier sans animation.
+ */
+class BoardGuard extends Component<{ children: ReactNode; onError: () => void }, { failed: boolean }> {
+  state = { failed: false }
+  static getDerivedStateFromError() {
+    return { failed: true }
+  }
+  componentDidCatch() {
+    this.props.onError()
+  }
+  render() {
+    return this.state.failed ? null : this.props.children
+  }
 }

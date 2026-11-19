@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { Chess } from 'chess.js'
 import { Board, type MoveInput } from '../../components/Board'
 import { RichText } from '../../components/RichText'
@@ -9,12 +9,23 @@ import { Button, Panel, SQ_HINT, StepLayout, sideToMove } from './ui'
 
 type Status = 'playing' | 'opponent' | 'wrong' | 'solved' | 'shown'
 
+type Props = {
+  step: MoveStep
+  onDone: (success: boolean) => void
+  /** Coup adverse (SAN) joué automatiquement au départ depuis step.fen (puzzles Lichess). */
+  preMove?: string
+  /** Informations affichées une fois l'exercice terminé (ex. lien vers Lichess). */
+  after?: ReactNode
+  /** Appelé dès que le résultat est connu (avant le clic sur « Suivant »). */
+  onResult?: (success: boolean) => void
+}
+
 /** Exercice « joue le bon coup » : retour immédiat, indice, solution, réponse adverse automatique. */
-export function MoveExercise({ step, onDone }: { step: MoveStep; onDone: (success: boolean) => void }) {
+export function MoveExercise({ step, onDone, preMove, after, onResult }: Props) {
   const [fen, setFen] = useState(step.fen)
   const [ply, setPly] = useState(0)
   const [lastMove, setLastMove] = useState<{ from: string; to: string } | null>(null)
-  const [status, setStatus] = useState<Status>('playing')
+  const [status, setStatus] = useState<Status>(preMove ? 'opponent' : 'playing')
   const [errors, setErrors] = useState(0)
   const [hint, setHint] = useState(false)
   const [hintUsed, setHintUsed] = useState(false)
@@ -24,8 +35,30 @@ export function MoveExercise({ step, onDone }: { step: MoveStep; onDone: (succes
   useEffect(() => () => timers.current.forEach(clearTimeout), [])
   const later = (fn: () => void, ms: number) => timers.current.push(window.setTimeout(fn, ms))
 
-  const orientation = step.orientation ?? sideToMove(step.fen)
+  // Coup d'ouverture de l'adversaire (puzzles) : on montre la position, puis il joue.
+  useEffect(() => {
+    if (!preMove) return
+    const id = window.setTimeout(() => {
+      const g = new Chess(step.fen)
+      const mv = g.move(preMove)
+      setFen(g.fen())
+      setLastMove(mv)
+      setStatus('playing')
+    }, 800)
+    return () => clearTimeout(id)
+  }, [preMove, step.fen])
+
+  const userSide = preMove ? (sideToMove(step.fen) === 'white' ? 'black' : 'white') : sideToMove(step.fen)
+  const orientation = step.orientation ?? userSide
   const finished = status === 'solved' || status === 'shown'
+
+  // Résultat connu : prévenir le parent une seule fois.
+  const reported = useRef(false)
+  useEffect(() => {
+    if (!finished || reported.current) return
+    reported.current = true
+    onResult?.(status === 'solved' && errors === 0 && !hintUsed)
+  }, [finished, status, errors, hintUsed, onResult])
 
   /** Joue la réponse adverse prévue (si elle existe) après un court délai. */
   function afterUserMove(g: Chess, nextPly: number, history: string[]) {
@@ -135,6 +168,7 @@ export function MoveExercise({ step, onDone }: { step: MoveStep; onDone: (succes
           text={step.explanation}
         />
       )}
+      {finished && after}
 
       <div className="flex flex-wrap gap-2">
         {!finished && (
