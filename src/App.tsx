@@ -7,6 +7,8 @@ import { CoursePage } from './features/course/CoursePage'
 import { LessonPage } from './features/course/LessonPlayer'
 import { PuzzlePage } from './features/puzzles/PuzzlePage'
 import { ReviewPage } from './features/review/ReviewPage'
+import { PlayPage } from './features/play/PlayPage'
+import { AnalysisPage } from './features/analysis/AnalysisPage'
 import { today, useProgress } from './lib/progress'
 import { isDue } from './lib/srs'
 
@@ -60,8 +62,8 @@ export default function App() {
             <Route path="/puzzles" element={<PuzzlePage />} />
             <Route path="/revisions" element={<ReviewPage />} />
             <Route path="/ouvertures" element={<Placeholder title="Entraîneur d'ouvertures" phase="e" />} />
-            <Route path="/jouer" element={<Placeholder title="Jouer contre le bot" phase="d" />} />
-            <Route path="/analyse" element={<Placeholder title="Analyse de parties" phase="d" />} />
+            <Route path="/jouer" element={<PlayPage />} />
+            <Route path="/analyse" element={<AnalysisPage />} />
             <Route
               path="/progres"
               element={

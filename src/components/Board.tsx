@@ -113,7 +113,7 @@ export function Board({
 
   return (
     <div className="relative w-full select-none">
-      <BoardGuard key={safeMode} onError={() => setSafeMode((n) => n + 1)}>
+      <BoardGuard key={`${orientation}-${safeMode}`} onError={() => setSafeMode((n) => n + 1)}>
       <Chessboard
         options={{
           position: fen,

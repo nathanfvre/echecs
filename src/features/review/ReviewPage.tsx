@@ -2,7 +2,8 @@ import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ALL_LESSONS } from '../../content'
 import type { ExerciseStep } from '../../content/types'
-import { getProgress, recordExerciseReview, recordPuzzle, today, useProgress } from '../../lib/progress'
+import { getProgress, recordCardReview, recordExerciseReview, recordPuzzle, today, useProgress } from '../../lib/progress'
+import { sanToFr } from '../../lib/notation'
 import { INTERVALS, isDue, type Card } from '../../lib/srs'
 import { ExerciseView } from '../course/StepView'
 import { MoveExercise } from '../course/MoveExercise'
@@ -40,7 +41,8 @@ export function ReviewPage() {
     if (kind === 'puzzle') {
       const p = puzzleById.get(id)
       if (p) recordPuzzle(p, ok, true)
-    } else recordExerciseReview(id, ok)
+    } else if (kind === 'mistake') recordCardReview(card.key, ok)
+    else recordExerciseReview(id, ok)
     if (ok) setScore(score + 1)
     setIndex(index + 1)
   }
@@ -78,7 +80,7 @@ export function ReviewPage() {
     )
 
   let content = null
-  const kind = card.key.startsWith('puzzle:') ? 'puzzle' : 'exercise'
+  const kind = card.key.slice(0, card.key.indexOf(':'))
   const id = card.key.slice(card.key.indexOf(':') + 1)
   if (kind === 'puzzle') {
     const p = puzzleById.get(id)
@@ -88,6 +90,24 @@ export function ReviewPage() {
       const { step, preMove } = puzzleToStep(p)
       content = <MoveExercise key={card.key} step={step} preMove={preMove} onDone={done} />
     }
+  } else if (kind === 'mistake' && card.mistake) {
+    const m = card.mistake
+    content = (
+      <MoveExercise
+        key={card.key}
+        step={{
+          type: 'move',
+          id: card.key,
+          fen: m.fen,
+          prompt: `Position tirée d'une de tes parties. Tu avais joué **${sanToFr(m.played)}** (une erreur). Trouve mieux !`,
+          solution: [m.best],
+          accept: m.accept,
+          hint: 'Fais la checklist : échecs, captures, menaces — pour toi ET pour l’adversaire.',
+          explanation: `Stockfish recommande **${sanToFr(m.best)}**${m.accept.length ? ` (${m.accept.map(sanToFr).join(', ')} étai${m.accept.length > 1 ? 'en' : ''}t aussi bon${m.accept.length > 1 ? 's' : ''})` : ''}.`,
+        }}
+        onDone={done}
+      />
+    )
   } else {
     const step = findExercise(id)
     content = step ? <ExerciseView key={card.key} step={step} onDone={done} /> : <Missing onSkip={() => setIndex(index + 1)} />
@@ -98,7 +118,7 @@ export function ReviewPage() {
       <div className="flex items-baseline justify-between">
         <h1 className="text-2xl font-semibold">Révisions du jour</h1>
         <span className="text-sm text-stone-500">
-          {index + 1} / {queue.length} · {kind === 'puzzle' ? 'puzzle' : 'exercice de leçon'} · boîte {card.box}
+          {index + 1} / {queue.length} · {kind === 'puzzle' ? 'puzzle' : kind === 'mistake' ? 'erreur de partie' : 'exercice de leçon'} · boîte {card.box}
         </span>
       </div>
       {content}

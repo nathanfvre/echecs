@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "test": "vitest run",
     "verify": "tsx scripts/verify-content.ts && tsx scripts/verify-puzzles.ts",
-    "build:puzzles": "tsx scripts/build-puzzles.ts"
+    "build:puzzles": "tsx scripts/build-puzzles.ts",
+    "predev": "node scripts/copy-stockfish.mjs",
+    "prebuild": "node scripts/copy-stockfish.mjs"
   },
   "dependencies": {
     "chess.js": "^1.4.0",

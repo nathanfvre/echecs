@@ -104,6 +104,20 @@ Système de Leitner à 5 boîtes (`src/lib/srs.ts`). Un exercice de leçon ou un
 revient le lendemain dans **Révisions**. Chaque réussite le fait monter d'une boîte (révisions à 1, 3, 7, 14
 puis 30 jours) ; une erreur le renvoie en boîte 1 ; réussi en boîte 5, il est acquis.
 
+## Jouer contre le bot et analyser
+
+- **Moteur** : Stockfish 19 « lite » en WebAssembly, dans le navigateur (Web Worker). Les fichiers sont copiés
+  automatiquement de `node_modules/stockfish` vers `public/stockfish/` avant `npm run dev` et `npm run build`.
+- **Niveaux du bot** (`src/engine/bot.ts`) : 1 à 5 = Stockfish volontairement affaibli (calcul peu profond,
+  choix parmi plusieurs coups, gaffes occasionnelles) ; 6 et 7 = réglage officiel `UCI_Elo` ; 8 = pleine force.
+  Les Elo affichés sont des estimations.
+- **Mode entraînement** : annuler ses coups et checklist anti-gaffe (rappel ou obligatoire).
+- **Analyse** (`src/engine/analysis.ts`) : chaque position est évaluée (profondeur 12). Comme sur Lichess, on
+  mesure les chances de gain perdues par chaque coup : ≥ 30 % gaffe, ≥ 20 % erreur, ≥ 10 % imprécision.
+  Tes gaffes et erreurs peuvent être ajoutées aux révisions (Stockfish fournit aussi les coups équivalents).
+- **Import Lichess** : API publique `lichess.org/api/games/user/<pseudo>` (15 dernières parties rapides,
+  lentes et blitz), sans compte ni clé. Ou coller un PGN (Lichess, Chess.com).
+
 ## Sauvegarde de la progression
 
 La progression est stockée dans le navigateur. Page **Progrès → Sauvegarde** : « Exporter » télécharge
@@ -119,7 +133,7 @@ et toujours affichés en notation française (`Cf3`) : R = roi, D = dame, T = to
 - [x] Phase a — squelette, navigation, échiquier interactif
 - [x] Phase b — moteur de leçons et d'exercices, module 0
 - [x] Phase c — puzzles et répétition espacée
-- [ ] Phase d — bot Stockfish et analyse
+- [x] Phase d — bot Stockfish et analyse
 - [ ] Phase e — modules 1 à 9, entraîneur d'ouvertures
 - [ ] Phase f — tableau de bord
 - [ ] Phase g — déploiement

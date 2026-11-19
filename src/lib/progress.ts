@@ -15,6 +15,19 @@ export type LessonProgress = {
 
 export type ThemeStat = { ok: number; total: number }
 
+export type GameRecord = {
+  date: string
+  /** Contre le bot ou partie importée et analysée. */
+  source: 'bot' | 'import'
+  userColor: 'w' | 'b'
+  result: 'win' | 'loss' | 'draw' | 'unknown'
+  level?: number
+  pgn: string
+  /** Nombre de gaffes / erreurs du joueur, une fois la partie analysée. */
+  blunders?: number
+  mistakes?: number
+}
+
 export type Progress = {
   version: 1
   lessons: Record<string, LessonProgress>
@@ -28,6 +41,10 @@ export type Progress = {
   themes: Record<string, ThemeStat>
   /** Jours d'activité (AAAA-MM-JJ), pour la série de jours. */
   days: string[]
+  /** Parties jouées contre le bot ou analysées (les 100 dernières). */
+  games: GameRecord[]
+  /** Pseudo Lichess, pour importer tes parties. */
+  lichessUser: string
 }
 
 const empty = (): Progress => ({
@@ -38,6 +55,8 @@ const empty = (): Progress => ({
   puzzlesSeen: [],
   themes: {},
   days: [],
+  games: [],
+  lichessUser: '',
 })
 
 export const today = () => new Date().toLocaleDateString('sv-SE') // format AAAA-MM-JJ, heure locale
@@ -156,7 +175,11 @@ export function recordPuzzle(p: { id: string; rating: number; themes: string[] }
 
 /** Révision d'un exercice de leçon. */
 export function recordExerciseReview(exerciseId: string, ok: boolean) {
-  const key = `exercise:${exerciseId}`
+  recordCardReview(`exercise:${exerciseId}`, ok)
+}
+
+/** Révision d'une carte quelconque (exercice, erreur de partie). */
+export function recordCardReview(key: string, ok: boolean) {
   const card = state.cards[key]
   if (!card) return
   const cards = { ...state.cards }
@@ -164,6 +187,26 @@ export function recordExerciseReview(exerciseId: string, ok: boolean) {
   if (next) cards[key] = next
   else delete cards[key]
   save({ ...state, cards })
+}
+
+/** Ajoute des cartes (ex. erreurs tirées d'une partie). Les cartes déjà présentes sont gardées telles quelles. */
+export function addCards(cards: Card[]) {
+  const next = { ...state.cards }
+  for (const c of cards) next[c.key] ??= c
+  save({ ...state, cards: next })
+}
+
+export function recordGame(g: GameRecord) {
+  save({ ...state, games: [g, ...state.games].slice(0, 100) })
+}
+
+/** Met à jour la dernière partie enregistrée ayant ce PGN (ex. après analyse). */
+export function updateGame(pgn: string, patch: Partial<GameRecord>) {
+  save({ ...state, games: state.games.map((g) => (g.pgn === pgn ? { ...g, ...patch } : g)) })
+}
+
+export function setLichessUser(name: string) {
+  save({ ...state, lichessUser: name })
 }
 
 // --- Sauvegarde ---

@@ -7,12 +7,14 @@
 export const INTERVALS = [1, 3, 7, 14, 30]
 
 export type Card = {
-  /** puzzle:<id Lichess>  ou  exercise:<id d'exercice> */
+  /** puzzle:<id Lichess>, exercise:<id d'exercice>, ou mistake:<id> (erreur tirée d'une de tes parties) */
   key: string
   box: number
   /** Date de la prochaine révision (AAAA-MM-JJ). */
   due: string
   lessonId?: string
+  /** Pour une erreur de partie : la position, le coup joué et les bons coups selon Stockfish. */
+  mistake?: { fen: string; played: string; best: string; accept: string[] }
 }
 
 export function addDays(date: string, days: number): string {

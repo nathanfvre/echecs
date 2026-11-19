@@ -12,7 +12,7 @@ export function Home() {
         <Card to="/libre" title="Échiquier libre" text="Déplace les pièces, teste des coups, charge une position." />
         <Card to="/cours" title="Le cours" text="Modules 0 à 9, des bases jusqu'à 1000 Elo." />
         <Card to="/puzzles" title="Puzzles" text="Tactique par thème avec révisions espacées." />
-        <Card to="/jouer" title="Jouer contre le bot" text="Niveau réglable, analyse de la partie." soon />
+        <Card to="/jouer" title="Jouer contre le bot" text="Niveau réglable, analyse de la partie." />
       </div>
     </div>
   )
