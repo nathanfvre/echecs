@@ -12,6 +12,8 @@ const CACHE = join(import.meta.dirname, '.cache/openings')
 const OUT = join(import.meta.dirname, '../src/content/opening-names.json')
 const REPERTOIRE = join(import.meta.dirname, '../src/content/repertoire.json')
 const BASE = 'https://raw.githubusercontent.com/lichess-org/chess-openings/master/'
+// Copie de fetch faite au chargement : Stockfish (WASM), lancé ensuite par npm run verify, remplace le fetch global.
+const httpFetch = globalThis.fetch.bind(globalThis)
 
 /** Position sans les compteurs de coups (format EPD). */
 export const epd = (fen: string) => fen.split(' ').slice(0, 4).join(' ')
@@ -21,7 +23,7 @@ async function download() {
   for (const f of ['a', 'b', 'c', 'd', 'e']) {
     const file = join(CACHE, `${f}.tsv`)
     if (existsSync(file)) continue
-    const res = await fetch(BASE + `${f}.tsv`)
+    const res = await httpFetch(BASE + `${f}.tsv`)
     if (!res.ok) throw new Error(`Téléchargement impossible : ${f}.tsv (${res.status})`)
     writeFileSync(file, await res.text())
   }
